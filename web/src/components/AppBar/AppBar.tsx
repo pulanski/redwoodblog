@@ -1,0 +1,112 @@
+import React from 'react'
+import {
+  createStyles,
+  Header,
+  Group,
+  Burger,
+  Kbd,
+  Input,
+  Image,
+} from '@mantine/core'
+import { useBooleanToggle } from '@mantine/hooks'
+import { Search } from 'tabler-icons-react'
+import { openSpotlight } from '@mantine/spotlight'
+
+const useStyles = createStyles((theme) => ({
+  header: {
+    paddingLeft: theme.spacing.md,
+    paddingRight: theme.spacing.md,
+  },
+
+  inner: {
+    height: 56,
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
+
+  links: {
+    [theme.fn.smallerThan('md')]: {
+      display: 'none',
+    },
+  },
+
+  search: {
+    [theme.fn.smallerThan('xs')]: {
+      display: 'none',
+    },
+    margin: theme.spacing.md,
+  },
+
+  link: {
+    display: 'block',
+    lineHeight: 1,
+    padding: '8px 12px',
+    borderRadius: theme.radius.sm,
+    textDecoration: 'none',
+    color:
+      theme.colorScheme === 'dark'
+        ? theme.colors.dark[0]
+        : theme.colors.gray[7],
+    fontSize: theme.fontSizes.sm,
+    fontWeight: 500,
+
+    '&:hover': {
+      backgroundColor:
+        theme.colorScheme === 'dark'
+          ? theme.colors.dark[6]
+          : theme.colors.gray[0],
+    },
+  },
+
+  leftIcon: {
+    marginLeft: theme.spacing.xs,
+  },
+
+  searchText: {
+    marginRight: '5rem',
+  },
+}))
+
+export function AppBar() {
+  const [opened, toggleOpened] = useBooleanToggle(false)
+  const { classes } = useStyles()
+
+  return (
+    <Header height={56} className={classes.header} mb={120}>
+      <div className={classes.inner}>
+        <Group>
+          <Burger opened={opened} onClick={() => toggleOpened()} size="sm" />
+          <Image
+            src="./redwoodjs-logo.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
+          {/* <MantineLogo /> */}
+        </Group>
+        <Input
+          icon={<Search size={16} />}
+          placeholder="Search"
+          rightSectionWidth={70}
+          rightSection={
+            <>
+              <Kbd>⌘</Kbd>
+              <span style={{ margin: '0 0.2rem' }}>+</span>
+              <Kbd
+                style={{
+                  marginRight: '1.5rem',
+                }}
+              >
+                K
+              </Kbd>
+            </>
+          }
+          onClick={openSpotlight}
+        />
+      </div>
+    </Header>
+  )
+}
+
+export default AppBar

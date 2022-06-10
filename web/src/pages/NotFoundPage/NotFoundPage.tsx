@@ -1,44 +1,56 @@
-export default () => (
-  <main>
-    <style
-      dangerouslySetInnerHTML={{
-        __html: `
-              html, body {
-                margin: 0;
-              }
-              html * {
-                box-sizing: border-box;
-              }
-              main {
-                display: flex;
-                align-items: center;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
-                text-align: center;
-                background-color: #E2E8F0;
-                height: 100vh;
-              }
-              section {
-                background-color: white;
-                border-radius: 0.25rem;
-                width: 32rem;
-                padding: 1rem;
-                margin: 0 auto;
-                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-              }
-              h1 {
-                font-size: 2rem;
-                margin: 0;
-                font-weight: 500;
-                line-height: 1;
-                color: #2D3748;
-              }
-            `,
-      }}
-    />
-    <section>
-      <h1>
-        <span>404 Page Not Found</span>
-      </h1>
-    </section>
-  </main>
-)
+import {
+  Button,
+  Title,
+  Text,
+  Stack,
+  // createStyles,
+  Container,
+  SimpleGrid,
+} from '@mantine/core'
+import { Link, routes } from '@redwoodjs/router'
+import NotFoundSVG from './NotFound.svg'
+import styled from '@emotion/styled'
+
+const StyledContainer = styled(Container)`
+  padding: 5rem 2rem;
+`
+
+const StyledTitle = styled(Title)`
+  font-weight: 900;
+  font-size: 3rem;
+`
+
+const StyledNotFoundSVG = styled(NotFoundSVG)`
+  margin-top: -2rem;
+  margin-left: -45rem;
+`
+
+export function NotFoundPage() {
+  return (
+    <StyledContainer>
+      <SimpleGrid
+        spacing={80}
+        cols={2}
+        breakpoints={[{ maxWidth: 'sm', cols: 1, spacing: 40 }]}
+      >
+        <Stack align="center" spacing="md">
+          <StyledTitle>Something is not right...</StyledTitle>
+          <Text color="dimmed" size="lg">
+            The page you are trying to open does not exist. You may have
+            mistyped the address, or the page has been moved to another URL. If
+            you think this is an error contact support.
+          </Text>
+          {/* className={classes.control} */}
+          <Link to={routes.home()}>
+            <Button variant="outline" size="md" mt="xl">
+              Get back to the home page
+            </Button>
+          </Link>
+        </Stack>
+        <StyledNotFoundSVG height="25rem" />
+      </SimpleGrid>
+    </StyledContainer>
+  )
+}
+
+export default NotFoundPage
