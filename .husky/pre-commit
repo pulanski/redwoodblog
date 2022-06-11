@@ -1,5 +1,5 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-yarn rw test --watch=false
+yarn rw test web --watch=false
 # yarn rw lint --fix
