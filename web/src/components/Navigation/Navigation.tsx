@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { createStyles, Navbar, Group, Code } from '@mantine/core'
+import { createStyles, Navbar } from '@mantine/core'
 import {
   Settings,
   SwitchHorizontal,
@@ -8,13 +8,19 @@ import {
   Wallpaper,
   Bookmarks,
   Notebook,
+  Edit,
 } from 'tabler-icons-react'
 import { navigate } from '@redwoodjs/router'
-import RedwoodLogo from 'src/components/RedwoodLogo/RedwoodLogo'
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('icon')
   return {
+    navbar: {
+      [theme.fn.smallerThan('sm')]: {
+        display: 'none',
+      },
+    },
+
     header: {
       paddingBottom: theme.spacing.md,
       marginBottom: theme.spacing.md * 1.5,
@@ -102,6 +108,7 @@ const data = [
   // { link: '', label: 'SSH Keys', icon: Key },
   // { link: '', label: 'Databases', icon: DatabaseImport },
   // { link: '', label: 'Authentication', icon: TwoFA },
+  { link: '/contact', label: 'Contact', icon: Edit },
   { link: '/settings', label: 'Settings', icon: Settings },
 ]
 
@@ -133,14 +140,8 @@ export function Navigation() {
   return (
     <>
       {showNavbar && (
-        <Navbar width={{ sm: 200 }} p="md">
-          <Navbar.Section grow>
-            <Group className={classes.header} position="center">
-              <RedwoodLogo />
-              <Code sx={{ fontWeight: 700 }}>v3.1.2</Code>
-            </Group>
-            {links}
-          </Navbar.Section>
+        <Navbar width={{ sm: 200 }} p="md" className={classes.navbar}>
+          <Navbar.Section grow>{links}</Navbar.Section>
 
           <Navbar.Section className={classes.footer}>
             <a

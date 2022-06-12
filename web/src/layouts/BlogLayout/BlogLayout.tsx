@@ -2,6 +2,7 @@ import { AppShell } from '@mantine/core'
 import { createContext, useState } from 'react'
 import AppBar from 'src/components/AppBar/AppBar'
 import Navigation from 'src/components/Navigation/Navigation'
+import Footer from 'src/components/Footer/Footer'
 
 type BlogLayoutProps = {
   children?: React.ReactNode
@@ -20,6 +21,7 @@ export function BlogLayout({ children }: BlogLayoutProps) {
           fixed
           navbar={<Navigation />}
           header={<AppBar />}
+          footer={<Footer />}
           styles={(theme) => ({
             main: {
               backgroundColor:

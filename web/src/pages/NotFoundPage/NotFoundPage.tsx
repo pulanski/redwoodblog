@@ -31,7 +31,7 @@ export function NotFoundPage() {
       <SimpleGrid
         spacing={80}
         cols={2}
-        breakpoints={[{ maxWidth: 'sm', cols: 1, spacing: 40 }]}
+        breakpoints={[{ maxWidth: 'md', cols: 1, spacing: 40 }]}
       >
         <Stack align="center" spacing="md">
           <StyledTitle>Something is not right...</StyledTitle>

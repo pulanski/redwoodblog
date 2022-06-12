@@ -17,6 +17,11 @@ import { UndrawBlogging } from 'react-undraw-illustrations'
 // import image from './image.svg';
 
 const useStyles = createStyles((theme) => ({
+  container: {
+    paddingRight: '12rem',
+    paddingLeft: '8rem',
+  },
+
   inner: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -75,77 +80,74 @@ export function LandingPage() {
   const { classes } = useStyles()
 
   return (
-    <div>
-      <Container>
-        <div className={classes.inner}>
-          <div className={classes.content}>
-            <Title className={classes.title}>
-              An introduction <br /> to the full-stack framework <br />
-              <Text
-                component="span"
-                align="center"
-                variant="gradient"
-                gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
-                weight={700}
-                className={classes.title}
-              >
-                you always wanted
-              </Text>
-              .
-              {/* <span className={classes.highlight}>you always wanted</span> */}
-            </Title>
-            <Text color="dimmed" mt="md">
-              Build fully functional accessible web applications faster than
-              ever - Mantine includes more than 120 customizable components and
-              hooks to cover you in any situation
-            </Text>
-
-            <List
-              mt={30}
-              spacing="sm"
-              size="sm"
-              icon={
-                <ThemeIcon size={20} radius="xl">
-                  <Check size={12} />
-                </ThemeIcon>
-              }
+    <Container className={classes.container}>
+      <div className={classes.inner}>
+        <div className={classes.content}>
+          <Title className={classes.title}>
+            An introduction <br /> to the full-stack framework <br />
+            <Text
+              component="span"
+              align="center"
+              variant="gradient"
+              gradient={{ from: 'indigo', to: 'cyan', deg: 45 }}
+              weight={700}
+              className={classes.title}
             >
-              <List.Item>
-                <b>TypeScript based</b> - build type safe applications, all
-                components and hooks export types
-              </List.Item>
-              <List.Item>
-                <b>Free and open source</b> - all packages have MIT license, you
-                can use Mantine in any project
-              </List.Item>
-              <List.Item>
-                <b>No annoying focus ring</b> - focus ring will appear only when
-                user navigates with keyboard
-              </List.Item>
-            </List>
+              you always wanted
+            </Text>
+            .
+          </Title>
+          <Text color="dimmed" mt="md">
+            Build fully functional accessible web applications faster than ever
+            - Mantine includes more than 120 customizable components and hooks
+            to cover you in any situation
+          </Text>
 
-            <Group mt={30}>
-              <Link to={routes.home()}>
-                <Button radius="xl" size="md" className={classes.control}>
-                  Get started
-                </Button>
-              </Link>
-              <Anchor href="https://github.com/pulanski" target="_blank">
-                <Button
-                  variant="default"
-                  radius="xl"
-                  size="md"
-                  className={classes.control}
-                >
-                  Source code
-                </Button>
-              </Anchor>
-            </Group>
-          </div>
-          <UndrawBlogging primaryColor="#238BE6" height="25rem" />
+          <List
+            mt={30}
+            spacing="sm"
+            size="sm"
+            icon={
+              <ThemeIcon size={20} radius="xl">
+                <Check size={12} />
+              </ThemeIcon>
+            }
+          >
+            <List.Item>
+              <b>TypeScript based</b> - build type safe applications, all
+              components and hooks export types
+            </List.Item>
+            <List.Item>
+              <b>Free and open source</b> - all packages have MIT license, you
+              can use Mantine in any project
+            </List.Item>
+            <List.Item>
+              <b>No annoying focus ring</b> - focus ring will appear only when
+              user navigates with keyboard
+            </List.Item>
+          </List>
+
+          <Group mt={30}>
+            <Link to={routes.home()}>
+              <Button radius="xl" size="md" className={classes.control}>
+                Get started
+              </Button>
+            </Link>
+            <Anchor href="https://github.com/pulanski" target="_blank">
+              <Button
+                variant="default"
+                radius="xl"
+                size="md"
+                className={classes.control}
+              >
+                Source code
+              </Button>
+            </Anchor>
+          </Group>
         </div>
-      </Container>
-    </div>
+        <UndrawBlogging primaryColor="#238BE6" height="25rem" />
+      </div>
+    </Container>
   )
 }
 

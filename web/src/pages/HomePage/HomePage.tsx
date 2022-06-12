@@ -1,28 +1,35 @@
-import { Link, routes } from '@redwoodjs/router'
+import { Affix, Button, Transition } from '@mantine/core'
+import { useWindowScroll } from '@mantine/hooks'
 import { MetaTags } from '@redwoodjs/web'
-import { Image } from '@mantine/core'
+import ArticlesCell from 'src/components/ArticlesCell'
+import { ArrowNarrowUp } from 'tabler-icons-react'
 
 const HomePage = () => {
+  const [scroll, scrollTo] = useWindowScroll()
+
   return (
     <>
       <MetaTags title="Home" description="Home page" />
 
-      <h1>HomePage</h1>
-      <p>
-        Find me in <code>./web/src/pages/HomePage/HomePage.tsx</code>
-      </p>
-      <p>
-        My default route is named <code>home</code>, link to me with `
-        <Link to={routes.home()}>Home</Link>`
-      </p>
-      <Image
-        width={120}
-        height={120}
-        src="./icon2.png"
-        alt="With default placeholder"
-        withPlaceholder
-      />
-      <img src="icon2.png" alt="hello" />
+      <ArticlesCell />
+      <Affix position={{ bottom: 20, right: 20 }}>
+        <Transition
+          transition="slide-up"
+          timingFunction="ease"
+          mounted={scroll.y > 0}
+          duration={400}
+        >
+          {(transitionStyles) => (
+            <Button
+              leftIcon={<ArrowNarrowUp />}
+              style={transitionStyles}
+              onClick={() => scrollTo({ y: 0 })}
+            >
+              Scroll to top
+            </Button>
+          )}
+        </Transition>
+      </Affix>
     </>
   )
 }

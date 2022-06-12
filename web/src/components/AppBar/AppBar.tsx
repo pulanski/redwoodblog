@@ -5,12 +5,12 @@ import {
   Group,
   Burger,
   Kbd,
-  Input,
-  Image,
+  Input
 } from '@mantine/core'
 import { useBooleanToggle } from '@mantine/hooks'
 import { Search } from 'tabler-icons-react'
 import { openSpotlight } from '@mantine/spotlight'
+import RedwoodLogo from '../RedwoodLogo/RedwoodLogo'
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -77,17 +77,12 @@ export function AppBar() {
       <div className={classes.inner}>
         <Group>
           <Burger opened={opened} onClick={() => toggleOpened()} size="sm" />
-          <Image
-            src="./redwoodjs-logo.png"
-            alt="logo"
-            width={100}
-            height={100}
-          />
-          {/* <MantineLogo /> */}
+          <RedwoodLogo />
         </Group>
         <Input
           icon={<Search size={16} />}
           placeholder="Search"
+          className={classes.search}
           rightSectionWidth={70}
           rightSection={
             <>

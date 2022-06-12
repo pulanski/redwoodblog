@@ -1,10 +1,6 @@
-import { SpotlightAction } from '@mantine/spotlight';
-import {
-  Home, Wallpaper,
-  Notebook,
-  Bookmarks
-} from 'tabler-icons-react';
-import { navigate, routes } from '@redwoodjs/router';
+import { SpotlightAction } from '@mantine/spotlight'
+import { Home, Wallpaper, Notebook, Bookmarks } from 'tabler-icons-react'
+import { navigate, routes } from '@redwoodjs/router'
 
 export const actions: SpotlightAction[] = [
   {
@@ -37,4 +33,4 @@ export const actions: SpotlightAction[] = [
     onTrigger: () => navigate(routes.settings()),
     icon: <Notebook size={18} />,
   },
-];
+]
