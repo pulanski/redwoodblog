@@ -1,12 +1,5 @@
 import React from 'react'
-import {
-  createStyles,
-  Header,
-  Group,
-  Burger,
-  Kbd,
-  Input
-} from '@mantine/core'
+import { createStyles, Header, Group, Burger, Kbd, Input } from '@mantine/core'
 import { useBooleanToggle } from '@mantine/hooks'
 import { Search } from 'tabler-icons-react'
 import { openSpotlight } from '@mantine/spotlight'

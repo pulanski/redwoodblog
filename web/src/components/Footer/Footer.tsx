@@ -6,11 +6,7 @@ import {
   ActionIcon,
   Anchor,
 } from '@mantine/core'
-import {
-  BrandYoutube,
-  BrandGithub,
-  BrandDiscord,
-} from 'tabler-icons-react'
+import { BrandYoutube, BrandGithub, BrandDiscord } from 'tabler-icons-react'
 import RedwoodLogo from 'src/components/RedwoodLogo'
 
 const useStyles = createStyles((theme) => ({

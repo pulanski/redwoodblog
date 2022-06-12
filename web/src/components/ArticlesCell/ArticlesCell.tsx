@@ -1,6 +1,6 @@
 import type { ArticlesQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
-import { SimpleGrid, useMantineTheme } from '@mantine/core'
+import { SimpleGrid } from '@mantine/core'
 import ArticleCard from '../ArticleCard/ArticleCard'
 
 export const QUERY = gql`
@@ -23,7 +23,7 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ articles }: CellSuccessProps<ArticlesQuery>) => {
-  const theme = useMantineTheme()
+  // const theme = useMantineTheme()
 
   return (
     <SimpleGrid

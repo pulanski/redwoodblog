@@ -6,10 +6,12 @@ import {
   // createStyles,
   Container,
   SimpleGrid,
+  Space,
 } from '@mantine/core'
 import { Link, routes } from '@redwoodjs/router'
 import NotFoundSVG from './NotFound.svg'
 import styled from '@emotion/styled'
+import Footer from 'src/components/Footer/Footer'
 
 const StyledContainer = styled(Container)`
   padding: 5rem 2rem;
@@ -25,6 +27,10 @@ const StyledNotFoundSVG = styled(NotFoundSVG)`
   margin-left: -45rem;
 `
 
+const StyledFooter = styled(Footer)`
+  // margin-top: 12rem;
+`
+
 export function NotFoundPage() {
   return (
     <StyledContainer>
@@ -32,6 +38,9 @@ export function NotFoundPage() {
         spacing={80}
         cols={2}
         breakpoints={[{ maxWidth: 'md', cols: 1, spacing: 40 }]}
+        style={{
+          marginLeft: '4rem',
+        }}
       >
         <Stack align="center" spacing="md">
           <StyledTitle>Something is not right...</StyledTitle>
@@ -49,6 +58,8 @@ export function NotFoundPage() {
         </Stack>
         <StyledNotFoundSVG height="25rem" />
       </SimpleGrid>
+      <Space h="xl" />
+      <StyledFooter />
     </StyledContainer>
   )
 }

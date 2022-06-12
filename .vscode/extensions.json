@@ -8,7 +8,10 @@
     "pflannery.vscode-versionlens",
     "editorconfig.editorconfig",
     "prisma.prisma",
-    "graphql.vscode-graphql"
+    "graphql.vscode-graphql",
+    "kol.commit-lint",
+    "redjue.git-commit-plugin",
+    "rioukkevin.vscode-git-commit"
   ],
   "unwantedRecommendations": []
 }
