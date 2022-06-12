@@ -78,7 +78,7 @@ const NavigationShortcuts = () => {
             ]}
           >
             {navigationShortcuts.map((shortcut) => (
-              <FloatingTooltip label={'⌘ + ' + shortcut.key}>
+              <FloatingTooltip label={'⌘ + ' + shortcut.key} key={shortcut.key}>
                 <StyledCard key={shortcut.key}>
                   <Group>
                     <Group>

@@ -23,6 +23,7 @@ const Routes = () => {
       </Set>
       <Route path="/" page={LandingPage} name="landing" />
       <Set wrap={BlogLayout}>
+        <Route path="/contact" page={ContactPage} name="contact" />
         <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
         <Route path="/home" page={HomePage} name="home" />
         <Route path="/settings" page={SettingsPage} name="settings" />

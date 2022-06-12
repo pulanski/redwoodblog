@@ -15,17 +15,16 @@ import Routes from 'src/Routes'
 import './scaffold.css'
 import './index.css'
 import { useState } from 'react'
-import { useFullscreen, useHotkeys } from '@mantine/hooks'
+import { useHotkeys } from '@mantine/hooks'
 import { actions } from './SpotlightActions'
 import { navigate, routes } from '@redwoodjs/router'
 
 export function App() {
-
-  const { toggle, fullscreen } = useFullscreen();
+  // const { toggle, fullscreen } = useFullscreen()
 
   useHotkeys([
     ['mod+J', () => toggleColorScheme()],
-    ['mod+F', () => toggle],
+    // ['mod+F', () => toggle],
     ['mod+1', () => navigate(routes.home())],
     ['mod+6', () => navigate(routes.settings())],
   ])
@@ -33,6 +32,8 @@ export function App() {
   const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')
   const toggleColorScheme = (value?: ColorScheme) =>
     setColorScheme(value || (colorScheme === 'dark' ? 'light' : 'dark'))
+
+  const [rtl, setRtl] = useState(false)
 
   return (
     <FatalErrorBoundary page={FatalErrorPage}>
@@ -42,7 +43,12 @@ export function App() {
             colorScheme={colorScheme}
             toggleColorScheme={toggleColorScheme}
           >
-            <MantineProvider theme={{ colorScheme }}>
+            <MantineProvider
+              theme={{
+                colorScheme,
+                dir: rtl ? 'rtl' : 'ltr',
+              }}
+            >
               <SpotlightProvider
                 actions={actions}
                 searchIcon={<Search size={18} />}
@@ -71,7 +77,9 @@ export function App() {
                     },
                   })}
                 />
-                <Routes />
+                <div dir={rtl ? 'rtl' : 'ltr'}>
+                  <Routes />
+                </div>
               </SpotlightProvider>
             </MantineProvider>
           </ColorSchemeProvider>

@@ -9,6 +9,12 @@ const useStyles = createStyles((theme) => ({
   header: {
     paddingLeft: theme.spacing.md,
     paddingRight: theme.spacing.md,
+    opacity: 0.9,
+    // [scrollY.greaterThan('0px')]: {
+    //   opacity: 1,
+    // },
+    backdropFilter: 'blur(10px)',
+    WebkitBackdropFilter: 'blur(10px)',
   },
 
   inner: {
@@ -67,7 +73,8 @@ const useStyles = createStyles((theme) => ({
 // }
 
 export function AppBar({ showNavbar, setShowNavbar }) {
-  const [opened, toggleOpened] = useBooleanToggle(false)
+  // const [opened, toggleOpened] = useBooleanToggle(false)
+  const [opened] = useBooleanToggle(false)
   const { classes } = useStyles()
 
   return (
@@ -76,16 +83,14 @@ export function AppBar({ showNavbar, setShowNavbar }) {
         <Group>
           <Burger
             opened={opened}
-            onClick={
-              () => {
-                // toggleOpened()
-                setShowNavbar(!showNavbar)
-              }
-            }
+            onClick={() => {
+              // toggleOpened()
+              setShowNavbar(!showNavbar)
+            }}
             size="sm"
             title="Open navigation"
             aria-label="Open navigation"
-            />
+          />
           <RedwoodLogo />
         </Group>
         <Input

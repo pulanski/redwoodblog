@@ -1,3 +1,4 @@
+import { Title } from '@mantine/core'
 import { MetaTags } from '@redwoodjs/web'
 import ArticlesCell from 'src/components/ArticlesCell'
 
@@ -7,6 +8,8 @@ const HomePage = () => {
   return (
     <>
       <MetaTags title="Home" description="Home page" />
+
+      <Title my={30}>Welcome back, Josh</Title>
 
       <ArticlesCell />
       {/* <Affix position={{ bottom: 20, right: 20 }}>

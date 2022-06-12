@@ -12597,6 +12597,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"cssjanus@npm:^2.0.1":
+  version: 2.1.0
+  resolution: "cssjanus@npm:2.1.0"
+  checksum: 51c381f1387693989d9a8dbd875a29e2e86da7ef8c9f67c3652d02ce879b35920120e64145ea968ea6d9e267baf58697df7d3adaf2d80f9065ec5d9c6a2ef5c9
+  languageName: node
+  linkType: hard
+
 "cssnano-preset-default@npm:^5.2.11":
   version: 5.2.11
   resolution: "cssnano-preset-default@npm:5.2.11"
@@ -27032,6 +27039,8 @@ __metadata:
     date-fns: ^2.28.0
     husky: ^7.0.0
     react-undraw-illustrations: ^2.0.3
+    stylis: ^4.1.1
+    stylis-plugin-rtl: ^2.1.1
     tabler-icons-react: ^1.48.1
     web: "workspace:^"
   languageName: unknown
@@ -28688,10 +28697,28 @@ __metadata:
   languageName: node
   linkType: hard
 
+"stylis-plugin-rtl@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "stylis-plugin-rtl@npm:2.1.1"
+  dependencies:
+    cssjanus: ^2.0.1
+  peerDependencies:
+    stylis: 4.x
+  checksum: 706640bba51ca75e3a824f781b59e8d8b8d034a10b839aa93daea166aac6cc67a4e7c063496ea8a09c396b639cff9859a42f5d03937d8f89f8922fd6c7435739
+  languageName: node
+  linkType: hard
+
 "stylis@npm:4.0.13":
   version: 4.0.13
   resolution: "stylis@npm:4.0.13"
   checksum: bd567c440b4f1acf8962b1b3aa7985c4e04d7badfe1e0f1c7ee2a60912de2718973850c524001a3d52f5fc9a0e3dcd204b8bd7e2d47d4934462e9f749fd9c7bc
+  languageName: node
+  linkType: hard
+
+"stylis@npm:^4.1.1":
+  version: 4.1.1
+  resolution: "stylis@npm:4.1.1"
+  checksum: 3723b20d272b01bb3c1329c382515e68073bfd4d273a22882037f2fd67de17b850c4bd272bbb78f9fbcd39c136ad13ed5c8b1819a43d994f91687226d106604a
   languageName: node
   linkType: hard
 

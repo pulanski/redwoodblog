@@ -19,52 +19,46 @@ export function BlogLayout({ children }: BlogLayoutProps) {
   return (
     <>
       {/* <NavbarContext.Provider value={{ showNavbar, setShowNavbar }}> */}
-        <AppShell
-          padding="md"
-          fixed
-          navbar={
-            <Navigation
-              showNavbar={showNavbar}
-              setShowNavbar={setShowNavbar}
-             />
-          }
-          header={
-            <AppBar
-              showNavbar={showNavbar}
-              setShowNavbar={setShowNavbar}
-             />
-          }
-          footer={<Footer />}
-          styles={(theme) => ({
-            main: {
-              backgroundColor:
-                theme.colorScheme === 'dark'
-                  ? theme.colors.dark[8]
-                  : theme.colors.gray[0],
-            },
-          })}
+      <AppShell
+        padding="md"
+        fixed
+        navbar={
+          <Navigation showNavbar={showNavbar} />
+        }
+        header={
+          <AppBar showNavbar={showNavbar} setShowNavbar={setShowNavbar} />
+        }
+        footer={<Footer />}
+        styles={(theme) => ({
+          main: {
+            backgroundColor:
+              theme.colorScheme === 'dark'
+                ? theme.colors.dark[8]
+                : theme.colors.gray[0],
+          },
+        })}
+      >
+        {children}
+      </AppShell>
+      <Affix position={{ bottom: 20, right: 20 }}>
+        <Transition
+          transition="slide-up"
+          timingFunction="ease"
+          mounted={scroll.y > 80}
+          duration={400}
         >
-          {children}
-        </AppShell>
-        <Affix position={{ bottom: 20, right: 20 }}>
-          <Transition
-            transition="slide-up"
-            timingFunction="ease"
-            mounted={scroll.y > 80}
-            duration={400}
-          >
-            {(transitionStyles) => (
-              <Button
-                leftIcon={<ArrowNarrowUp />}
-                style={transitionStyles}
-                onClick={() => scrollTo({ y: 0 })}
-                color="gray"
-              >
-                Scroll to top
-              </Button>
-            )}
-          </Transition>
-        </Affix>
+          {(transitionStyles) => (
+            <Button
+              leftIcon={<ArrowNarrowUp />}
+              style={transitionStyles}
+              onClick={() => scrollTo({ y: 0 })}
+              color="gray"
+            >
+              Scroll to top
+            </Button>
+          )}
+        </Transition>
+      </Affix>
       {/* </NavbarContext.Provider> */}
     </>
   )

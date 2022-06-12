@@ -1,13 +1,12 @@
-import { ActionIcon, Button, Group, Kbd, Tooltip, Text } from "@mantine/core"
-import { upperFirst, useFullscreen } from "@mantine/hooks"
-import { ScreenShare, ScreenShareOff } from "tabler-icons-react"
+import { ActionIcon, Group, Kbd, Tooltip, Text } from '@mantine/core'
+import { upperFirst, useFullscreen } from '@mantine/hooks'
+import { ScreenShare, ScreenShareOff } from 'tabler-icons-react'
 
 export interface FullScreenToggleProps {
   dark: boolean
 }
 
 const FullScreenToggle = ({ dark }: FullScreenToggleProps) => {
-
   const { toggle, fullscreen } = useFullscreen()
 
   return (
@@ -25,17 +24,14 @@ const FullScreenToggle = ({ dark }: FullScreenToggleProps) => {
         transitionDuration={300}
         transitionTimingFunction="ease"
       >
-        {/* <Button onClick={toggle} color={fullscreen ? 'red' : 'blue'}>
-          {fullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
-        </Button> */}
         <Group position="center">
-          <Text size="md" color={
-            // fullscreen
-            // ? 'red'
-            dark
-              ? 'yellow'
-              : 'blue'
-          }
+          <Text
+            size="md"
+            color={
+              // fullscreen
+              // ? 'red'
+              dark ? 'yellow' : 'blue'
+            }
           >
             {upperFirst(fullscreen ? 'Exit' : 'Enter')} Full Screen Mode
           </Text>
@@ -44,20 +40,16 @@ const FullScreenToggle = ({ dark }: FullScreenToggleProps) => {
             color={
               // fullscreen
               // ? 'red'
-              dark
-                ? 'yellow'
-                : 'blue'
+              dark ? 'yellow' : 'blue'
             }
             onClick={toggle}
-            title={
-              fullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'
-            }
+            title={fullscreen ? 'Exit Fullscreen' : 'Enter Fullscreen'}
           >
-            {
-              fullscreen
-                ? <ScreenShareOff size={18} />
-                : <ScreenShare size={18} />
-            }
+            {fullscreen ? (
+              <ScreenShareOff size={18} />
+            ) : (
+              <ScreenShare size={18} />
+            )}
           </ActionIcon>
         </Group>
       </Tooltip>

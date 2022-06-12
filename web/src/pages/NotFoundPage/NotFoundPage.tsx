@@ -12,6 +12,7 @@ import { Link, routes } from '@redwoodjs/router'
 import NotFoundSVG from './NotFound.svg'
 import styled from '@emotion/styled'
 import Footer from 'src/components/Footer/Footer'
+import NotFoundHeader from 'src/components/NotFoundHeader/NotFoundHeader'
 
 const StyledContainer = styled(Container)`
   padding: 5rem 2rem;
@@ -27,13 +28,18 @@ const StyledNotFoundSVG = styled(NotFoundSVG)`
   margin-left: -45rem;
 `
 
-const StyledFooter = styled(Footer)`
-  // margin-top: 12rem;
-`
-
 export function NotFoundPage() {
   return (
     <StyledContainer>
+      <NotFoundHeader
+        links={[
+          { link: '/home', label: 'Home' },
+          { link: '/about', label: 'About' },
+          { link: '/contact', label: 'Contact' },
+          { link: '/settings', label: 'Settings' },
+          // { link: 'login', label: 'Login' },
+        ]}
+      />
       <SimpleGrid
         spacing={80}
         cols={2}
@@ -59,7 +65,7 @@ export function NotFoundPage() {
         <StyledNotFoundSVG height="25rem" />
       </SimpleGrid>
       <Space h="xl" />
-      <StyledFooter />
+      <Footer />
     </StyledContainer>
   )
 }

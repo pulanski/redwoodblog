@@ -1,4 +1,5 @@
 import { Code, createStyles, Group, Image, Text } from '@mantine/core'
+import { navigate, routes } from '@redwoodjs/router'
 
 // const StyledImage = styled(Image)`
 
@@ -26,19 +27,25 @@ export function RedwoodLogo() {
 
   return (
     <>
-      {/* position="center" */}
-      <Group>
-        <Image
-          width={35}
-          height={35}
-          src="https://redwoodjs.com/images/diecut.svg"
-          alt="RedwoodJS Logo"
-          withPlaceholder
-          className={classes.image}
-        />
-        <Text className={classes.logoText}>RedwoodJS Blog</Text>
-        <Code sx={{ fontWeight: 700 }}>v1.5.1</Code>
-      </Group>
+      <div
+        onClick={() => navigate(routes.home())}
+        style={{
+          cursor: 'pointer',
+        }}
+      >
+        <Group>
+          <Image
+            width={35}
+            height={35}
+            src="https://redwoodjs.com/images/diecut.svg"
+            alt="RedwoodJS Logo"
+            withPlaceholder
+            className={classes.image}
+          />
+          <Text className={classes.logoText}>RedwoodJS Blog</Text>
+          <Code sx={{ fontWeight: 700 }}>v1.5.1</Code>
+        </Group>
+      </div>
     </>
   )
 }
