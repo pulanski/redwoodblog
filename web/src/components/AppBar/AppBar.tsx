@@ -61,7 +61,12 @@ const useStyles = createStyles((theme) => ({
   },
 }))
 
-export function AppBar() {
+// export interface AppBarProps {
+//   showNavbar?: boolean
+//   setShowNavbar?: (showNavbar: boolean) => void
+// }
+
+export function AppBar({ showNavbar, setShowNavbar }) {
   const [opened, toggleOpened] = useBooleanToggle(false)
   const { classes } = useStyles()
 
@@ -69,7 +74,18 @@ export function AppBar() {
     <Header height={56} className={classes.header} mb={120}>
       <div className={classes.inner}>
         <Group>
-          <Burger opened={opened} onClick={() => toggleOpened()} size="sm" />
+          <Burger
+            opened={opened}
+            onClick={
+              () => {
+                // toggleOpened()
+                setShowNavbar(!showNavbar)
+              }
+            }
+            size="sm"
+            title="Open navigation"
+            aria-label="Open navigation"
+            />
           <RedwoodLogo />
         </Group>
         <Input

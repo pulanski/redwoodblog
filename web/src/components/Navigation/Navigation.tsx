@@ -112,7 +112,7 @@ const data = [
   { link: '/settings', label: 'Settings', icon: Settings },
 ]
 
-export function Navigation() {
+export function Navigation({ showNavbar, setShowNavbar }) {
   const { classes, cx } = useStyles()
   const [active, setActive] = useState('Billing')
 
@@ -133,9 +133,6 @@ export function Navigation() {
       <span>{item.label}</span>
     </a>
   ))
-
-  // const {showNavbar, setShowNavbar} = useContext(NavbarContext);
-  const [showNavbar] = useState(true)
 
   return (
     <>

@@ -8,6 +8,7 @@ import {
 } from '@mantine/core'
 import { MetaTags } from '@redwoodjs/web'
 import DarkModeToggle from 'src/components/DarkModeToggle/DarkModeToggle'
+import FullScreenToggle from 'src/components/FullScreenToggle/FullScreenToggle'
 import GeneralShortcuts from 'src/components/GeneralShortcuts/GeneralShortcuts'
 import NavigationShortcuts from 'src/components/NavigationShortcuts/NavigationShortcuts'
 
@@ -37,6 +38,7 @@ export function SettingsPage() {
             colorScheme={colorScheme}
             toggleColorScheme={toggleColorScheme}
           />
+          <FullScreenToggle dark={dark} />
           <Center>
             <Title order={2} className={classes.title}>
               Keyboard Shortcuts Reference

@@ -18,12 +18,22 @@ export function BlogLayout({ children }: BlogLayoutProps) {
 
   return (
     <>
-      <NavbarContext.Provider value={{ showNavbar, setShowNavbar }}>
+      {/* <NavbarContext.Provider value={{ showNavbar, setShowNavbar }}> */}
         <AppShell
           padding="md"
           fixed
-          navbar={<Navigation />}
-          header={<AppBar />}
+          navbar={
+            <Navigation
+              showNavbar={showNavbar}
+              setShowNavbar={setShowNavbar}
+             />
+          }
+          header={
+            <AppBar
+              showNavbar={showNavbar}
+              setShowNavbar={setShowNavbar}
+             />
+          }
           footer={<Footer />}
           styles={(theme) => ({
             main: {
@@ -55,7 +65,7 @@ export function BlogLayout({ children }: BlogLayoutProps) {
             )}
           </Transition>
         </Affix>
-      </NavbarContext.Provider>
+      {/* </NavbarContext.Provider> */}
     </>
   )
 }

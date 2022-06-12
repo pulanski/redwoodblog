@@ -36,16 +36,16 @@ const useStyles = createStyles((theme) => ({
 
 const generalShortcuts = [
   {
+    key: 'F',
+    description: 'Toggle fullscreen',
+  },
+  {
     key: 'J',
     description: 'Toggle dark mode',
   },
   {
     key: 'K',
     description: 'Open Spotlight',
-  },
-  {
-    key: 'L',
-    description: 'Toggle fullscreen',
   },
   {
     key: 'M',

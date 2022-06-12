@@ -15,13 +15,17 @@ import Routes from 'src/Routes'
 import './scaffold.css'
 import './index.css'
 import { useState } from 'react'
-import { useHotkeys } from '@mantine/hooks'
+import { useFullscreen, useHotkeys } from '@mantine/hooks'
 import { actions } from './SpotlightActions'
 import { navigate, routes } from '@redwoodjs/router'
 
 export function App() {
+
+  const { toggle, fullscreen } = useFullscreen();
+
   useHotkeys([
     ['mod+J', () => toggleColorScheme()],
+    ['mod+F', () => toggle],
     ['mod+1', () => navigate(routes.home())],
     ['mod+6', () => navigate(routes.settings())],
   ])
