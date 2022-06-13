@@ -59,6 +59,10 @@ const generalShortcuts = [
     key: '.',
     description: 'Open System Info',
   },
+  {
+    key: 'D',
+    description: 'Toggle RTL Mode',
+  }
 ]
 
 const GeneralShortcuts = () => {

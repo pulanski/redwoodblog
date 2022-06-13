@@ -29,3 +29,19 @@ model User {
   resetToken          String?
   resetTokenExpiresAt DateTime?
 }
+
+// model Comment {
+//   id          Int @id @default(autoincrement())
+//   content     String
+//   // author      User @relation(fields: [id])
+//   // post        Post @relation(fields: [id])
+//   createdAt   DateTime @default(now())
+// }
+
+model Contact {
+  id          Int @id @default(autoincrement())
+  name        String
+  email       String
+  message     String
+  createdAt   DateTime @default(now())
+}

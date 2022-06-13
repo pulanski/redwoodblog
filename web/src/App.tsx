@@ -1,5 +1,4 @@
 import { AuthProvider } from '@redwoodjs/auth'
-
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 import {
@@ -8,6 +7,7 @@ import {
   Global,
   MantineProvider,
 } from '@mantine/core'
+import rtlPlugin from 'stylis-plugin-rtl'
 import { SpotlightProvider } from '@mantine/spotlight'
 import { Search } from 'tabler-icons-react'
 
@@ -20,6 +20,7 @@ import { useState } from 'react'
 import { useHotkeys } from '@mantine/hooks'
 import { actions } from './SpotlightActions'
 import { navigate, routes } from '@redwoodjs/router'
+import { RtlContext } from './RtlContext'
 
 export function App() {
   // const { toggle, fullscreen } = useFullscreen()
@@ -27,6 +28,7 @@ export function App() {
   useHotkeys([
     ['mod+J', () => toggleColorScheme()],
     // ['mod+F', () => toggle],
+    ['mod+D', () => setRtl(!rtl)],
     ['mod+1', () => navigate(routes.home())],
     ['mod+,', () => navigate(routes.settings())],
   ])
@@ -47,6 +49,11 @@ export function App() {
               toggleColorScheme={toggleColorScheme}
             >
               <MantineProvider
+                emotionOptions={rtl
+                  ? // rtl cache
+                  { key: 'mantine-rtl', stylisPlugins: [rtlPlugin] }
+                  : // ltr cache
+                  { key: 'mantine' }}
                 theme={{
                   colorScheme,
                   dir: rtl ? 'rtl' : 'ltr',
@@ -80,9 +87,11 @@ export function App() {
                       },
                     })}
                   />
-                  <div dir={rtl ? 'rtl' : 'ltr'}>
-                    <Routes />
-                  </div>
+                  <RtlContext.Provider value={{ rtl, setRtl }}>
+                    <div dir={rtl ? 'rtl' : 'ltr'}>
+                      <Routes />
+                    </div>
+                  </RtlContext.Provider>
                 </SpotlightProvider>
               </MantineProvider>
             </ColorSchemeProvider>

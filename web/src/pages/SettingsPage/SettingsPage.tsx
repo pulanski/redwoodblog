@@ -5,12 +5,14 @@ import {
   Stack,
   Center,
   createStyles,
+  Button,
 } from '@mantine/core'
 import { MetaTags } from '@redwoodjs/web'
 import DarkModeToggle from 'src/components/DarkModeToggle/DarkModeToggle'
 import FullScreenToggle from 'src/components/FullScreenToggle/FullScreenToggle'
 import GeneralShortcuts from 'src/components/GeneralShortcuts/GeneralShortcuts'
 import NavigationShortcuts from 'src/components/NavigationShortcuts/NavigationShortcuts'
+import RtlModeToggle from 'src/components/RtlModeToggle/RtlModeToggle'
 
 const useStyles = createStyles((theme) => ({
   title: {
@@ -33,6 +35,8 @@ export function SettingsPage() {
 
       <Group position="center" my="xl">
         <Stack>
+
+          <RtlModeToggle dark={dark} />
           <DarkModeToggle
             dark={dark}
             colorScheme={colorScheme}

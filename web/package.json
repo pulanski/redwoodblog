@@ -35,6 +35,7 @@
     "react-dom": "17.0.2"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.0.0-rc.13"
+    "@tauri-apps/cli": "^1.0.0-rc.13",
+    "cypress": "^10.1.0"
   }
 }
