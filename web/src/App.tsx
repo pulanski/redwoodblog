@@ -1,3 +1,5 @@
+import { AuthProvider } from '@redwoodjs/auth'
+
 import { FatalErrorBoundary, RedwoodProvider } from '@redwoodjs/web'
 import { RedwoodApolloProvider } from '@redwoodjs/web/apollo'
 import {
@@ -26,7 +28,7 @@ export function App() {
     ['mod+J', () => toggleColorScheme()],
     // ['mod+F', () => toggle],
     ['mod+1', () => navigate(routes.home())],
-    ['mod+6', () => navigate(routes.settings())],
+    ['mod+,', () => navigate(routes.settings())],
   ])
 
   const [colorScheme, setColorScheme] = useState<ColorScheme>('dark')
@@ -38,52 +40,54 @@ export function App() {
   return (
     <FatalErrorBoundary page={FatalErrorPage}>
       <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
-        <RedwoodApolloProvider>
-          <ColorSchemeProvider
-            colorScheme={colorScheme}
-            toggleColorScheme={toggleColorScheme}
-          >
-            <MantineProvider
-              theme={{
-                colorScheme,
-                dir: rtl ? 'rtl' : 'ltr',
-              }}
+        <AuthProvider type="dbAuth">
+          <RedwoodApolloProvider>
+            <ColorSchemeProvider
+              colorScheme={colorScheme}
+              toggleColorScheme={toggleColorScheme}
             >
-              <SpotlightProvider
-                actions={actions}
-                searchIcon={<Search size={18} />}
-                searchPlaceholder="Search..."
-                shortcut="mod + k"
-                nothingFoundMessage="Nothing found..."
-                highlightQuery
+              <MantineProvider
+                theme={{
+                  colorScheme,
+                  dir: rtl ? 'rtl' : 'ltr',
+                }}
               >
-                <Global
-                  styles={(theme) => ({
-                    '*, *::before, *::after': {
-                      boxSizing: 'border-box',
-                    },
+                <SpotlightProvider
+                  actions={actions}
+                  searchIcon={<Search size={18} />}
+                  searchPlaceholder="Search..."
+                  shortcut="mod + k"
+                  nothingFoundMessage="Nothing found..."
+                  highlightQuery
+                >
+                  <Global
+                    styles={(theme) => ({
+                      '*, *::before, *::after': {
+                        boxSizing: 'border-box',
+                      },
 
-                    body: {
-                      ...theme.fn.fontStyles(),
-                      backgroundColor:
-                        theme.colorScheme === 'dark'
-                          ? theme.colors.dark[7]
-                          : theme.white,
-                      color:
-                        theme.colorScheme === 'dark'
-                          ? theme.colors.dark[0]
-                          : theme.black,
-                      lineHeight: theme.lineHeight,
-                    },
-                  })}
-                />
-                <div dir={rtl ? 'rtl' : 'ltr'}>
-                  <Routes />
-                </div>
-              </SpotlightProvider>
-            </MantineProvider>
-          </ColorSchemeProvider>
-        </RedwoodApolloProvider>
+                      body: {
+                        ...theme.fn.fontStyles(),
+                        backgroundColor:
+                          theme.colorScheme === 'dark'
+                            ? theme.colors.dark[7]
+                            : theme.white,
+                        color:
+                          theme.colorScheme === 'dark'
+                            ? theme.colors.dark[0]
+                            : theme.black,
+                        lineHeight: theme.lineHeight,
+                      },
+                    })}
+                  />
+                  <div dir={rtl ? 'rtl' : 'ltr'}>
+                    <Routes />
+                  </div>
+                </SpotlightProvider>
+              </MantineProvider>
+            </ColorSchemeProvider>
+          </RedwoodApolloProvider>
+        </AuthProvider>
       </RedwoodProvider>
     </FatalErrorBoundary>
   )

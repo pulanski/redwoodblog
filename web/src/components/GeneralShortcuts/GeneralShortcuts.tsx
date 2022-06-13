@@ -48,8 +48,16 @@ const generalShortcuts = [
     description: 'Open Spotlight',
   },
   {
-    key: 'M',
-    description: 'Toggle sidebar',
+    key: 'B',
+    description: 'Open Navigation',
+  },
+  {
+    key: ',',
+    description: 'Open Settings',
+  },
+  {
+    key: '.',
+    description: 'Open System Info',
   },
 ]
 

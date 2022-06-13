@@ -1,4 +1,4 @@
-import { Badge, Title, Text, Code, Stack } from '@mantine/core'
+import { Badge, Text, Code, Stack } from '@mantine/core'
 import {
   useColorScheme,
   useIdle,
@@ -19,9 +19,6 @@ const ClientSystemInformation = () => {
     <>
       <div ref={ref}>
         <Stack>
-          <Title mt={60} mb={30}>
-            Client System Information
-          </Title>
           <Badge color={idle ? 'blue' : 'teal'}>
             Current state: {idle ? 'idle' : 'not idle'}
           </Badge>

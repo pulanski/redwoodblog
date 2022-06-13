@@ -7,7 +7,6 @@ import {
   createStyles,
 } from '@mantine/core'
 import { MetaTags } from '@redwoodjs/web'
-import ClientSystemInformation from 'src/components/ClientSystemInformation/ClientSystemInformation'
 import DarkModeToggle from 'src/components/DarkModeToggle/DarkModeToggle'
 import FullScreenToggle from 'src/components/FullScreenToggle/FullScreenToggle'
 import GeneralShortcuts from 'src/components/GeneralShortcuts/GeneralShortcuts'
@@ -47,7 +46,6 @@ export function SettingsPage() {
           </Center>
           <GeneralShortcuts />
           <NavigationShortcuts />
-          <ClientSystemInformation />
         </Stack>
       </Group>
     </>

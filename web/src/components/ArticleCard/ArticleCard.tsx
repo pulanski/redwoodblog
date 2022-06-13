@@ -47,10 +47,10 @@ const ArticleCard = ({ article }) => {
           {article.title}
         </Text>
         <Stack>
-          <Badge color="pink" variant="light">
+          <Badge color="red" variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}>
             {timeTagDate(article.createdAt)}
           </Badge>
-          <Badge color="cyan" variant="light">
+          <Badge color="pink" variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}>
             {timeTagTime(article.createdAt)}
           </Badge>
         </Stack>
@@ -67,8 +67,8 @@ const ArticleCard = ({ article }) => {
       </Text>
 
       <Button
-        variant="light"
-        color="blue"
+        variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}
+        color="orange"
         style={{
           marginTop: 14,
         }}

@@ -8,13 +8,17 @@ import NotFoundHeader from './NotFoundHeader'
 describe('NotFoundHeader', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<NotFoundHeader links={[
-        { link: '/home', label: 'Home' },
-        { link: '/about', label: 'About' },
-        { link: '/contact', label: 'Contact' },
-        { link: '/settings', label: 'Settings' },
-        // { link: 'login', label: 'Login' },
-      ]} />)
+      render(
+        <NotFoundHeader
+          links={[
+            { link: '/home', label: 'Home' },
+            { link: '/about', label: 'About' },
+            { link: '/contact', label: 'Contact' },
+            { link: '/settings', label: 'Settings' },
+            // { link: 'login', label: 'Login' },
+          ]}
+        />
+      )
     }).not.toThrow()
   })
 })

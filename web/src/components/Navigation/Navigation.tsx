@@ -9,8 +9,10 @@ import {
   Bookmarks,
   Notebook,
   Edit,
+  Login,
 } from 'tabler-icons-react'
-import { navigate } from '@redwoodjs/router'
+import { navigate, routes } from '@redwoodjs/router'
+import { useAuth } from '@redwoodjs/auth'
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('icon')
@@ -116,6 +118,9 @@ export function Navigation({ showNavbar }) {
   const { classes, cx } = useStyles()
   const [active, setActive] = useState('Billing')
 
+  // Handle User Auth State
+  const { isAuthenticated, currentUser, logOut } = useAuth()
+
   const links = data.map((item) => (
     <a
       className={cx(classes.link, {
@@ -150,14 +155,39 @@ export function Navigation({ showNavbar }) {
               <span>Change account</span>
             </a>
 
-            <a
-              href="#"
-              className={classes.link}
-              onClick={(event) => event.preventDefault()}
-            >
-              <Logout className={classes.linkIcon} />
-              <span>Logout</span>
-            </a>
+            {isAuthenticated ? (
+              <div
+                onClick={logOut}
+                style={{
+                  cursor: 'pointer',
+                }}
+              >
+                <a
+                  href="#"
+                  className={classes.link}
+                  onClick={(event) => event.preventDefault()}
+                >
+                  <Logout className={classes.linkIcon} />
+                  <span>Logout</span>
+                </a>
+              </div>
+            ) : (
+              <div
+                onClick={() => navigate(routes.login())}
+                style={{
+                  cursor: 'pointer',
+                }}
+              >
+                <a
+                  href="/login"
+                  className={classes.link}
+                  onClick={(event) => event.preventDefault()}
+                >
+                  <Login className={classes.linkIcon} />
+                  <span>Login</span>
+                </a>
+              </div>
+            )}
           </Navbar.Section>
         </Navbar>
       )}

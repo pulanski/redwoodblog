@@ -36,10 +36,6 @@ const navigationShortcuts = [
     key: '5',
     description: 'Contact us',
   },
-  {
-    key: '6',
-    description: 'Configure settings',
-  },
 ]
 
 const useStyles = createStyles((theme) => ({
