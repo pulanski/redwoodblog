@@ -12,21 +12,21 @@ import AppBar from 'src/components/AppBar/AppBar'
 import Navigation from 'src/components/Navigation/Navigation'
 import Footer from 'src/components/Footer/Footer'
 import { ArrowNarrowUp, Home } from 'tabler-icons-react'
-import { useHotkeys, useWindowScroll } from '@mantine/hooks'
+import { useHotkeys, useMouse, useWindowScroll } from '@mantine/hooks'
 import { navigate, routes, useLocation } from '@redwoodjs/router'
 import SystemInfoModal from 'src/components/SystemInfoModal/SystemInfoModal'
+import { MouseContext } from 'src/MouseContext'
 
 type BlogLayoutProps = {
   children?: React.ReactNode
 }
-
-export const NavbarContext = createContext(null)
 
 export function BlogLayout({ children }: BlogLayoutProps) {
   // Handle UI State for Navbar, Srolling, and System Info Modal
   const [showNavbar, setShowNavbar] = useState(true)
   const [scroll, scrollTo] = useWindowScroll()
   const [clientInfoOpened, setClientInfoOpened] = useState(false)
+  const { ref, x, y } = useMouse()
 
   useHotkeys([
     ['mod+B', () => setShowNavbar(!showNavbar)],
@@ -52,44 +52,47 @@ export function BlogLayout({ children }: BlogLayoutProps) {
 
   return (
     <>
-      <SystemInfoModal
-        clientInfoOpened={clientInfoOpened}
-        setClientInfoOpened={setClientInfoOpened}
-      />
-      {/* <NavbarContext.Provider value={{ showNavbar, setShowNavbar }}> */}
-      <AppShell
-        padding="md"
-        fixed
-        navbar={<Navigation showNavbar={showNavbar} />}
-        header={
-          <AppBar showNavbar={showNavbar} setShowNavbar={setShowNavbar} />
-        }
-        footer={<Footer />}
-        styles={(theme) => ({
-          main: {
-            backgroundColor:
-              theme.colorScheme === 'dark'
-                ? theme.colors.dark[8]
-                : theme.colors.gray[0],
-          },
-        })}
-      >
-        <Group>
-          <Badge
-            color="red"
-            size="lg"
-            style={{ cursor: 'pointer' }}
-            onClick={() => navigate(routes.home())}
-            leftSection={
-              <>
-                <Home size={24} style={{ paddingTop: '0.5rem' }} />
-              </>
+      <MouseContext.Provider value={{ x, y }}>
+        <div ref={ref}>
+          <SystemInfoModal
+            clientInfoOpened={clientInfoOpened}
+            setClientInfoOpened={setClientInfoOpened}
+          />
+          <AppShell
+            padding="md"
+            fixed
+            navbar={<Navigation showNavbar={showNavbar} />}
+            header={
+              <AppBar showNavbar={showNavbar} setShowNavbar={setShowNavbar} />
             }
-          ></Badge>
-          /<Breadcrumbs separator="/">{items}</Breadcrumbs>
-        </Group>
-        {children}
-      </AppShell>
+            footer={<Footer />}
+            styles={(theme) => ({
+              main: {
+                backgroundColor:
+                  theme.colorScheme === 'dark'
+                    ? theme.colors.dark[8]
+                    : theme.colors.gray[0],
+              },
+            })}
+          >
+            <Group>
+              <Badge
+                color="red"
+                size="lg"
+                style={{ cursor: 'pointer' }}
+                onClick={() => navigate(routes.home())}
+                leftSection={
+                  <>
+                    <Home size={24} style={{ paddingTop: '0.5rem' }} />
+                  </>
+                }
+              ></Badge>
+              /<Breadcrumbs separator="/">{items}</Breadcrumbs>
+            </Group>
+            {children}
+          </AppShell>
+        </div>
+      </MouseContext.Provider>
       <Affix position={{ bottom: 20, right: 20 }}>
         <Transition
           transition="slide-up"
@@ -110,7 +113,6 @@ export function BlogLayout({ children }: BlogLayoutProps) {
           )}
         </Transition>
       </Affix>
-      {/* </NavbarContext.Provider> */}
     </>
   )
 }

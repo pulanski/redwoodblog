@@ -4,11 +4,25 @@ import {
   FieldError,
   Label,
   TextField,
+  NumberField,
   Submit,
 } from '@redwoodjs/forms'
 
+
+
 const PostForm = (props) => {
   const onSubmit = (data) => {
+
+  
+    
+    
+  
+    
+    
+  
+    
+    
+  
     props.onSave(data, props?.post?.id)
   }
 
@@ -21,7 +35,7 @@ const PostForm = (props) => {
           titleClassName="rw-form-error-title"
           listClassName="rw-form-error-list"
         />
-
+      
         <Label
           name="title"
           className="rw-label"
@@ -29,14 +43,15 @@ const PostForm = (props) => {
         >
           Title
         </Label>
-
-        <TextField
-          name="title"
-          defaultValue={props.post?.title}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
+        
+          <TextField
+            name="title"
+            defaultValue={props.post?.title}
+            className="rw-input"
+            errorClassName="rw-input rw-input-error"
+            validation={{ required: true }}
+          />
+        
 
         <FieldError name="title" className="rw-field-error" />
 
@@ -47,19 +62,42 @@ const PostForm = (props) => {
         >
           Content
         </Label>
-
-        <TextField
-          name="content"
-          defaultValue={props.post?.content}
-          className="rw-input"
-          errorClassName="rw-input rw-input-error"
-          validation={{ required: true }}
-        />
+        
+          <TextField
+            name="content"
+            defaultValue={props.post?.content}
+            className="rw-input"
+            errorClassName="rw-input rw-input-error"
+            validation={{ required: true }}
+          />
+        
 
         <FieldError name="content" className="rw-field-error" />
 
+        <Label
+          name="numLikes"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Num likes
+        </Label>
+        
+          <NumberField
+            name="numLikes"
+            defaultValue={props.post?.numLikes}
+            className="rw-input"
+            errorClassName="rw-input rw-input-error"
+            validation={{ required: true }}
+          />
+        
+
+        <FieldError name="numLikes" className="rw-field-error" />
+
         <div className="rw-button-group">
-          <Submit disabled={props.loading} className="rw-button rw-button-blue">
+          <Submit
+            disabled={props.loading}
+            className="rw-button rw-button-blue"
+          >
             Save
           </Submit>
         </div>

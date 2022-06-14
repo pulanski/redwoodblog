@@ -17,7 +17,7 @@ import Routes from 'src/Routes'
 import './scaffold.css'
 import './index.css'
 import { useState } from 'react'
-import { useHotkeys } from '@mantine/hooks'
+import { useHotkeys, useMouse } from '@mantine/hooks'
 import { actions } from './SpotlightActions'
 import { navigate, routes } from '@redwoodjs/router'
 import { RtlContext } from './RtlContext'
@@ -30,6 +30,7 @@ export function App() {
     // ['mod+F', () => toggle],
     ['mod+D', () => setRtl(!rtl)],
     ['mod+1', () => navigate(routes.home())],
+    ['mod+5', () => navigate(routes.contact())],
     ['mod+,', () => navigate(routes.settings())],
   ])
 

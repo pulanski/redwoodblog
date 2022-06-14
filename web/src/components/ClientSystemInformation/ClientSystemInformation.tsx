@@ -6,18 +6,21 @@ import {
   useOs,
   useWindowScroll,
 } from '@mantine/hooks'
+import { useContext } from 'react'
+import { MouseContext } from 'src/MouseContext'
 import NetworkStatus from '../NetworkStatus/NetworkStatus'
 
 const ClientSystemInformation = () => {
   const idle = useIdle(2000, { initialState: false })
   const os = useOs()
   const [scroll] = useWindowScroll()
-  const { ref, x, y } = useMouse()
+  // const { ref, x, y } = useMouse()
   const colorScheme = useColorScheme()
+  const { x, y } = useContext(MouseContext)
 
   return (
     <>
-      <div ref={ref}>
+      {/* <div ref={ref}> */}
         <Stack>
           <Badge color={idle ? 'blue' : 'teal'}>
             Current state: {idle ? 'idle' : 'not idle'}
@@ -40,7 +43,7 @@ const ClientSystemInformation = () => {
           </Text>
           <NetworkStatus />
         </Stack>
-      </div>
+      {/* </div> */}
     </>
   )
 }

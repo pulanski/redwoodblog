@@ -3,11 +3,13 @@ import {
   Button,
   Card,
   Group,
+  Space,
   Stack,
   Text,
   useMantineTheme,
 } from '@mantine/core'
 import { navigate, routes } from '@redwoodjs/router'
+import { Book, HeartPlus } from 'tabler-icons-react'
 
 const timeTagDate = (datetime) => {
   return (
@@ -66,22 +68,33 @@ const ArticleCard = ({ article }) => {
         {article.content}
       </Text>
 
-      <Button
-        variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}
-        color="orange"
-        style={{
-          marginTop: 14,
-        }}
-        onClick={() => {
-          navigate(
-            routes.article({
-              id: article.id,
-            })
-          )
-        }}
-      >
-        Read more
-      </Button>
+      <Group position='right' style={{
+        marginTop: 14,
+      }}>
+
+
+        <Button color='red' variant='subtle' leftIcon={<HeartPlus />}>
+          Like
+          <Space w="sm" />
+          {article.numLikes}
+        </Button>
+
+        <Button
+          variant={theme.colorScheme === 'dark' ? 'light' : 'outline'}
+          color="orange"
+          leftIcon={<Book />}
+
+          onClick={() => {
+            navigate(
+              routes.article({
+                id: article.id,
+              })
+            )
+          }}
+        >
+          Read more
+        </Button>
+      </Group>
     </Card>
   )
 }

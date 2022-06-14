@@ -9,6 +9,7 @@ export const QUERY = gql`
       title
       content
       createdAt
+      numLikes
     }
   }
 `

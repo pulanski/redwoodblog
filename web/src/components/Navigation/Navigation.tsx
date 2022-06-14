@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { createStyles, Navbar } from '@mantine/core'
+import { createStyles, Navbar, Tooltip } from '@mantine/core'
 import {
   Settings,
   SwitchHorizontal,
@@ -101,17 +101,17 @@ const useStyles = createStyles((theme, _params, getRef) => {
 })
 
 const data = [
-  { link: '/home', label: 'Home', icon: Home },
-  { link: '/posts', label: 'New Post', icon: Wallpaper },
-  { link: '/collection', label: 'Collection', icon: Notebook }, // Created Posts
-  { link: '/bookmarks', label: 'Bookmarks', icon: Bookmarks }, // Saved Posts
+  { link: '/home', label: 'Home', icon: Home, shortcutKey: '1' },
+  { link: '/posts', label: 'New Post', icon: Wallpaper, shortcutKey: '2' },
+  { link: '/collection', label: 'Collection', icon: Notebook, shortcutKey: '3' }, // Created Posts
+  { link: '/bookmarks', label: 'Bookmarks', icon: Bookmarks, shortcutKey: '4' }, // Saved Posts
   // { link: '', label: 'Billing', icon: Receipt2 },
   // { link: '', label: 'Security', icon: Fingerprint },
   // { link: '', label: 'SSH Keys', icon: Key },
   // { link: '', label: 'Databases', icon: DatabaseImport },
   // { link: '', label: 'Authentication', icon: TwoFA },
-  { link: '/contact', label: 'Contact', icon: Edit },
-  { link: '/settings', label: 'Settings', icon: Settings },
+  { link: '/contact', label: 'Contact', icon: Edit, shortcutKey: '5' },
+  { link: '/settings', label: 'Settings', icon: Settings, shortcutKey: ',' },
 ]
 
 export function Navigation({ showNavbar }) {
@@ -122,28 +122,32 @@ export function Navigation({ showNavbar }) {
   const { isAuthenticated, currentUser, logOut } = useAuth()
 
   const links = data.map((item) => (
-    <a
-      className={cx(classes.link, {
-        [classes.linkActive]: item.label === active,
-      })}
-      href={item.link}
-      key={item.label}
-      onClick={(event) => {
-        event.preventDefault()
-        setActive(item.label)
-        navigate(item.link)
-      }}
-    >
-      <item.icon className={classes.linkIcon} />
-      <span>{item.label}</span>
-    </a>
+      <a
+        className={cx(classes.link, {
+          [classes.linkActive]: item.label === active,
+        })}
+        href={item.link}
+        key={item.label}
+        onClick={(event) => {
+          event.preventDefault()
+          setActive(item.label)
+          navigate(item.link)
+        }}
+      >
+        <item.icon className={classes.linkIcon} />
+      <Tooltip label={'⌘ + ' + item.shortcutKey} position='right' withArrow transitionDuration={0}>
+          <span>{item.label}</span>
+        </Tooltip>
+      </a>
   ))
 
   return (
     <>
       {showNavbar && (
         <Navbar width={{ sm: 200 }} p="md" className={classes.navbar}>
-          <Navbar.Section grow>{links}</Navbar.Section>
+          <Navbar.Section grow>
+            {links}
+          </Navbar.Section>
 
           <Navbar.Section className={classes.footer}>
             <a

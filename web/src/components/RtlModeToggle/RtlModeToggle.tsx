@@ -1,7 +1,7 @@
 import { ActionIcon, Text, Group, Kbd, Tooltip } from "@mantine/core"
 import { useContext } from "react"
 import { RtlContext } from "src/RtlContext"
-import { AlignLeft, AlignRight } from "tabler-icons-react"
+import { TextDirectionLtr, TextDirectionRtl } from "tabler-icons-react"
 
 const RtlModeToggle = ({ dark }) => {
 
@@ -32,7 +32,7 @@ const RtlModeToggle = ({ dark }) => {
             onClick={() => setRtl(!rtl)}
             title="Toggle RTL Mode"
           >
-            {rtl ? <AlignLeft size={18} /> : <AlignRight size={18} />}
+            {rtl ? <TextDirectionLtr size={18} /> : <TextDirectionRtl size={18} />}
             {/* {dark ? <Sun size={18} /> : <MoonStars size={18} />} */}
           </ActionIcon>
         </Group>

@@ -11,6 +11,7 @@ export const QUERY = gql`
       id
       title
       content
+      numLikes
       createdAt
     }
   }
@@ -22,7 +23,10 @@ export const Empty = () => {
   return (
     <div className="rw-text-center">
       {'No posts yet. '}
-      <Link to={routes.newPost()} className="rw-link">
+      <Link
+        to={routes.newPost()}
+        className="rw-link"
+      >
         {'Create one?'}
       </Link>
     </div>

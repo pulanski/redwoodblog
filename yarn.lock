@@ -1896,7 +1896,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.5.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.14.6, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.5.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.8.7, @babel/runtime@npm:^7.9.2":
   version: 7.18.3
   resolution: "@babel/runtime@npm:7.18.3"
   dependencies:
@@ -12896,9 +12896,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:^10.1.0":
-  version: 10.1.0
-  resolution: "cypress@npm:10.1.0"
+"cypress@npm:9.6.0":
+  version: 9.6.0
+  resolution: "cypress@npm:9.6.0"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -12944,7 +12944,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 66059b2363c8121659efc23e1c3ff834899872f0904be1de0bacc4c0094d078416f45d89eba8c227a2376ea932c0376d6a63aced0f5f8a2794a78d27f90e2b8e
+  checksum: 9f590c55c4cf7271aed1b4d0260dce9fd90333a6f56428b68a39794af6ea1421bccad921bcd43d5b57fb0572ce6ef8f16d5d477af610c16d4fc564db31baf066
   languageName: node
   linkType: hard
 
@@ -17897,7 +17897,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"html-escaper@npm:^2.0.0":
+"html-escaper@npm:^2.0.0, html-escaper@npm:^2.0.2":
   version: 2.0.2
   resolution: "html-escaper@npm:2.0.2"
   checksum: 208e8a12de1a6569edbb14544f4567e6ce8ecc30b9394fcaa4e7bb1e60c12a7c9a1ed27e31290817157e8626f3a4f29e76c8747030822eb84a6abb15c255f0a0
@@ -17952,6 +17952,15 @@ __metadata:
   bin:
     html-minifier: ./cli.js
   checksum: 010bd1a1304bca784e36b5a09db442a47c531cef80d9215149f7c08273bd9ba98dc9e3851e76c39d6c94ac4b182d08cfea3c4379604bd52072876a16389b2fbf
+  languageName: node
+  linkType: hard
+
+"html-parse-stringify@npm:^3.0.1":
+  version: 3.0.1
+  resolution: "html-parse-stringify@npm:3.0.1"
+  dependencies:
+    void-elements: 3.1.0
+  checksum: 159292753d48b84d216d61121054ae5a33466b3db5b446e2ffc093ac077a411a99ce6cbe0d18e55b87cf25fa3c5a86c4d8b130b9719ec9b66623259000c72c15
   languageName: node
   linkType: hard
 
@@ -18230,6 +18239,24 @@ __metadata:
   bin:
     husky: lib/bin.js
   checksum: aacb2b8fbfed0ec161f94e9b08d422c51fec073def4e165e57da42f47c10f520a5f0a88b42efc667784e314a1af83cf1994b582cd6f4b0333739921a601c6187
+  languageName: node
+  linkType: hard
+
+"i18next-browser-languagedetector@npm:^6.1.4":
+  version: 6.1.4
+  resolution: "i18next-browser-languagedetector@npm:6.1.4"
+  dependencies:
+    "@babel/runtime": ^7.14.6
+  checksum: 192d54fedc0bb545a208082620d943b7d8af13e4f33acdfab00e5a2983c24c98515cbb37f3d4c01afb9bee97313665b54a0b52c508da4830015262295762d8c2
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^21.8.9":
+  version: 21.8.9
+  resolution: "i18next@npm:21.8.9"
+  dependencies:
+    "@babel/runtime": ^7.17.2
+  checksum: 381208b4218e1d287af42e40d58879cdf46a7505db4ca1414ba6bb7ec3e387dfe2524182a980bf5644052600fcc7142505ef292eaa37b130aae7c3cbc17257c7
   languageName: node
   linkType: hard
 
@@ -26234,6 +26261,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-i18next@npm:^11.17.1":
+  version: 11.17.1
+  resolution: "react-i18next@npm:11.17.1"
+  dependencies:
+    "@babel/runtime": ^7.14.5
+    html-escaper: ^2.0.2
+    html-parse-stringify: ^3.0.1
+  peerDependencies:
+    i18next: ">= 19.0.0"
+    react: ">= 16.8.0"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: d1359695c55bec02a737aeae4c948e055d366cc5d3017463a68759b7cf06dd560eb26f7e22d400a7f2332b4b166abf72529cf2d09d4571befad11d79de142615
+  languageName: node
+  linkType: hard
+
 "react-inspector@npm:^5.1.0":
   version: 5.1.1
   resolution: "react-inspector@npm:5.1.1"
@@ -27357,12 +27403,7 @@ __metadata:
   dependencies:
     "@redwoodjs/core": 1.5.1
     cz-conventional-changelog: 3.3.0
-    date-fns: ^2.28.0
     husky: ^7.0.0
-    react-undraw-illustrations: ^2.0.3
-    stylis: ^4.1.1
-    stylis-plugin-rtl: ^2.1.1
-    tabler-icons-react: ^1.48.1
     web: "workspace:^"
   languageName: unknown
   linkType: soft
@@ -31059,6 +31100,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"void-elements@npm:3.1.0":
+  version: 3.1.0
+  resolution: "void-elements@npm:3.1.0"
+  checksum: 0b8686f9f9aa44012e9bd5eabf287ae0cde409b9a2854c5a2335cb83920c957668ac5876e3f0d158dd424744ac411a7270e64128556b451ed3bec875ef18534d
+  languageName: node
+  linkType: hard
+
 "vscode-jsonrpc@npm:8.0.1":
   version: 8.0.1
   resolution: "vscode-jsonrpc@npm:8.0.1"
@@ -31249,11 +31297,19 @@ __metadata:
     "@redwoodjs/web": 1.5.1
     "@tauri-apps/api": ^1.0.0-rc.6
     "@tauri-apps/cli": ^1.0.0-rc.13
-    cypress: ^10.1.0
+    cypress: 9.6.0
+    date-fns: ^2.28.0
     dayjs: ^1.11.3
+    i18next: ^21.8.9
+    i18next-browser-languagedetector: ^6.1.4
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
+    react-i18next: ^11.17.1
+    react-undraw-illustrations: ^2.0.3
+    stylis: ^4.1.1
+    stylis-plugin-rtl: ^2.1.1
+    tabler-icons-react: ^1.48.1
   languageName: unknown
   linkType: soft
 

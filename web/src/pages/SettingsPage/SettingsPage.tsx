@@ -35,14 +35,15 @@ export function SettingsPage() {
 
       <Group position="center" my="xl">
         <Stack>
+          <Title order={1} mt={30} mb={40} className={classes.title}>Settings</Title>
 
-          <RtlModeToggle dark={dark} />
           <DarkModeToggle
             dark={dark}
             colorScheme={colorScheme}
             toggleColorScheme={toggleColorScheme}
           />
           <FullScreenToggle dark={dark} />
+          <RtlModeToggle dark={dark} />
           <Center>
             <Title order={2} className={classes.title}>
               Keyboard Shortcuts Reference

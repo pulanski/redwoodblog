@@ -10,6 +10,7 @@ export const QUERY = gql`
       title
       content
       createdAt
+      numLikes
     }
   }
 `
@@ -23,7 +24,6 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ articles }: CellSuccessProps<ArticlesQuery>) => {
-  // const theme = useMantineTheme()
 
   return (
     <SimpleGrid
