@@ -1,0 +1,65 @@
+# Add 'husky' label to any husky configuration changes
+husky:
+  - '.husky/*'
+  - '.husky/**/*'
+
+# Add 'github' label to any github configuration changes
+github:
+  - '.github/*'
+  - '.github/**/*'
+
+# Add 'gh-workflows' label to any github workflow configuration changes
+gh-actions:
+  - '.github/workflows/*'
+  - '.github/workflows/**/*'
+
+# Add 'test' label to any change to *.test.ts and *.test.tsx
+# files within the web and api directories
+test:
+  - web/**/*.test.ts
+  - web/**/*.test.tsx
+  - api/**/*.test.ts
+  - api/**/*.test.tsx
+
+# Add 'test' label to any change to *.test.ts and *.test.tsx
+# files within the web and api directories
+jest:
+  - web/**/*.test.tsx
+
+# Add 'tauri' label to any changes in the web/src-tauri directory
+tauri:
+  - 'web/src-tauri/**/*'
+
+# Add 'prisma' label to any prisma related changes (e.g migrations, services)
+prisma:
+  - 'api/db/**/*'
+  - 'api/src/services/**/*'
+
+# Add 'graphql' label to any graphql related changes (e.g sdl)
+graphql:
+  - 'api/src/graphql/**/*'
+
+# Add 'storybook' label to any change to *.test.ts and *.test.tsx
+# files within the web and api directories
+storybook:
+  - web/**/*.stories.tsx
+
+# Add 'web` label to any change
+# within the web directory
+web:
+  - web/**/*
+
+# Add 'api` label to any change
+# made within the api/backend
+api:
+  - api/*
+  - api/**/*
+
+# # Add 'root-config' label to any root file changes
+# root-config:
+#   - '*'
+
+# # Add 'circleci' label to any circleci configuration changes
+# circleci:
+#   - '.circleci/*'
+#   - '.circleci/**/*'
