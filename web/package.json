@@ -28,7 +28,7 @@
     "@redwoodjs/forms": "1.5.1",
     "@redwoodjs/router": "1.5.1",
     "@redwoodjs/web": "1.5.1",
-    "@tauri-apps/api": "^1.0.0-rc.6",
+    "@tauri-apps/api": "^1.0.0-rc.7",
     "date-fns": "^2.28.0",
     "dayjs": "^1.11.3",
     "i18next": "^21.8.9",
