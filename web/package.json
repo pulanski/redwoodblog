@@ -22,7 +22,7 @@
     "@mantine/hooks": "^4.2.8",
     "@mantine/modals": "^4.2.9",
     "@mantine/notifications": "^4.2.8",
-    "@mantine/prism": "^4.2.8",
+    "@mantine/prism": "^4.2.9",
     "@mantine/spotlight": "^4.2.8",
     "@redwoodjs/auth": "1.5.1",
     "@redwoodjs/forms": "1.5.2",
