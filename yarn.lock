@@ -2148,12 +2148,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/is-prop-valid@npm:^1.1.2":
-  version: 1.1.2
-  resolution: "@emotion/is-prop-valid@npm:1.1.2"
+"@emotion/is-prop-valid@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "@emotion/is-prop-valid@npm:1.1.3"
   dependencies:
     "@emotion/memoize": ^0.7.4
-  checksum: 3e658290a9ece7f6149b84e13144e414d5d0535773f78dd15ffabb28ea4aa37346afbf9be178289ecb2a39ec49890a0199da1b86388393de7644f80598a12da6
+  checksum: 29b57699b1db1d6f0efdc86a65d161ffd7e715c17c14884fdbc31562c28166d0814284e3e79865bf1ffa21ca84aca3fa2a4b0d6cb68cde3c6b85faf16fa1727f
   languageName: node
   linkType: hard
 
@@ -2236,6 +2236,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/serialize@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "@emotion/serialize@npm:1.0.4"
+  dependencies:
+    "@emotion/hash": ^0.8.0
+    "@emotion/memoize": ^0.7.4
+    "@emotion/unitless": ^0.7.5
+    "@emotion/utils": ^1.0.0
+    csstype: ^3.0.2
+  checksum: ad2d5aba32177ae305918ccebd1e7a8d1d2886dc2083d9a031853169f9713012aee998ddd8a3d62d63eade1cfa4c077de5b260ed664a77583428d3df65dd193a
+  languageName: node
+  linkType: hard
+
 "@emotion/sheet@npm:^1.1.0":
   version: 1.1.0
   resolution: "@emotion/sheet@npm:1.1.0"
@@ -2243,14 +2256,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.8.1":
-  version: 11.8.1
-  resolution: "@emotion/styled@npm:11.8.1"
+"@emotion/styled@npm:^11.9.3":
+  version: 11.9.3
+  resolution: "@emotion/styled@npm:11.9.3"
   dependencies:
     "@babel/runtime": ^7.13.10
     "@emotion/babel-plugin": ^11.7.1
-    "@emotion/is-prop-valid": ^1.1.2
-    "@emotion/serialize": ^1.0.2
+    "@emotion/is-prop-valid": ^1.1.3
+    "@emotion/serialize": ^1.0.4
     "@emotion/utils": ^1.1.0
   peerDependencies:
     "@babel/core": ^7.0.0
@@ -2261,7 +2274,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: b8c9e917ac54454b6816b35c031b9368729393f62792e7498a26605c9349c6c16143ecfc0f99bd5eb0c503896811e39d12bc6c068061cd6b71db0992098b3589
+  checksum: 0f80eecde2a36cc1bc7065232ead9b4a4a9cba9a48fa8c508c8ae5cdcbfef36cce997f8087f47b008301f9b63ede76e5e43d2e7264a5a0548b8d179c492a41bc
   languageName: node
   linkType: hard
 
@@ -3519,17 +3532,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dropzone@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/dropzone@npm:4.2.8"
+"@mantine/dropzone@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/dropzone@npm:4.2.9"
   dependencies:
     react-dropzone: ^11.4.2
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 7e8b85a3b33fe74efab1e8478cc33c4bd8b803db1343e8422a4b49de808c66389bfca133a8340ca96b11eb4aaa42cc8049160f36509822d8b15aec6e0e86ce60
+  checksum: 107b356b4c476f3b49795c152db3446b511c0ec348884dfe262a3f300813dc871c09cd65d4c45101f45ce37e14713995f316f7c099c108b6526ac050866e66ad
   languageName: node
   linkType: hard
 
@@ -3551,15 +3564,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/modals@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/modals@npm:4.2.8"
+"@mantine/modals@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/modals@npm:4.2.9"
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: d7d554f8fb113a11a82a19e4ba8fa9862bc3f292264731d2686a43a3eb09d658ac4e54d7e38a324bb338eb4e99bb49cdd194b9f928a8f3f8b3e586951fecfd99
+  checksum: ff889246e4dc545412c926c1200d6daf30bffbc58bf7d4ed9f7a18957e9e31905bba843da59a251941522a66e5af7de0eecd8be61bc8cc943ef3417b6ba0c646
   languageName: node
   linkType: hard
 
@@ -4280,6 +4293,43 @@ __metadata:
     rwfw: dist/bins/rwfw.js
     tsc: dist/bins/tsc.js
   checksum: 19aa4c0f4eb1687ad520524963c697bb194eea7469db65dc4ca702655daea27e96751ca5094dbba3eb6ef950f2da7f8c75616ee5e0831aba7ab15642e6bfee14
+  languageName: node
+  linkType: hard
+
+"@redwoodjs/api@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@redwoodjs/api@npm:1.5.2"
+  dependencies:
+    "@babel/runtime-corejs3": 7.16.7
+    "@prisma/client": 3.14.0
+    core-js: 3.22.5
+    cross-undici-fetch: 0.1.27
+    crypto-js: 4.1.1
+    humanize-string: 2.1.0
+    jsonwebtoken: 8.5.1
+    jwks-rsa: 2.0.5
+    md5: 2.3.0
+    pascalcase: 1.0.0
+    pino: 7.11.0
+    title-case: 3.0.3
+    uuid: 8.3.2
+  peerDependencies:
+    "@clerk/clerk-sdk-node": 3.5.0
+    "@magic-sdk/admin": 1.4.1
+    firebase-admin: 10.2.0
+  peerDependenciesMeta:
+    "@clerk/clerk-sdk-node":
+      optional: true
+    "@magic-sdk/admin":
+      optional: true
+    firebase-admin:
+      optional: true
+  bin:
+    redwood: dist/bins/redwood.js
+    rw: dist/bins/redwood.js
+    rwfw: dist/bins/rwfw.js
+    tsc: dist/bins/tsc.js
+  checksum: 5ed9323ec8f5c1319ae88e056464d131900a2dbedab01d16d555d64b63766a2c88092a878ca0717f807a9f9b116d23a9a946318ddd31f9e307bc15c81dacc884
   languageName: node
   linkType: hard
 
@@ -5968,12 +6018,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/api@npm:^1.0.0-rc.6":
-  version: 1.0.0-rc.6
-  resolution: "@tauri-apps/api@npm:1.0.0-rc.6"
+"@tauri-apps/api@npm:^1.0.0-rc.7":
+  version: 1.0.0-rc.7
+  resolution: "@tauri-apps/api@npm:1.0.0-rc.7"
   dependencies:
-    type-fest: 2.12.2
-  checksum: ebfb02c3019d737e7c03ba858506e22103088f0e358054412b34b98798cdc4914894ed90664a0f5c3ee037578aea457b24ee6a985660cec6dddc928b9bddc5e1
+    type-fest: 2.13.0
+  checksum: 80596a27fb41b2b5774d7594641ea635183953dc6f21484e5903a3c0e4919c2ed2ae8ac755d7de564d4046861a31de11de11a087987b6f50eab10849617d1052
   languageName: node
   linkType: hard
 
@@ -8125,7 +8175,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
-    "@redwoodjs/api": 1.5.1
+    "@redwoodjs/api": 1.5.2
     "@redwoodjs/graphql-server": 1.5.1
   languageName: unknown
   linkType: soft
@@ -30162,10 +30212,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:2.12.2":
-  version: 2.12.2
-  resolution: "type-fest@npm:2.12.2"
-  checksum: a83ccfd2f07cb8cfab47b4a8ed3c4c111d98722295e25e899d8a68e574f5fe8ed5c1a0f1d76f63d3cc6721eccc9085ac4441a540030537ef314fd8f56a4a60c3
+"type-fest@npm:2.13.0":
+  version: 2.13.0
+  resolution: "type-fest@npm:2.13.0"
+  checksum: 8746231e055ed9298b09fe1f1b14f37438f69acf3f1bf5fc2d203d0279c381b69413375a5b71d03641c71fccce0527d38e842f661f3246b6b48f96ff7d2afe90
   languageName: node
   linkType: hard
 
@@ -31281,13 +31331,13 @@ __metadata:
   resolution: "web@workspace:web"
   dependencies:
     "@emotion/react": ^11.9.0
-    "@emotion/styled": ^11.8.1
+    "@emotion/styled": ^11.9.3
     "@mantine/core": 4.2.9
     "@mantine/dates": ^4.2.8
-    "@mantine/dropzone": ^4.2.8
+    "@mantine/dropzone": ^4.2.9
     "@mantine/form": ^4.2.8
     "@mantine/hooks": ^4.2.8
-    "@mantine/modals": ^4.2.8
+    "@mantine/modals": ^4.2.9
     "@mantine/notifications": ^4.2.8
     "@mantine/prism": ^4.2.8
     "@mantine/spotlight": ^4.2.8
@@ -31295,7 +31345,7 @@ __metadata:
     "@redwoodjs/forms": 1.5.1
     "@redwoodjs/router": 1.5.1
     "@redwoodjs/web": 1.5.1
-    "@tauri-apps/api": ^1.0.0-rc.6
+    "@tauri-apps/api": ^1.0.0-rc.7
     "@tauri-apps/cli": ^1.0.0-rc.13
     cypress: 9.6.0
     date-fns: ^2.28.0
