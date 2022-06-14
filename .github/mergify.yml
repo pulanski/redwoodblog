@@ -1,0 +1,31 @@
+pull_request_rules:
+  - name: Automatic merge ⬇️ on approval ✔
+    conditions:
+      - 'author=pulanski'
+      # https://docs.mergify.com/conditions/#about-status-checks
+    actions:
+      merge:
+        method: merge
+
+  - name: automatic merge for Dependabot pull requests
+    conditions:
+      - author~=^dependabot(|-preview)\[bot\]$
+    actions:
+      merge:
+        method: merge
+
+  - name: automatic merge for Snyk pull requests
+    conditions:
+      - title~=^\[Snyk\]
+      - head~=^snyk-fix
+      - check-success~=^security/snyk
+    actions:
+      merge:
+        method: merge
+
+  - name: automatic merge for Renovate pull requests
+    conditions:
+      - title~=^\[Renovate\]
+    actions:
+      merge:
+        method: merge
