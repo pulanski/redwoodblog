@@ -3657,15 +3657,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dates@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/dates@npm:4.2.8"
+"@mantine/dates@npm:4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/dates@npm:4.2.9"
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     dayjs: ^1.10.5
     react: ">=16.8.0"
-  checksum: bb6be18a5f3c17a8d21b668497f0cc5db6f0ebf3824af2ec01fbf1b53845c7c965a9626f414aa8cb348d0b40b4d657aa2eb30055f2b8dd804f15ddf7810f1704
+  checksum: 8dac14a171ced0a496b33c445305b7d6852860f42f21437437392ae4e234865be4c6a77469df65f285757c663573fed580bd973fe5f0239834db74bf57d5d4a2
   languageName: node
   linkType: hard
 
@@ -31704,7 +31704,7 @@ __metadata:
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.9.3
     "@mantine/core": 4.2.9
-    "@mantine/dates": ^4.2.8
+    "@mantine/dates": 4.2.9
     "@mantine/dropzone": ^4.2.9
     "@mantine/form": ^4.2.8
     "@mantine/hooks": ^4.2.8
