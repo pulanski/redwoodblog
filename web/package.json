@@ -44,6 +44,6 @@
   },
   "devDependencies": {
     "@tauri-apps/cli": "^1.0.0-rc.13",
-    "cypress": "9.6.0"
+    "cypress": "10.1.0"
   }
 }
