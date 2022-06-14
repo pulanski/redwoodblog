@@ -3692,12 +3692,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/hooks@npm:4.2.8"
+"@mantine/hooks@npm:4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/hooks@npm:4.2.9"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: a8c958efd59177a731586b1953277a263e8aede69577dfd72d65ebfd821bad07d91d88bceea28d470ac4a6dd64140d090b485545f6f8277879ad5360d6e573b9
+  checksum: 148cd3dbb770f6d72fdede0b38ee4e5932fadbd5ded8c598910d5e43750a6fc0245d087f36c27cb544fa6e01980af54e1de6b4caea75a81932d3cfa842e98ceb
   languageName: node
   linkType: hard
 
@@ -31707,7 +31707,7 @@ __metadata:
     "@mantine/dates": ^4.2.8
     "@mantine/dropzone": ^4.2.9
     "@mantine/form": ^4.2.8
-    "@mantine/hooks": ^4.2.8
+    "@mantine/hooks": 4.2.9
     "@mantine/modals": ^4.2.9
     "@mantine/notifications": ^4.2.8
     "@mantine/prism": ^4.2.8
