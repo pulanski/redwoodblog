@@ -25,7 +25,7 @@ pull_request_rules:
 
   - name: automatic merge for Renovate pull requests
     conditions:
-      - title~=^\[Renovate\]
+      - title~=^\[renovate\]
     actions:
       merge:
         method: merge
