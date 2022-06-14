@@ -11,9 +11,9 @@ describe('Complete onboarding process and authenticate user', () => {
     cy.get('.mantine-Button-filled .mantine-qo1k2').click();
     cy.get('.mantine-10o78yv > div span').click();
     cy.get('#username').click();
-    cy.get('#username').type('joshuakersey50@gmail.com');
+    cy.get('#username').type('test');
     cy.get('#password').click();
-    cy.get('#password').type('Minjinleepachinko1');
+    cy.get('#password').type('abc123');
     cy.get('.rw-button').click();
     cy.get('.rw-form-wrapper > .rw-form-wrapper').submit();
     cy.get('.mantine-Title-root').should('contain', 'Welcome back');
