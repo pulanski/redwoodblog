@@ -3519,17 +3519,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dropzone@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/dropzone@npm:4.2.8"
+"@mantine/dropzone@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/dropzone@npm:4.2.9"
   dependencies:
     react-dropzone: ^11.4.2
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 7e8b85a3b33fe74efab1e8478cc33c4bd8b803db1343e8422a4b49de808c66389bfca133a8340ca96b11eb4aaa42cc8049160f36509822d8b15aec6e0e86ce60
+  checksum: 107b356b4c476f3b49795c152db3446b511c0ec348884dfe262a3f300813dc871c09cd65d4c45101f45ce37e14713995f316f7c099c108b6526ac050866e66ad
   languageName: node
   linkType: hard
 
@@ -3577,17 +3577,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/prism@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/prism@npm:4.2.8"
+"@mantine/prism@npm:4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/prism@npm:4.2.9"
   dependencies:
     prism-react-renderer: ^1.2.1
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 070b45370bdce5fa41fdd212c5fd6fd94e17e05489290fe7afa77e54446cfc45928ca5ea91d62a68d8acd07c725e41bf6cc5501e36d82a5a4311fc309a76cbce
+  checksum: 5db2443cbbefa2a749099b9e16f6a62b98bc3f4551b17c37731593a83b4dafae446835774470eb51a1102e11e95446c826d5b7c6b86fd197b7c5bd4e7f6aaf80
   languageName: node
   linkType: hard
 
@@ -4280,6 +4280,43 @@ __metadata:
     rwfw: dist/bins/rwfw.js
     tsc: dist/bins/tsc.js
   checksum: 19aa4c0f4eb1687ad520524963c697bb194eea7469db65dc4ca702655daea27e96751ca5094dbba3eb6ef950f2da7f8c75616ee5e0831aba7ab15642e6bfee14
+  languageName: node
+  linkType: hard
+
+"@redwoodjs/api@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@redwoodjs/api@npm:1.5.2"
+  dependencies:
+    "@babel/runtime-corejs3": 7.16.7
+    "@prisma/client": 3.14.0
+    core-js: 3.22.5
+    cross-undici-fetch: 0.1.27
+    crypto-js: 4.1.1
+    humanize-string: 2.1.0
+    jsonwebtoken: 8.5.1
+    jwks-rsa: 2.0.5
+    md5: 2.3.0
+    pascalcase: 1.0.0
+    pino: 7.11.0
+    title-case: 3.0.3
+    uuid: 8.3.2
+  peerDependencies:
+    "@clerk/clerk-sdk-node": 3.5.0
+    "@magic-sdk/admin": 1.4.1
+    firebase-admin: 10.2.0
+  peerDependenciesMeta:
+    "@clerk/clerk-sdk-node":
+      optional: true
+    "@magic-sdk/admin":
+      optional: true
+    firebase-admin:
+      optional: true
+  bin:
+    redwood: dist/bins/redwood.js
+    rw: dist/bins/redwood.js
+    rwfw: dist/bins/rwfw.js
+    tsc: dist/bins/tsc.js
+  checksum: 5ed9323ec8f5c1319ae88e056464d131900a2dbedab01d16d555d64b63766a2c88092a878ca0717f807a9f9b116d23a9a946318ddd31f9e307bc15c81dacc884
   languageName: node
   linkType: hard
 
@@ -5968,12 +6005,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/api@npm:^1.0.0-rc.6":
-  version: 1.0.0-rc.6
-  resolution: "@tauri-apps/api@npm:1.0.0-rc.6"
+"@tauri-apps/api@npm:^1.0.0-rc.7":
+  version: 1.0.0-rc.7
+  resolution: "@tauri-apps/api@npm:1.0.0-rc.7"
   dependencies:
-    type-fest: 2.12.2
-  checksum: ebfb02c3019d737e7c03ba858506e22103088f0e358054412b34b98798cdc4914894ed90664a0f5c3ee037578aea457b24ee6a985660cec6dddc928b9bddc5e1
+    type-fest: 2.13.0
+  checksum: 80596a27fb41b2b5774d7594641ea635183953dc6f21484e5903a3c0e4919c2ed2ae8ac755d7de564d4046861a31de11de11a087987b6f50eab10849617d1052
   languageName: node
   linkType: hard
 
@@ -8125,7 +8162,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "api@workspace:api"
   dependencies:
-    "@redwoodjs/api": 1.5.1
+    "@redwoodjs/api": 1.5.2
     "@redwoodjs/graphql-server": 1.5.1
   languageName: unknown
   linkType: soft
@@ -30162,10 +30199,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:2.12.2":
-  version: 2.12.2
-  resolution: "type-fest@npm:2.12.2"
-  checksum: a83ccfd2f07cb8cfab47b4a8ed3c4c111d98722295e25e899d8a68e574f5fe8ed5c1a0f1d76f63d3cc6721eccc9085ac4441a540030537ef314fd8f56a4a60c3
+"type-fest@npm:2.13.0":
+  version: 2.13.0
+  resolution: "type-fest@npm:2.13.0"
+  checksum: 8746231e055ed9298b09fe1f1b14f37438f69acf3f1bf5fc2d203d0279c381b69413375a5b71d03641c71fccce0527d38e842f661f3246b6b48f96ff7d2afe90
   languageName: node
   linkType: hard
 
@@ -31284,18 +31321,18 @@ __metadata:
     "@emotion/styled": ^11.8.1
     "@mantine/core": 4.2.9
     "@mantine/dates": ^4.2.8
-    "@mantine/dropzone": ^4.2.8
+    "@mantine/dropzone": ^4.2.9
     "@mantine/form": ^4.2.8
     "@mantine/hooks": ^4.2.8
     "@mantine/modals": ^4.2.8
     "@mantine/notifications": ^4.2.8
-    "@mantine/prism": ^4.2.8
+    "@mantine/prism": 4.2.9
     "@mantine/spotlight": ^4.2.8
     "@redwoodjs/auth": 1.5.1
     "@redwoodjs/forms": 1.5.1
     "@redwoodjs/router": 1.5.1
     "@redwoodjs/web": 1.5.1
-    "@tauri-apps/api": ^1.0.0-rc.6
+    "@tauri-apps/api": ^1.0.0-rc.7
     "@tauri-apps/cli": ^1.0.0-rc.13
     cypress: 9.6.0
     date-fns: ^2.28.0
