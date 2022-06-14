@@ -3519,17 +3519,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dropzone@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/dropzone@npm:4.2.8"
+"@mantine/dropzone@npm:4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/dropzone@npm:4.2.9"
   dependencies:
     react-dropzone: ^11.4.2
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 7e8b85a3b33fe74efab1e8478cc33c4bd8b803db1343e8422a4b49de808c66389bfca133a8340ca96b11eb4aaa42cc8049160f36509822d8b15aec6e0e86ce60
+  checksum: 107b356b4c476f3b49795c152db3446b511c0ec348884dfe262a3f300813dc871c09cd65d4c45101f45ce37e14713995f316f7c099c108b6526ac050866e66ad
   languageName: node
   linkType: hard
 
@@ -31284,7 +31284,7 @@ __metadata:
     "@emotion/styled": ^11.8.1
     "@mantine/core": 4.2.9
     "@mantine/dates": ^4.2.8
-    "@mantine/dropzone": ^4.2.8
+    "@mantine/dropzone": 4.2.9
     "@mantine/form": ^4.2.8
     "@mantine/hooks": ^4.2.8
     "@mantine/modals": ^4.2.8
