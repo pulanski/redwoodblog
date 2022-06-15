@@ -27,7 +27,7 @@ const HomePage = () => {
 
       {isAuthenticated ? (
         <>
-          <Title mb={30}>Welcome back, {currentUser.email}</Title>
+          {/* <Title mb={30}>Welcome back, {currentUser.email}</Title> */}
         </>
       ) : (
         <Title mt={40} mb={30}>

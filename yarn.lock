@@ -3727,17 +3727,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/prism@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/prism@npm:4.2.8"
+"@mantine/prism@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/prism@npm:4.2.9"
   dependencies:
     prism-react-renderer: ^1.2.1
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 070b45370bdce5fa41fdd212c5fd6fd94e17e05489290fe7afa77e54446cfc45928ca5ea91d62a68d8acd07c725e41bf6cc5501e36d82a5a4311fc309a76cbce
+  checksum: 5db2443cbbefa2a749099b9e16f6a62b98bc3f4551b17c37731593a83b4dafae446835774470eb51a1102e11e95446c826d5b7c6b86fd197b7c5bd4e7f6aaf80
   languageName: node
   linkType: hard
 
@@ -4626,9 +4626,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@redwoodjs/forms@npm:1.5.1":
-  version: 1.5.1
-  resolution: "@redwoodjs/forms@npm:1.5.1"
+"@redwoodjs/forms@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@redwoodjs/forms@npm:1.5.2"
   dependencies:
     "@babel/runtime-corejs3": 7.16.7
     core-js: 3.22.5
@@ -4637,7 +4637,7 @@ __metadata:
   peerDependencies:
     graphql: 16.5.0
     react: 17.0.2
-  checksum: 8ff21c75396d0e9a9d73b39dd7810c615bc704dd8d315abcf002b316a96f39815745f9bb9daded0e767e75cfa99f92a6fc55f8fce8d7d0c5be3450794e747b27
+  checksum: 9aecaca6e82d180aafcbb68201003172b760014ee479a9cee26aecccce74a8ccd5f57de3f8123eedc59488eb3bf273b28d7c0776fc99fe7c960dadfb29bebb75
   languageName: node
   linkType: hard
 
@@ -31710,10 +31710,10 @@ __metadata:
     "@mantine/hooks": ^4.2.8
     "@mantine/modals": ^4.2.9
     "@mantine/notifications": ^4.2.8
-    "@mantine/prism": ^4.2.8
+    "@mantine/prism": ^4.2.9
     "@mantine/spotlight": ^4.2.8
     "@redwoodjs/auth": 1.5.1
-    "@redwoodjs/forms": 1.5.1
+    "@redwoodjs/forms": 1.5.2
     "@redwoodjs/router": 1.5.1
     "@redwoodjs/web": 1.5.1
     "@tauri-apps/api": ^1.0.0-rc.7
