@@ -1,6 +1,6 @@
 import type { ArticlesQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
-import { SimpleGrid } from '@mantine/core'
+import { SimpleGrid, Title } from '@mantine/core'
 import ArticleCard from '../ArticleCard/ArticleCard'
 
 export const QUERY = gql`
@@ -24,20 +24,24 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ articles }: CellSuccessProps<ArticlesQuery>) => {
-
   return (
-    <SimpleGrid
-      cols={1}
-      spacing="lg"
-      breakpoints={[
-        { maxWidth: 980, cols: 2, spacing: 'md' },
-        { maxWidth: 755, cols: 2, spacing: 'sm' },
-        { maxWidth: 600, cols: 1, spacing: 'sm' },
-      ]}
-    >
-      {articles.map((article) => {
-        return <ArticleCard article={article} />
-      })}
-    </SimpleGrid>
+    <>
+      <Title order={3}>All Posts</Title>
+      <SimpleGrid
+        cols={1}
+        spacing="lg"
+        breakpoints={[
+          { maxWidth: 980, cols: 2, spacing: 'md' },
+          { maxWidth: 755, cols: 2, spacing: 'sm' },
+          { maxWidth: 600, cols: 1, spacing: 'sm' },
+        ]}
+      >
+        {articles.map((article) => {
+          return (
+            <ArticleCard article={article} key={article.id} homePage={true} />
+          )
+        })}
+      </SimpleGrid>
+    </>
   )
 }

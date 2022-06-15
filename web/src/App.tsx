@@ -17,10 +17,10 @@ import Routes from 'src/Routes'
 import './scaffold.css'
 import './index.css'
 import { useState } from 'react'
-import { useHotkeys, useMouse } from '@mantine/hooks'
+import { useHotkeys } from '@mantine/hooks'
 import { actions } from './SpotlightActions'
 import { navigate, routes } from '@redwoodjs/router'
-import { RtlContext } from './RtlContext'
+import { RtlProvider } from './contexts/RtlContext'
 
 export function App() {
   // const { toggle, fullscreen } = useFullscreen()
@@ -50,11 +50,13 @@ export function App() {
               toggleColorScheme={toggleColorScheme}
             >
               <MantineProvider
-                emotionOptions={rtl
-                  ? // rtl cache
-                  { key: 'mantine-rtl', stylisPlugins: [rtlPlugin] }
-                  : // ltr cache
-                  { key: 'mantine' }}
+                emotionOptions={
+                  rtl
+                    ? // rtl cache
+                      { key: 'mantine-rtl', stylisPlugins: [rtlPlugin] }
+                    : // ltr cache
+                      { key: 'mantine' }
+                }
                 theme={{
                   colorScheme,
                   dir: rtl ? 'rtl' : 'ltr',
@@ -88,11 +90,9 @@ export function App() {
                       },
                     })}
                   />
-                  <RtlContext.Provider value={{ rtl, setRtl }}>
-                    <div dir={rtl ? 'rtl' : 'ltr'}>
-                      <Routes />
-                    </div>
-                  </RtlContext.Provider>
+                  <div dir={rtl ? 'rtl' : 'ltr'}>
+                    <Routes />
+                  </div>
                 </SpotlightProvider>
               </MantineProvider>
             </ColorSchemeProvider>

@@ -1,7 +1,6 @@
 import ArticleCard from './ArticleCard'
 
 export const generated = () => {
-
   const article = {
     id: '1',
     title: 'This is a card in isolation',

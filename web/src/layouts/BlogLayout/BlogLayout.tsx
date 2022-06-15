@@ -5,6 +5,7 @@ import {
   Breadcrumbs,
   Button,
   Group,
+  Space,
   Transition,
 } from '@mantine/core'
 import { createContext, useEffect, useState } from 'react'
@@ -15,7 +16,7 @@ import { ArrowNarrowUp, Home } from 'tabler-icons-react'
 import { useHotkeys, useMouse, useWindowScroll } from '@mantine/hooks'
 import { navigate, routes, useLocation } from '@redwoodjs/router'
 import SystemInfoModal from 'src/components/SystemInfoModal/SystemInfoModal'
-import { MouseContext } from 'src/MouseContext'
+import { MouseContext } from 'src/contexts/MouseContext'
 
 type BlogLayoutProps = {
   children?: React.ReactNode
@@ -39,6 +40,7 @@ export function BlogLayout({ children }: BlogLayoutProps) {
   // log the URL when the pathname changes
   useEffect(() => {
     path = pathname.split('/').slice(1)
+    console.log(path)
   }, [pathname])
 
   const items = path.map((pathFragment, index) => (
@@ -89,6 +91,7 @@ export function BlogLayout({ children }: BlogLayoutProps) {
               ></Badge>
               /<Breadcrumbs separator="/">{items}</Breadcrumbs>
             </Group>
+            <Space h="lg" />
             {children}
           </AppShell>
         </div>

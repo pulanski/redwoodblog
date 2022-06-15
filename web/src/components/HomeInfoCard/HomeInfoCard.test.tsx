@@ -1,17 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
-import { useState } from 'react'
 
-import AppBar from './AppBar'
+import HomeInfoCard from './HomeInfoCard'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
 
-describe('AppBar', () => {
-  // const [showNavbar, setShowNavbar] = useState(false)
-
+describe('HomeInfoCard', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<AppBar showNavbar={true} setShowNavbar={() => {}} />)
+      render(<HomeInfoCard />)
     }).not.toThrow()
   })
 })

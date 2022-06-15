@@ -62,7 +62,7 @@ const generalShortcuts = [
   {
     key: 'D',
     description: 'Toggle RTL Mode',
-  }
+  },
 ]
 
 const GeneralShortcuts = () => {

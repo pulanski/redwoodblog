@@ -7,7 +7,6 @@ import Comment from './Comment'
 
 describe('Comment', () => {
   it('renders successfully', () => {
-
     const comment = {
       author: 'Josh Kersey',
       body: 'hello',

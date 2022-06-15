@@ -1,5 +1,13 @@
-import { Title } from "@mantine/core"
-import { Form, FormError, Label, Submit, SubmitHandler, TextAreaField, TextField } from "@redwoodjs/forms"
+import { Title } from '@mantine/core'
+import {
+  Form,
+  FormError,
+  Label,
+  Submit,
+  SubmitHandler,
+  TextAreaField,
+  TextField,
+} from '@redwoodjs/forms'
 import { useMutation } from '@redwoodjs/web'
 
 const CREATE = gql`
@@ -23,7 +31,6 @@ interface CommentFormProps {
 }
 
 const CommentForm = ({ postId }: CommentFormProps) => {
-
   const [createComment, { loading, error }] = useMutation(CREATE)
 
   const onSubmit: SubmitHandler<FormValues> = (input) => {
@@ -40,9 +47,9 @@ const CommentForm = ({ postId }: CommentFormProps) => {
           wrapperClassName="bg-red-100 text-red-900 text-sm p-3 rounded"
         />
         <Label name="author">Name</Label>
-        <TextField name="author" required/>
+        <TextField name="author" required />
         <Label name="body">Comment</Label>
-        <TextAreaField name="body" required/>
+        <TextAreaField name="body" required />
         <Submit disabled={loading}>Submit</Submit>
       </Form>
     </>

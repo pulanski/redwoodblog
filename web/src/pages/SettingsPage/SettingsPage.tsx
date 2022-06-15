@@ -35,7 +35,9 @@ export function SettingsPage() {
 
       <Group position="center" my="xl">
         <Stack>
-          <Title order={1} mt={30} mb={40} className={classes.title}>Settings</Title>
+          <Title order={1} mt={30} mb={40} className={classes.title}>
+            Settings
+          </Title>
 
           <DarkModeToggle
             dark={dark}

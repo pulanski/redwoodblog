@@ -31719,6 +31719,7 @@ __metadata:
     "@tauri-apps/api": ^1.0.0-rc.7
     "@tauri-apps/cli": ^1.0.0-rc.13
     cypress: 9.6.0
+    cz-conventional-changelog: 3.3.0
     date-fns: ^2.28.0
     dayjs: ^1.11.3
     i18next: ^21.8.9

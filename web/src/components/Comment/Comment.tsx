@@ -1,4 +1,4 @@
-import { Badge, Blockquote, Group, Paper, Spoiler } from "@mantine/core"
+import { Badge, Blockquote, Group, Paper, Spoiler } from '@mantine/core'
 
 const formattedDate = (datetime: ConstructorParameters<typeof Date>[0]) => {
   const parsedDate = new Date(datetime)
@@ -15,24 +15,28 @@ interface CommentProps {
 }
 
 const Comment = ({ comment }: CommentProps) => {
-
   console.log(comment.author)
 
   return (
     <>
       <Paper shadow="md" radius="md" p="lg" withBorder>
-        <Group position='apart'>
+        <Group position="apart">
           <Blockquote
             cite={comment.author}
-          // icon={<Flame size={24} />}
+            // icon={<Flame size={24} />}
           >
             <Spoiler maxHeight={60} showLabel="Show more" hideLabel="Hide">
               {comment.body}
             </Spoiler>
           </Blockquote>
-          <Badge color="cyan" size="lg" radius="lg" style={{
-            marginLeft: 'auto',
-          }}>
+          <Badge
+            color="cyan"
+            size="lg"
+            radius="lg"
+            style={{
+              marginLeft: 'auto',
+            }}
+          >
             {formattedDate(comment.createdAt)}
           </Badge>
         </Group>
