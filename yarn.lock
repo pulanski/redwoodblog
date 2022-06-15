@@ -3713,17 +3713,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/notifications@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/notifications@npm:4.2.8"
+"@mantine/notifications@npm:4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/notifications@npm:4.2.9"
   dependencies:
     react-transition-group: ^4.4.2
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 5c727dd0e1fcd934a37fc6226c0f13db736db8d41ce71828ba839bcd29e9c3edae0aa20f60418177f003b735063076c48298ca2b293cf4baf1238257a543fefa
+  checksum: 7563d6af2d62f109ae34bbf3c51ea1f3460c3be2957bf2d4a8eeb0e16190cf6ad35b04e6bacff391581e57c850c2ef4d14a11c7229ccb2752a793defb04f8060
   languageName: node
   linkType: hard
 
@@ -31709,7 +31709,7 @@ __metadata:
     "@mantine/form": ^4.2.8
     "@mantine/hooks": ^4.2.8
     "@mantine/modals": ^4.2.9
-    "@mantine/notifications": ^4.2.8
+    "@mantine/notifications": 4.2.9
     "@mantine/prism": ^4.2.9
     "@mantine/spotlight": ^4.2.8
     "@redwoodjs/auth": 1.5.1
