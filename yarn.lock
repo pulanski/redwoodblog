@@ -26798,9 +26798,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:^11.17.1":
-  version: 11.17.1
-  resolution: "react-i18next@npm:11.17.1"
+"react-i18next@npm:11.17.2":
+  version: 11.17.2
+  resolution: "react-i18next@npm:11.17.2"
   dependencies:
     "@babel/runtime": ^7.14.5
     html-escaper: ^2.0.2
@@ -26813,7 +26813,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: d1359695c55bec02a737aeae4c948e055d366cc5d3017463a68759b7cf06dd560eb26f7e22d400a7f2332b4b166abf72529cf2d09d4571befad11d79de142615
+  checksum: 1fdcc98dc2499a4b16a5d35eede5f81bf038fde7ace6a7efc626edbba3348faa7558b451ef164f5be3107c6bbb42531daeec082d2acd87d7ed5fab6a73276d91
   languageName: node
   linkType: hard
 
@@ -32031,7 +32031,7 @@ __metadata:
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
-    react-i18next: ^11.17.1
+    react-i18next: 11.17.2
     react-slick: ^0.29.0
     react-undraw-illustrations: ^2.0.3
     react-use: ^17.4.0
