@@ -54,9 +54,7 @@ export const Success = ({ post }: CellSuccessProps<EditPostById>) => {
   })
 
   const onSave = (input, id) => {
-    const castInput = Object.assign(input, {
-      authorId: parseInt(input.authorId),
-    })
+    const castInput = Object.assign(input, { authorId: parseInt(input.authorId), })
     updatePost({ variables: { id, input: castInput } })
   }
 

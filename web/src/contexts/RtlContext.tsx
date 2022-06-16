@@ -1,4 +1,3 @@
-import { any } from 'prop-types'
 import { createContext, useState, Dispatch, ReactNode } from 'react'
 
 export interface RtlState {

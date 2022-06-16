@@ -3657,15 +3657,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dates@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/dates@npm:4.2.8"
+"@mantine/dates@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/dates@npm:4.2.9"
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     dayjs: ^1.10.5
     react: ">=16.8.0"
-  checksum: bb6be18a5f3c17a8d21b668497f0cc5db6f0ebf3824af2ec01fbf1b53845c7c965a9626f414aa8cb348d0b40b4d657aa2eb30055f2b8dd804f15ddf7810f1704
+  checksum: 8dac14a171ced0a496b33c445305b7d6852860f42f21437437392ae4e234865be4c6a77469df65f285757c663573fed580bd973fe5f0239834db74bf57d5d4a2
   languageName: node
   linkType: hard
 
@@ -4480,6 +4480,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redwoodjs/auth@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@redwoodjs/auth@npm:1.5.2"
+  dependencies:
+    "@babel/runtime-corejs3": 7.16.7
+    core-js: 3.22.5
+  checksum: 31ad16ffe21b71754bbdb93658ccda45981965e69879f740da2dc7d9a1dd96763090b06104bd4b7797ec21a775344b4b0c6bd0c6783733d14663d9bcecb37354
+  languageName: node
+  linkType: hard
+
 "@redwoodjs/cli@npm:1.5.1":
   version: 1.5.1
   resolution: "@redwoodjs/cli@npm:1.5.1"
@@ -4666,6 +4676,34 @@ __metadata:
     lodash.omitby: 4.6.0
     uuid: 8.3.2
   checksum: a8dc2a7816c73012e7c36cf696ac2dcd1507d57ce2a424d29f629efe357b72ecbbd80959f84325d245e6a1fbfb9adaa66155456781045ca80337e333517f9e18
+  languageName: node
+  linkType: hard
+
+"@redwoodjs/graphql-server@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@redwoodjs/graphql-server@npm:1.5.2"
+  dependencies:
+    "@babel/runtime-corejs3": 7.16.7
+    "@envelop/depth-limit": 1.5.2
+    "@envelop/disable-introspection": 3.3.2
+    "@envelop/filter-operation-type": 3.3.2
+    "@envelop/parser-cache": 4.3.2
+    "@envelop/validation-cache": 4.3.2
+    "@graphql-tools/merge": 8.2.11
+    "@graphql-tools/schema": 8.3.11
+    "@graphql-tools/utils": 8.6.10
+    "@graphql-yoga/common": 2.6.0
+    "@prisma/client": 3.14.0
+    "@redwoodjs/api": 1.5.2
+    core-js: 3.22.5
+    cross-undici-fetch: 0.1.27
+    graphql: 16.5.0
+    graphql-scalars: 1.17.0
+    graphql-tag: 2.12.6
+    lodash.merge: 4.6.2
+    lodash.omitby: 4.6.0
+    uuid: 8.3.2
+  checksum: c3c4fa91296eefb85f339cc0962656d330086914da27d111f0fc94930cf785f13d5e7e2992eed0398f0c0dda2e18690679378640b7ab401030b57e075ff5f78a
   languageName: node
   linkType: hard
 
@@ -8346,7 +8384,7 @@ __metadata:
   resolution: "api@workspace:api"
   dependencies:
     "@redwoodjs/api": 1.5.2
-    "@redwoodjs/graphql-server": 1.5.1
+    "@redwoodjs/graphql-server": 1.5.2
   languageName: unknown
   linkType: soft
 
@@ -27962,10 +28000,7 @@ __metadata:
     "@commitlint/config-angular": ^17.0.0
     "@redwoodjs/core": 1.5.1
     cz-conventional-changelog: 3.3.0
-    detect-browser-language: ^0.0.2
     husky: ^7.0.0
-    react-slick: ^0.29.0
-    react-use: ^17.4.0
     web: "workspace:^"
   languageName: unknown
   linkType: soft
@@ -30006,12 +30041,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tabler-icons-react@npm:^1.48.1":
-  version: 1.48.1
-  resolution: "tabler-icons-react@npm:1.48.1"
+"tabler-icons-react@npm:^1.49.0":
+  version: 1.49.0
+  resolution: "tabler-icons-react@npm:1.49.0"
   peerDependencies:
     react: ">= 16.8.0"
-  checksum: 7df7265d6172093fafce180ee7a8d4e356d16553d9cc7139b815aef1f13271c0fec4cbdad7fd36f4cf5b1398218c0fcfc864d7565c701a647880880e05e2a240
+  checksum: 0e448fcd9fd35c7b0f632c7df356ca1cdfcfce44a9ad3d5122098beac7cec0f42a897c846d882873bd6f01295e1b12091abfab0f4a9d1f3446d7ef28971c35b1
   languageName: node
   linkType: hard
 
@@ -31972,7 +32007,7 @@ __metadata:
     "@emotion/react": ^11.9.0
     "@emotion/styled": ^11.9.3
     "@mantine/core": 4.2.9
-    "@mantine/dates": ^4.2.8
+    "@mantine/dates": ^4.2.9
     "@mantine/dropzone": ^4.2.9
     "@mantine/form": ^4.2.8
     "@mantine/hooks": ^4.2.8
@@ -31980,7 +32015,7 @@ __metadata:
     "@mantine/notifications": ^4.2.8
     "@mantine/prism": ^4.2.9
     "@mantine/spotlight": ^4.2.8
-    "@redwoodjs/auth": 1.5.1
+    "@redwoodjs/auth": 1.5.2
     "@redwoodjs/forms": 1.5.2
     "@redwoodjs/router": 1.5.1
     "@redwoodjs/web": 1.5.1
@@ -31990,16 +32025,19 @@ __metadata:
     cz-conventional-changelog: 3.3.0
     date-fns: ^2.28.0
     dayjs: ^1.11.3
+    detect-browser-language: ^0.0.2
     i18next: ^21.8.9
     i18next-browser-languagedetector: ^6.1.4
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
     react-i18next: ^11.17.1
+    react-slick: ^0.29.0
     react-undraw-illustrations: ^2.0.3
+    react-use: ^17.4.0
     stylis: ^4.1.1
     stylis-plugin-rtl: ^2.1.1
-    tabler-icons-react: ^1.48.1
+    tabler-icons-react: ^1.49.0
   languageName: unknown
   linkType: soft
 

@@ -37,9 +37,6 @@
     "e2e": "cypress open"
   },
   "dependencies": {
-    "detect-browser-language": "^0.0.2",
-    "react-slick": "^0.29.0",
-    "react-use": "^17.4.0",
     "web": "workspace:^"
   }
 }

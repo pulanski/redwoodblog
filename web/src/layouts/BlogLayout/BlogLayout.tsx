@@ -12,11 +12,12 @@ import { useEffect, useState } from 'react'
 import AppBar from 'src/components/AppBar/AppBar'
 import Navigation from 'src/components/Navigation/Navigation'
 import Footer from 'src/components/Footer/Footer'
-import { ArrowNarrowUp, Home } from 'tabler-icons-react'
+import { Home } from 'tabler-icons-react'
 import { useHotkeys, useMouse, useWindowScroll } from '@mantine/hooks'
 import { navigate, routes, useLocation } from '@redwoodjs/router'
 import SystemInfoModal from 'src/components/SystemInfoModal/SystemInfoModal'
 import { MouseContext } from 'src/contexts/MouseContext'
+import ScrollToTop from 'src/components/ScrollToTop/ScrollToTop'
 
 type BlogLayoutProps = {
   children?: React.ReactNode
@@ -25,7 +26,6 @@ type BlogLayoutProps = {
 export function BlogLayout({ children }: BlogLayoutProps) {
   // Handle UI State for Navbar, Srolling, and System Info Modal
   const [showNavbar, setShowNavbar] = useState(true)
-  const [scroll, scrollTo] = useWindowScroll()
   const [clientInfoOpened, setClientInfoOpened] = useState(false)
   const { ref, x, y } = useMouse()
 
@@ -96,26 +96,7 @@ export function BlogLayout({ children }: BlogLayoutProps) {
           </AppShell>
         </div>
       </MouseContext.Provider>
-      <Affix position={{ bottom: 20, right: 20 }}>
-        <Transition
-          transition="slide-up"
-          timingFunction="ease"
-          mounted={scroll.y > 80}
-          duration={400}
-        >
-          {(transitionStyles) => (
-            <Button
-              leftIcon={<ArrowNarrowUp />}
-              style={transitionStyles}
-              onClick={() => scrollTo({ y: 0 })}
-              color="orange"
-              variant="subtle"
-            >
-              Scroll to top
-            </Button>
-          )}
-        </Transition>
-      </Affix>
+      <ScrollToTop />
     </>
   )
 }

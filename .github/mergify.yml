@@ -7,25 +7,25 @@ pull_request_rules:
       merge:
         method: merge
 
-  - name: automatic merge for Dependabot pull requests
-    conditions:
-      - author~=^dependabot(|-preview)\[bot\]$
-    actions:
-      merge:
-        method: merge
+  # - name: automatic merge for Dependabot pull requests
+  #   conditions:
+  #     - author~=^dependabot(|-preview)\[bot\]$
+  #   actions:
+  #     merge:
+  #       method: merge
 
-  - name: automatic merge for Snyk pull requests
-    conditions:
-      - title~=^\[Snyk\]
-      - head~=^snyk-fix
-      - check-success~=^security/snyk
-    actions:
-      merge:
-        method: merge
+  # - name: automatic merge for Snyk pull requests
+  #   conditions:
+  #     - title~=^\[Snyk\]
+  #     - head~=^snyk-fix
+  #     - check-success~=^security/snyk
+  #   actions:
+  #     merge:
+  #       method: merge
 
-  - name: automatic merge for Renovate pull requests
-    conditions:
-      - title~=^\[renovate\]
-    actions:
-      merge:
-        method: merge
+  # - name: automatic merge for Renovate pull requests
+  #   conditions:
+  #     - title~=^\[renovate\]
+  #   actions:
+  #     merge:
+  #       method: merge

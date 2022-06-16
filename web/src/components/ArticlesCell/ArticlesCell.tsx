@@ -25,13 +25,12 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ articles }: CellSuccessProps<ArticlesQuery>) => {
-  // const size = useWindowSize();
-  const { width, height } = useWindowSize()
+
+  const { width } = useWindowSize()
 
   return (
     <>
       <Stack>
-        {width}
         <Title order={3}>All Posts</Title>
         <ScrollArea
           style={{
