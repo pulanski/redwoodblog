@@ -4,7 +4,12 @@ export const schema = gql`
     title: String!
     content: String!
     numLikes: Int!
+    author: User!
+    authorId: Int!
     createdAt: DateTime!
+    Comment: [Comment]!
+    draft: Boolean!
+    featured: Boolean!
   }
 
   type Query {
@@ -16,12 +21,18 @@ export const schema = gql`
     title: String!
     content: String!
     numLikes: Int!
+    authorId: Int!
+    draft: Boolean!
+    featured: Boolean!
   }
 
   input UpdatePostInput {
     title: String
     content: String
     numLikes: Int
+    authorId: Int
+    draft: Boolean
+    featured: Boolean
   }
 
   type Mutation {

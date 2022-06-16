@@ -5,6 +5,7 @@ import {
   Label,
   TextField,
   NumberField,
+  CheckboxField,
   Submit,
 } from '@redwoodjs/forms'
 
@@ -76,6 +77,58 @@ const PostForm = (props) => {
         />
 
         <FieldError name="numLikes" className="rw-field-error" />
+
+        <Label
+          name="authorId"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Author id
+        </Label>
+
+        <NumberField
+          name="authorId"
+          defaultValue={props.post?.authorId}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+          validation={{ required: true }}
+        />
+
+        <FieldError name="authorId" className="rw-field-error" />
+
+        <Label
+          name="draft"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Draft
+        </Label>
+
+        <CheckboxField
+          name="draft"
+          defaultChecked={props.post?.draft}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="draft" className="rw-field-error" />
+
+        <Label
+          name="featured"
+          className="rw-label"
+          errorClassName="rw-label rw-label-error"
+        >
+          Featured
+        </Label>
+
+        <CheckboxField
+          name="featured"
+          defaultChecked={props.post?.featured}
+          className="rw-input"
+          errorClassName="rw-input rw-input-error"
+        />
+
+        <FieldError name="featured" className="rw-field-error" />
 
         <div className="rw-button-group">
           <Submit disabled={props.loading} className="rw-button rw-button-blue">

@@ -89,8 +89,20 @@ const Post = ({ post }) => {
               <td>{post.numLikes}</td>
             </tr>
             <tr>
+              <th>Author id</th>
+              <td>{post.authorId}</td>
+            </tr>
+            <tr>
               <th>Created at</th>
               <td>{timeTag(post.createdAt)}</td>
+            </tr>
+            <tr>
+              <th>Draft</th>
+              <td>{checkboxInputTag(post.draft)}</td>
+            </tr>
+            <tr>
+              <th>Featured</th>
+              <td>{checkboxInputTag(post.featured)}</td>
             </tr>
           </tbody>
         </table>

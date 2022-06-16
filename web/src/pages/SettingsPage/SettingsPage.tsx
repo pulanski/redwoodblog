@@ -5,7 +5,6 @@ import {
   Stack,
   Center,
   createStyles,
-  Button,
 } from '@mantine/core'
 import { MetaTags } from '@redwoodjs/web'
 import DarkModeToggle from 'src/components/DarkModeToggle/DarkModeToggle'

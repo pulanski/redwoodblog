@@ -13,6 +13,7 @@ import {
 } from 'tabler-icons-react'
 import { navigate, routes } from '@redwoodjs/router'
 import { useAuth } from '@redwoodjs/auth'
+import { useDarkMode } from 'src/hooks/useDarkMode'
 
 const useStyles = createStyles((theme, _params, getRef) => {
   const icon = getRef('icon')
@@ -156,9 +157,11 @@ export function Navigation({ showNavbar }) {
     </a>
   ))
 
+  const dark = useDarkMode()
+
   return (
     <>
-      {showNavbar && (
+      {showNavbar ? (
         <Navbar width={{ sm: 200 }} p="md" className={classes.navbar}>
           <Navbar.Section grow>{links}</Navbar.Section>
 
@@ -207,6 +210,11 @@ export function Navigation({ showNavbar }) {
             )}
           </Navbar.Section>
         </Navbar>
+      ) : (
+        <div
+          style={{ backgroundColor: dark ? '#141517' : '#F8F9FA', width: 200 }}
+          className={classes.navbar}
+        ></div>
       )}
     </>
   )

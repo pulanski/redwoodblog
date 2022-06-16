@@ -13,12 +13,19 @@ import BlogLayout from 'src/layouts/BlogLayout/BlogLayout'
 import ArticlePage from './pages/ArticlePage/ArticlePage'
 import { useAuth } from '@redwoodjs/auth'
 import { useEffect } from 'react'
+import { LanguageProvider } from './contexts/LanguageContext'
 
 const Routes = () => {
   const { isAuthenticated } = useAuth()
 
   return (
     <Router>
+      <Set wrap={PostsLayout}>
+        <Route path="/posts/new" page={PostNewPostPage} name="newPost" />
+        <Route path="/posts/{id:Int}/edit" page={PostEditPostPage} name="editPost" />
+        <Route path="/posts/{id:Int}" page={PostPostPage} name="post" />
+        <Route path="/posts" page={PostPostsPage} name="posts" />
+      </Set>
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
@@ -33,9 +40,8 @@ const Routes = () => {
       <Set private wrap={BlogLayout} unauthenticated="login">
         <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
       </Set>
-      <Set wrap={BlogLayout}>
+      <Set wrap={[BlogLayout, LanguageProvider]}>
         <Route path="/contact" page={ContactPage} name="contact" />
-        {/* <Route path={isAuthenticated ? "/" : "/home"} page={HomePage} name="home" /> */}
         <Route path="/home" page={HomePage} name="home" />
         {isAuthenticated && <Route path="/" page={HomePage} name="home" />}
         <Route path="/settings" page={SettingsPage} name="settings" />

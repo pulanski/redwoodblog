@@ -12,7 +12,10 @@ export const QUERY = gql`
       title
       content
       numLikes
+      authorId
       createdAt
+      draft
+      featured
     }
   }
 `

@@ -8,7 +8,7 @@ import {
   Space,
   Transition,
 } from '@mantine/core'
-import { createContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import AppBar from 'src/components/AppBar/AppBar'
 import Navigation from 'src/components/Navigation/Navigation'
 import Footer from 'src/components/Footer/Footer'
@@ -34,7 +34,7 @@ export function BlogLayout({ children }: BlogLayoutProps) {
     ['mod+.', () => setClientInfoOpened(!clientInfoOpened)],
   ])
 
-  const { pathname, search, hash } = useLocation()
+  const { pathname } = useLocation()
   let path = pathname.split('/').slice(1)
 
   // log the URL when the pathname changes

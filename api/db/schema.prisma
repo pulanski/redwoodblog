@@ -18,10 +18,12 @@ model Post {
   title     String
   content   String
   numLikes  Int       @default(0)
-  // published   Boolean
-  // author      User @relation(fields: [authorId])
+  author    User      @relation(fields: [authorId], references: [id])
+  authorId  Int
   createdAt DateTime  @default(now())
   Comment   Comment[]
+  draft     Boolean   @default(false)
+  featured  Boolean   @default(false)
 }
 
 model User {
@@ -34,27 +36,26 @@ model User {
   salt                String
   resetToken          String?
   resetTokenExpiresAt DateTime?
+  Comment             Comment[]
+  Contact             Contact[]
+  createdAt           DateTime  @default(now())
+  Post                Post[]
 }
-
-// model Comment {
-//   id          Int @id @default(autoincrement())
-//   content     String
-//   // author      User @relation(fields: [id])
-//   // post        Post @relation(fields: [id])
-//   createdAt   DateTime @default(now())
-// }
 
 model Comment {
   id        Int      @id @default(autoincrement())
-  author    String
   body      String
   post      Post     @relation(fields: [postId], references: [id])
   postId    Int
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  Int
   createdAt DateTime @default(now())
 }
 
 model Contact {
   id        Int      @id @default(autoincrement())
+  author    User     @relation(fields: [authorId], references: [id])
+  authorId  Int
   name      String
   email     String
   message   String
