@@ -7,7 +7,9 @@ import {
   useMantineTheme,
   createStyles,
 } from '@mantine/core'
+import { useState } from 'react'
 import { useDarkMode } from 'src/hooks/useDarkMode'
+import CreateCommunityModal from '../CreateCommunityModal/CreateCommunityModal'
 import logo from './logo.png'
 
 const useStyles = createStyles((theme) => ({
@@ -24,8 +26,14 @@ const HomeInfoCard = () => {
   const secondaryColor = darkMode ? theme.colors.dark[1] : theme.colors.gray[7]
   const { classes } = useStyles()
 
+  const [modalOpened, setModalOpened] = useState(false)
+
   return (
     <>
+      <CreateCommunityModal
+        modalOpened={modalOpened}
+        setModalOpened={setModalOpened}
+      />
       <Card style={{ width: 300 }} shadow="sm" p="lg" className={classes.card}>
         <Card.Section>
           <Image src={logo} alt="Card Header" height={160} />
@@ -50,6 +58,7 @@ const HomeInfoCard = () => {
             variant={darkMode ? 'light' : 'filled'}
             fullWidth
             color="yellow"
+            onClick={() => setModalOpened(true)}
           >
             Create Community
           </Button>

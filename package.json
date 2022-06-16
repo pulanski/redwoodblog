@@ -37,6 +37,7 @@
     "e2e": "cypress open"
   },
   "dependencies": {
+    "react-icons": "^4.4.0",
     "web": "workspace:^"
   }
 }

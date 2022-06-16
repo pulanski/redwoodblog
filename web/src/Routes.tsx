@@ -19,14 +19,14 @@ const Routes = () => {
 
   return (
     <Router>
-      {/* <Private unauthenticated="home"> */}
-      <Set wrap={PostsLayout}>
-        <Route path="/admin/posts/new" page={PostNewPostPage} name="newPost" />
-        <Route path="/admin/posts/{id:Int}/edit" page={PostEditPostPage} name="editPost" />
-        <Route path="/admin/posts/{id:Int}" page={PostPostPage} name="post" />
-        <Route path="/admin/posts" page={PostPostsPage} name="posts" />
-      </Set>
-      {/* </Private> */}
+      <Private unauthenticated="home">
+        <Set wrap={PostsLayout}>
+          <Route path="/admin/posts/new" page={PostNewPostPage} name="newPost" />
+          <Route path="/admin/posts/{id:Int}/edit" page={PostEditPostPage} name="editPost" />
+          <Route path="/admin/posts/{id:Int}" page={PostPostPage} name="post" />
+          <Route path="/admin/posts" page={PostPostsPage} name="posts" />
+        </Set>
+      </Private>
       <Route path="/login" page={LoginPage} name="login" />
       <Route path="/signup" page={SignupPage} name="signup" />
       <Route path="/forgot-password" page={ForgotPasswordPage} name="forgotPassword" />
@@ -36,6 +36,7 @@ const Routes = () => {
         <Route path="/article/{id:Int}" page={ArticlePage} name="article" />
       </Set>
       <Set wrap={[BlogLayout, LanguageProvider]}>
+        <Route path="/create" page={CreatePostPage} name="createPost" />
         <Route path="/contact" page={ContactPage} name="contact" />
         <Route path="/home" page={HomePage} name="home" />
         {isAuthenticated && <Route path="/" page={HomePage} name="home" />}
