@@ -46,7 +46,7 @@
     "tabler-icons-react": "^1.49.0"
   },
   "devDependencies": {
-    "@tauri-apps/cli": "^1.0.0-rc.13",
+    "@tauri-apps/cli": "^1.0.0",
     "cypress": "9.6.0",
     "cz-conventional-changelog": "3.3.0"
   }
