@@ -1995,7 +1995,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:^17.0.2":
+"@commitlint/cli@npm:17.0.2":
   version: 17.0.2
   resolution: "@commitlint/cli@npm:17.0.2"
   dependencies:
@@ -2022,7 +2022,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/config-angular@npm:^17.0.0":
+"@commitlint/config-angular@npm:17.0.0":
   version: 17.0.0
   resolution: "@commitlint/config-angular@npm:17.0.0"
   dependencies:
@@ -2337,7 +2337,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.9.3":
+"@emotion/react@npm:11.9.3":
   version: 11.9.3
   resolution: "@emotion/react@npm:11.9.3"
   dependencies:
@@ -2413,7 +2413,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:^11.9.3":
+"@emotion/styled@npm:11.9.3":
   version: 11.9.3
   resolution: "@emotion/styled@npm:11.9.3"
   dependencies:
@@ -3677,7 +3677,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dates@npm:^4.2.9":
+"@mantine/dates@npm:4.2.9":
   version: 4.2.9
   resolution: "@mantine/dates@npm:4.2.9"
   peerDependencies:
@@ -3689,7 +3689,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/dropzone@npm:^4.2.9":
+"@mantine/dropzone@npm:4.2.9":
   version: 4.2.9
   resolution: "@mantine/dropzone@npm:4.2.9"
   dependencies:
@@ -3703,7 +3703,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/form@npm:^4.2.9":
+"@mantine/form@npm:4.2.9":
   version: 4.2.9
   resolution: "@mantine/form@npm:4.2.9"
   peerDependencies:
@@ -3712,7 +3712,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:^4.2.9":
+"@mantine/hooks@npm:4.2.9":
   version: 4.2.9
   resolution: "@mantine/hooks@npm:4.2.9"
   peerDependencies:
@@ -3721,7 +3721,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/modals@npm:^4.2.9":
+"@mantine/modals@npm:4.2.9":
   version: 4.2.9
   resolution: "@mantine/modals@npm:4.2.9"
   peerDependencies:
@@ -3733,7 +3733,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/notifications@npm:^4.2.9":
+"@mantine/notifications@npm:4.2.9":
   version: 4.2.9
   resolution: "@mantine/notifications@npm:4.2.9"
   dependencies:
@@ -3747,7 +3747,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/prism@npm:^4.2.9":
+"@mantine/prism@npm:4.2.9":
   version: 4.2.9
   resolution: "@mantine/prism@npm:4.2.9"
   dependencies:
@@ -3761,7 +3761,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/spotlight@npm:^4.2.9":
+"@mantine/spotlight@npm:4.2.9":
   version: 4.2.9
   resolution: "@mantine/spotlight@npm:4.2.9"
   peerDependencies:
@@ -5023,7 +5023,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/react@npm:^7.1.1":
+"@sentry/react@npm:7.1.1":
   version: 7.1.1
   resolution: "@sentry/react@npm:7.1.1"
   dependencies:
@@ -5038,7 +5038,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/tracing@npm:^7.1.1":
+"@sentry/tracing@npm:7.1.1":
   version: 7.1.1
   resolution: "@sentry/tracing@npm:7.1.1"
   dependencies:
@@ -6337,7 +6337,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/api@npm:^1.0.1":
+"@tauri-apps/api@npm:1.0.1":
   version: 1.0.1
   resolution: "@tauri-apps/api@npm:1.0.1"
   dependencies:
@@ -6409,7 +6409,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli@npm:^1.0.0":
+"@tauri-apps/cli@npm:1.0.0":
   version: 1.0.0
   resolution: "@tauri-apps/cli@npm:1.0.0"
   dependencies:
@@ -13535,6 +13535,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"date-fns@npm:2.28.0, date-fns@npm:^2.0.1, date-fns@npm:^2.16.1":
+  version: 2.28.0
+  resolution: "date-fns@npm:2.28.0"
+  checksum: ecdacd36326e7f5f8c4f1e78ae931a8997109f1c841f5163053b866585ca899521b0e7a114eeb48a9fe5135a550787bd4bbd8baa321cded0b4d823f847889a80
+  languageName: node
+  linkType: hard
+
 "date-fns@npm:^1.27.2":
   version: 1.30.1
   resolution: "date-fns@npm:1.30.1"
@@ -13542,14 +13549,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"date-fns@npm:^2.0.1, date-fns@npm:^2.16.1, date-fns@npm:^2.28.0":
-  version: 2.28.0
-  resolution: "date-fns@npm:2.28.0"
-  checksum: ecdacd36326e7f5f8c4f1e78ae931a8997109f1c841f5163053b866585ca899521b0e7a114eeb48a9fe5135a550787bd4bbd8baa321cded0b4d823f847889a80
-  languageName: node
-  linkType: hard
-
-"dayjs@npm:^1.10.4, dayjs@npm:^1.11.3":
+"dayjs@npm:1.11.3, dayjs@npm:^1.10.4":
   version: 1.11.3
   resolution: "dayjs@npm:1.11.3"
   checksum: 989758998b6ce11af4a12cd8cdb99ca1d24163db585564472d7bd2cef06fd68998b0e784867b4a1ca4cb8e31af5991ecd9c8f816a8f31967bde375bd58bb4230
@@ -13910,7 +13910,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-browser-language@npm:^0.0.2":
+"detect-browser-language@npm:0.0.2":
   version: 0.0.2
   resolution: "detect-browser-language@npm:0.0.2"
   checksum: 373d8403e373b3c3326808962755dc7237a7250b957f98b75e3741dfec3b75ea8ecc6951e57dcd85e2cf096fb835aed6b7ec0344da115b99a1ec1adb7ff5eb4c
@@ -17105,7 +17105,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"formik@npm:^2.2.9":
+"formik@npm:2.2.9":
   version: 2.2.9
   resolution: "formik@npm:2.2.9"
   dependencies:
@@ -18815,7 +18815,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^7.0.0":
+"husky@npm:7.0.4":
   version: 7.0.4
   resolution: "husky@npm:7.0.4"
   bin:
@@ -18831,7 +18831,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next-browser-languagedetector@npm:^6.1.4":
+"i18next-browser-languagedetector@npm:6.1.4":
   version: 6.1.4
   resolution: "i18next-browser-languagedetector@npm:6.1.4"
   dependencies:
@@ -18840,7 +18840,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:^21.8.10":
+"i18next@npm:21.8.10":
   version: 21.8.10
   resolution: "i18next@npm:21.8.10"
   dependencies:
@@ -26980,7 +26980,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:^11.17.2":
+"react-i18next@npm:11.17.2":
   version: 11.17.2
   resolution: "react-i18next@npm:11.17.2"
   dependencies:
@@ -26999,7 +26999,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.4.0":
+"react-icons@npm:4.4.0":
   version: 4.4.0
   resolution: "react-icons@npm:4.4.0"
   peerDependencies:
@@ -27082,7 +27082,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-slick@npm:^0.29.0":
+"react-slick@npm:0.29.0":
   version: 0.29.0
   resolution: "react-slick@npm:0.29.0"
   dependencies:
@@ -27141,7 +27141,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-undraw-illustrations@npm:^2.0.3":
+"react-undraw-illustrations@npm:2.0.3":
   version: 2.0.3
   resolution: "react-undraw-illustrations@npm:2.0.3"
   dependencies:
@@ -27202,7 +27202,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-use@npm:^17.4.0":
+"react-use@npm:17.4.0":
   version: 17.4.0
   resolution: "react-use@npm:17.4.0"
   dependencies:
@@ -28187,13 +28187,13 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@commitlint/cli": ^17.0.2
-    "@commitlint/config-angular": ^17.0.0
+    "@commitlint/cli": 17.0.2
+    "@commitlint/config-angular": 17.0.0
     "@redwoodjs/core": 1.5.1
-    "@tauri-apps/cli": ^1.0.0
+    "@tauri-apps/cli": 1.0.0
     cz-conventional-changelog: 3.3.0
-    husky: ^7.0.0
-    react-slick: ^0.29.0
+    husky: 7.0.4
+    react-slick: 0.29.0
     web: "workspace:^"
   languageName: unknown
   linkType: soft
@@ -29943,7 +29943,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylis-plugin-rtl@npm:^2.1.1":
+"stylis-plugin-rtl@npm:2.1.1":
   version: 2.1.1
   resolution: "stylis-plugin-rtl@npm:2.1.1"
   dependencies:
@@ -29961,7 +29961,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"stylis@npm:^4.0.6, stylis@npm:^4.1.1":
+"stylis@npm:4.1.1, stylis@npm:^4.0.6":
   version: 4.1.1
   resolution: "stylis@npm:4.1.1"
   checksum: 3723b20d272b01bb3c1329c382515e68073bfd4d273a22882037f2fd67de17b850c4bd272bbb78f9fbcd39c136ad13ed5c8b1819a43d994f91687226d106604a
@@ -30234,7 +30234,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tabler-icons-react@npm:^1.49.0":
+"tabler-icons-react@npm:1.49.0":
   version: 1.49.0
   resolution: "tabler-icons-react@npm:1.49.0"
   peerDependencies:
@@ -32197,44 +32197,44 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
-    "@emotion/react": ^11.9.3
-    "@emotion/styled": ^11.9.3
+    "@emotion/react": 11.9.3
+    "@emotion/styled": 11.9.3
     "@mantine/core": 4.2.9
-    "@mantine/dates": ^4.2.9
-    "@mantine/dropzone": ^4.2.9
-    "@mantine/form": ^4.2.9
-    "@mantine/hooks": ^4.2.9
-    "@mantine/modals": ^4.2.9
-    "@mantine/notifications": ^4.2.9
-    "@mantine/prism": ^4.2.9
-    "@mantine/spotlight": ^4.2.9
+    "@mantine/dates": 4.2.9
+    "@mantine/dropzone": 4.2.9
+    "@mantine/form": 4.2.9
+    "@mantine/hooks": 4.2.9
+    "@mantine/modals": 4.2.9
+    "@mantine/notifications": 4.2.9
+    "@mantine/prism": 4.2.9
+    "@mantine/spotlight": 4.2.9
     "@redwoodjs/auth": 1.5.2
     "@redwoodjs/forms": 1.5.2
     "@redwoodjs/router": 1.5.2
     "@redwoodjs/web": 1.5.2
-    "@sentry/react": ^7.1.1
-    "@sentry/tracing": ^7.1.1
-    "@tauri-apps/api": ^1.0.1
-    "@tauri-apps/cli": ^1.0.0
+    "@sentry/react": 7.1.1
+    "@sentry/tracing": 7.1.1
+    "@tauri-apps/api": 1.0.1
+    "@tauri-apps/cli": 1.0.0
     cypress: 9.6.0
     cz-conventional-changelog: 3.3.0
-    date-fns: ^2.28.0
-    dayjs: ^1.11.3
-    detect-browser-language: ^0.0.2
-    formik: ^2.2.9
-    i18next: ^21.8.10
-    i18next-browser-languagedetector: ^6.1.4
+    date-fns: 2.28.0
+    dayjs: 1.11.3
+    detect-browser-language: 0.0.2
+    formik: 2.2.9
+    i18next: 21.8.10
+    i18next-browser-languagedetector: 6.1.4
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
-    react-i18next: ^11.17.2
-    react-icons: ^4.4.0
-    react-slick: ^0.29.0
-    react-undraw-illustrations: ^2.0.3
-    react-use: ^17.4.0
-    stylis: ^4.1.1
-    stylis-plugin-rtl: ^2.1.1
-    tabler-icons-react: ^1.49.0
+    react-i18next: 11.17.2
+    react-icons: 4.4.0
+    react-slick: 0.29.0
+    react-undraw-illustrations: 2.0.3
+    react-use: 17.4.0
+    stylis: 4.1.1
+    stylis-plugin-rtl: 2.1.1
+    tabler-icons-react: 1.49.0
   languageName: unknown
   linkType: soft
 

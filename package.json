@@ -9,12 +9,12 @@
     ]
   },
   "devDependencies": {
-    "@commitlint/cli": "^17.0.2",
-    "@commitlint/config-angular": "^17.0.0",
+    "@commitlint/cli": "17.0.2",
+    "@commitlint/config-angular": "17.0.0",
     "@redwoodjs/core": "1.5.1",
-    "@tauri-apps/cli": "^1.0.0",
+    "@tauri-apps/cli": "1.0.0",
     "cz-conventional-changelog": "3.3.0",
-    "husky": "^7.0.0"
+    "husky": "7.0.4"
   },
   "eslintConfig": {
     "extends": "@redwoodjs/eslint-config",
@@ -38,7 +38,7 @@
     "e2e": "cypress open"
   },
   "dependencies": {
-    "react-slick": "^0.29.0",
+    "react-slick": "0.29.0",
     "web": "workspace:^"
   }
 }
