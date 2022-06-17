@@ -56,10 +56,11 @@
     "windows": [
       {
         "fullscreen": false,
-        "height": 600,
+        "height": 718,
         "resizable": true,
-        "title": "redwoodblog",
-        "width": 800
+        "title": "Runx",
+        "width": 1272,
+        "center": true
       }
     ]
   }

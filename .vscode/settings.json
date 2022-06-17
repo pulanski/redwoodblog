@@ -19,5 +19,6 @@
       "username": "postgres",
       "name": "redwoodblog_desktop"
     }
-  ]
+  ],
+  "circleci-vscode.apiToken": "18827352d69118dcd68168539a08ba2d31127343"
 }

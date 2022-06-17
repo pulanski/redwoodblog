@@ -3,7 +3,6 @@ import {
   Button,
   Card,
   Group,
-  MediaQuery,
   Space,
   Stack,
   Text,
@@ -21,11 +20,15 @@ const ArticleCard = ({ article, homePage }) => {
   const secondaryColor = darkMode ? theme.colors.dark[1] : theme.colors.gray[7]
 
   const [isLiked, setIsLiked] = useState(false)
-  const [likeCount, setLikeCount] = useState(article.numLikes)
+  const [likeCount] = useState(article.numLikes)
 
   return (
     <>
-      <Card shadow="sm" p="lg">
+      <Card
+        shadow="sm"
+        p="lg"
+        style={{ backgroundColor: darkMode ? '' : '#F2F3F6' }}
+      >
         <Group
           position="apart"
           style={{
@@ -43,7 +46,7 @@ const ArticleCard = ({ article, homePage }) => {
             >
               {timeTagDate(article.createdAt)}
             </Badge>
-            <Badge color="pink" variant="light">
+            <Badge color="orange" variant="light">
               {timeTagTime(article.createdAt)}
             </Badge>
           </Stack>

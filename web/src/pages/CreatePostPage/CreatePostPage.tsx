@@ -1,19 +1,40 @@
-import { Link, routes } from '@redwoodjs/router'
 import { MetaTags } from '@redwoodjs/web'
+import { Form, Formik, FormikHelpers, FormikValues } from 'formik'
+import { TextInput } from '@mantine/core'
 
-const CreatePostPage = () => {
+interface Values {
+  title: string
+  content: string
+  language: string
+}
+
+interface CreatePostProps {
+  //  helpers: FormikHelpers<FormikValues>
+  // : FormikValues
+  onSubmit: (values: Values) => void
+}
+
+const CreatePostPage = ({ onSubmit }: CreatePostProps) => {
   return (
     <>
       <MetaTags title="CreatePost" description="CreatePost page" />
 
-      <h1>CreatePostPage</h1>
-      <p>
-        Find me in <code>./web/src/pages/CreatePostPage/CreatePostPage.tsx</code>
-      </p>
-      <p>
-        My default route is named <code>createPost</code>, link to me with `
-        <Link to={routes.createPost()}>CreatePost</Link>`
-      </p>
+      <Formik
+        initialValues={{
+          title: '',
+          content: '',
+          language: '',
+        }}
+        onSubmit={(values) => {
+          onSubmit(values)
+        }}
+      >
+        {(values) => (
+          <Form>
+            <TextInput name="title">{values.values.title}</TextInput>
+          </Form>
+        )}
+      </Formik>
     </>
   )
 }

@@ -14,16 +14,16 @@ generator client {
 // to create migrations for them and apply to your dev DB.
 
 model Post {
-  id        Int       @id @default(autoincrement())
+  id        Int      @id @default(autoincrement())
   title     String
   content   String
-  numLikes  Int       @default(0)
-  author    User      @relation(fields: [authorId], references: [id])
+  numLikes  Int      @default(0)
+  author    User     @relation(fields: [authorId], references: [id])
   authorId  Int
-  createdAt DateTime  @default(now())
-  Comment   Comment[]
-  draft     Boolean   @default(false)
-  featured  Boolean   @default(false)
+  createdAt DateTime @default(now())
+  // Comment   Comment[]
+  draft     Boolean  @default(false)
+  featured  Boolean  @default(false)
 }
 
 model User {
@@ -45,7 +45,7 @@ model User {
 model Comment {
   id        Int      @id @default(autoincrement())
   body      String
-  post      Post     @relation(fields: [postId], references: [id])
+  // post      Post     @relation(fields: [postId], references: [id])
   postId    Int
   author    User     @relation(fields: [authorId], references: [id])
   authorId  Int

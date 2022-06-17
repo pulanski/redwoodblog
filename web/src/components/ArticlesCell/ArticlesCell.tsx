@@ -1,6 +1,6 @@
 import type { ArticlesQuery } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
-import { ScrollArea, SimpleGrid, Text, Stack, Title } from '@mantine/core'
+import { ScrollArea, SimpleGrid, Stack, Title } from '@mantine/core'
 import { useWindowSize } from 'react-use'
 import ArticleCard from '../ArticleCard/ArticleCard'
 
@@ -25,7 +25,6 @@ export const Failure = ({ error }: CellFailureProps) => (
 )
 
 export const Success = ({ articles }: CellSuccessProps<ArticlesQuery>) => {
-
   const { width } = useWindowSize()
 
   return (
@@ -34,8 +33,13 @@ export const Success = ({ articles }: CellSuccessProps<ArticlesQuery>) => {
         <Title order={3}>All Posts</Title>
         <ScrollArea
           style={{
-            height: 800,
-            width: width > 1000 ? width - 600 : width > 770 ? width - 250 : width - 50,
+            height: 1000,
+            width:
+              width > 1000
+                ? width - 600
+                : width > 770
+                ? width - 250
+                : width - 50,
           }}
           type="scroll"
           offsetScrollbars

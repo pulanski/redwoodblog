@@ -37,6 +37,8 @@ export const deletePost: MutationResolvers['deletePost'] = ({ id }) => {
 export const Post: PostResolvers = {
   author: (_obj, { root }) =>
     db.post.findUnique({ where: { id: root.id } }).author(),
-  Comment: (_obj, { root }) =>
-    db.post.findUnique({ where: { id: root.id } }).Comment(),
+}
+
+export const featured: QueryResolvers['featured'] = () => {
+  return db.post.findMany({ where: { featured: true } })
 }

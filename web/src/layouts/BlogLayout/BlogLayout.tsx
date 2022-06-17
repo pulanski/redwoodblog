@@ -43,7 +43,7 @@ export function BlogLayout({ children }: BlogLayoutProps) {
     console.log(path)
   }, [pathname])
 
-  const items = path.map((pathFragment, index) => (
+  const items = path.map((pathFragment) => (
     <>
       {/* onClick={() => navigate(pathFragment)} */}
       <Badge color="orange" size="md">
