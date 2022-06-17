@@ -18815,12 +18815,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"husky@npm:^7.0.0":
-  version: 7.0.4
-  resolution: "husky@npm:7.0.4"
+"husky@npm:8.0.1":
+  version: 8.0.1
+  resolution: "husky@npm:8.0.1"
   bin:
     husky: lib/bin.js
-  checksum: aacb2b8fbfed0ec161f94e9b08d422c51fec073def4e165e57da42f47c10f520a5f0a88b42efc667784e314a1af83cf1994b582cd6f4b0333739921a601c6187
+  checksum: 58c0e87c37f0aaea4e0ea02499444df11adb9ec182fd42735385045b51a55cbdcca48afeea337801e50435fbeb0e77c57c2b430695663774afb279bb0e8aa25f
   languageName: node
   linkType: hard
 
@@ -28192,7 +28192,7 @@ __metadata:
     "@redwoodjs/core": 1.5.1
     "@tauri-apps/cli": ^1.0.0
     cz-conventional-changelog: 3.3.0
-    husky: ^7.0.0
+    husky: 8.0.1
     react-slick: ^0.29.0
     web: "workspace:^"
   languageName: unknown
