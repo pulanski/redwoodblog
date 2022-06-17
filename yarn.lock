@@ -13378,9 +13378,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cypress@npm:9.6.0":
-  version: 9.6.0
-  resolution: "cypress@npm:9.6.0"
+"cypress@npm:9.7.0":
+  version: 9.7.0
+  resolution: "cypress@npm:9.7.0"
   dependencies:
     "@cypress/request": ^2.88.10
     "@cypress/xvfb": ^1.2.4
@@ -13426,7 +13426,7 @@ __metadata:
     yauzl: ^2.10.0
   bin:
     cypress: bin/cypress
-  checksum: 9f590c55c4cf7271aed1b4d0260dce9fd90333a6f56428b68a39794af6ea1421bccad921bcd43d5b57fb0572ce6ef8f16d5d477af610c16d4fc564db31baf066
+  checksum: 9ebffdc463ebb4db796fa27fa11883f04e696711417f544a7d793a7a283c2f79c4f5d1e528bc3d312a16a1e1d6ae63532106feb4c70b4a42f51fd3d0487d4d38
   languageName: node
   linkType: hard
 
@@ -32216,7 +32216,7 @@ __metadata:
     "@sentry/tracing": ^7.1.1
     "@tauri-apps/api": ^1.0.1
     "@tauri-apps/cli": ^1.0.0
-    cypress: 9.6.0
+    cypress: 9.7.0
     cz-conventional-changelog: 3.3.0
     date-fns: ^2.28.0
     dayjs: ^1.11.3
