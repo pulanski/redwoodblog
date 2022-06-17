@@ -1,19 +1,10 @@
-import {
-  Affix,
-  AppShell,
-  Badge,
-  Breadcrumbs,
-  Button,
-  Group,
-  Space,
-  Transition,
-} from '@mantine/core'
+import { AppShell, Badge, Breadcrumbs, Group, Space } from '@mantine/core'
 import { useEffect, useState } from 'react'
 import AppBar from 'src/components/AppBar/AppBar'
 import Navigation from 'src/components/Navigation/Navigation'
 import Footer from 'src/components/Footer/Footer'
 import { Home } from 'tabler-icons-react'
-import { useHotkeys, useMouse, useWindowScroll } from '@mantine/hooks'
+import { useHotkeys, useMouse } from '@mantine/hooks'
 import { navigate, routes, useLocation } from '@redwoodjs/router'
 import SystemInfoModal from 'src/components/SystemInfoModal/SystemInfoModal'
 import { MouseContext } from 'src/contexts/MouseContext'
@@ -23,7 +14,7 @@ type BlogLayoutProps = {
   children?: React.ReactNode
 }
 
-export function BlogLayout({ children }: BlogLayoutProps) {
+export function AppShellLayout({ children }: BlogLayoutProps) {
   // Handle UI State for Navbar, Srolling, and System Info Modal
   const [showNavbar, setShowNavbar] = useState(true)
   const [clientInfoOpened, setClientInfoOpened] = useState(false)
@@ -40,13 +31,12 @@ export function BlogLayout({ children }: BlogLayoutProps) {
   // log the URL when the pathname changes
   useEffect(() => {
     path = pathname.split('/').slice(1)
-    console.log(path)
   }, [pathname])
 
-  const items = path.map((pathFragment) => (
+  const items = path.map((pathFragment, index) => (
     <>
       {/* onClick={() => navigate(pathFragment)} */}
-      <Badge color="orange" size="md">
+      <Badge color="orange" size="md" key={index}>
         {pathFragment}
       </Badge>
     </>
@@ -101,4 +91,4 @@ export function BlogLayout({ children }: BlogLayoutProps) {
   )
 }
 
-export default BlogLayout
+export default AppShellLayout

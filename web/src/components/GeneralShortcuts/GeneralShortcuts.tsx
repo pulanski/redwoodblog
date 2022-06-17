@@ -98,8 +98,10 @@ const GeneralShortcuts = () => {
                     <Group>
                       <Kbd>⌘</Kbd> + <Kbd>{shortcut.key}</Kbd>
                     </Group>
+                    {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                    {/* @ts-ignore */}
                     <StyledBadge color="red" key={shortcut.key}>
-                      {shortcut.description}
+                      <>{shortcut.description}</>
                     </StyledBadge>
                   </Group>
                 </StyledCard>

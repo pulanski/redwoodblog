@@ -2278,6 +2278,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@emotion/cache@npm:^11.9.3":
+  version: 11.9.3
+  resolution: "@emotion/cache@npm:11.9.3"
+  dependencies:
+    "@emotion/memoize": ^0.7.4
+    "@emotion/sheet": ^1.1.1
+    "@emotion/utils": ^1.0.0
+    "@emotion/weak-memoize": ^0.2.5
+    stylis: 4.0.13
+  checksum: 8592bc55bfe331ce8bd1bc4900a0fec801dc916d191400b8a4b10551ca37b05d3a21aa53cddd23929469f9e5361ef0591b03b6963da66cfe5d282df82e26e0a6
+  languageName: node
+  linkType: hard
+
 "@emotion/hash@npm:^0.8.0":
   version: 0.8.0
   resolution: "@emotion/hash@npm:0.8.0"
@@ -2324,14 +2337,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:^11.9.0":
-  version: 11.9.0
-  resolution: "@emotion/react@npm:11.9.0"
+"@emotion/react@npm:^11.9.3":
+  version: 11.9.3
+  resolution: "@emotion/react@npm:11.9.3"
   dependencies:
     "@babel/runtime": ^7.13.10
     "@emotion/babel-plugin": ^11.7.1
-    "@emotion/cache": ^11.7.1
-    "@emotion/serialize": ^1.0.3
+    "@emotion/cache": ^11.9.3
+    "@emotion/serialize": ^1.0.4
     "@emotion/utils": ^1.1.0
     "@emotion/weak-memoize": ^0.2.5
     hoist-non-react-statics: ^3.3.1
@@ -2343,7 +2356,7 @@ __metadata:
       optional: true
     "@types/react":
       optional: true
-  checksum: 97e3a17c73d46c6379e09e8c8bbd01d2e829a7db22099412afb60377779fed9c9d37589c0b74998fe510f8d52f2520e834b6836237701fcb9513165ef18a76b2
+  checksum: f32dbae3110d4c391d6ec51d8c3d86235303d858c8ebf1e90b3d35bcadeb73c0f4557e73ba824e9dbf7f269d0413bc2877e3f4bc2e2b1157b08fbb10b51e18eb
   languageName: node
   linkType: hard
 
@@ -2360,7 +2373,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/serialize@npm:^1.0.2, @emotion/serialize@npm:^1.0.3":
+"@emotion/serialize@npm:^1.0.2":
   version: 1.0.3
   resolution: "@emotion/serialize@npm:1.0.3"
   dependencies:
@@ -2390,6 +2403,13 @@ __metadata:
   version: 1.1.0
   resolution: "@emotion/sheet@npm:1.1.0"
   checksum: 5b13035550a08b5c94e24289eed44f1157cfbdc3465e6fe40c492dd113cc10270241f2d5e28b2ed95d4a6fd7b28e31b2d556a1f0fcd632f9e57fbb429870f2d1
+  languageName: node
+  linkType: hard
+
+"@emotion/sheet@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "@emotion/sheet@npm:1.1.1"
+  checksum: be65c618965123b9012eb9535e256a6ba172bd67389f91de8a38dd4db00bed2534e8f5a2b22e2ab2fabb41946259bedc1c18c09acd24021490484aeed9bb1f90
   languageName: node
   linkType: hard
 
@@ -3683,21 +3703,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/form@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/form@npm:4.2.8"
+"@mantine/form@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/form@npm:4.2.9"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: a7ac5a6ca28059c459075178c7d8ed45b160e0b7f7cd5f7f4c80eaed36fc6445d6d5fcfea798987101ca12fddee9741033a280f3ec3569ef1ca1f54aee00fb29
+  checksum: 21979f0cae9a38dbc74c1c13999951e33a75154c5315171d5d8853e4c8b36ed5679c8e0b5ca093a182a6033705dd2de9850593d015b2d5890642e2d84ec6655b
   languageName: node
   linkType: hard
 
-"@mantine/hooks@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/hooks@npm:4.2.8"
+"@mantine/hooks@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/hooks@npm:4.2.9"
   peerDependencies:
     react: ">=16.8.0"
-  checksum: a8c958efd59177a731586b1953277a263e8aede69577dfd72d65ebfd821bad07d91d88bceea28d470ac4a6dd64140d090b485545f6f8277879ad5360d6e573b9
+  checksum: 148cd3dbb770f6d72fdede0b38ee4e5932fadbd5ded8c598910d5e43750a6fc0245d087f36c27cb544fa6e01980af54e1de6b4caea75a81932d3cfa842e98ceb
   languageName: node
   linkType: hard
 
@@ -3713,17 +3733,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/notifications@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/notifications@npm:4.2.8"
+"@mantine/notifications@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/notifications@npm:4.2.9"
   dependencies:
     react-transition-group: ^4.4.2
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: 5c727dd0e1fcd934a37fc6226c0f13db736db8d41ce71828ba839bcd29e9c3edae0aa20f60418177f003b735063076c48298ca2b293cf4baf1238257a543fefa
+  checksum: 7563d6af2d62f109ae34bbf3c51ea1f3460c3be2957bf2d4a8eeb0e16190cf6ad35b04e6bacff391581e57c850c2ef4d14a11c7229ccb2752a793defb04f8060
   languageName: node
   linkType: hard
 
@@ -3741,15 +3761,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@mantine/spotlight@npm:^4.2.8":
-  version: 4.2.8
-  resolution: "@mantine/spotlight@npm:4.2.8"
+"@mantine/spotlight@npm:^4.2.9":
+  version: 4.2.9
+  resolution: "@mantine/spotlight@npm:4.2.9"
   peerDependencies:
-    "@mantine/core": 4.2.8
-    "@mantine/hooks": 4.2.8
+    "@mantine/core": 4.2.9
+    "@mantine/hooks": 4.2.9
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-  checksum: e15a47cc6566abf400acd50a3e8e3d329bfe331f478824299d936875fdaef188f59f08c7e2544f0e9250aeaf71e0f97a1aa4d79c4b82ba4c3e3a1dd80a8569f5
+  checksum: 306c50a7b1a5c45176e5b64716f83b1c63d973f614dde794ca4442c5884929d0410e2cffd8d92622341342826e5c5640a3240f06f2bfbe4c8af2dbab6894e399
   languageName: node
   linkType: hard
 
@@ -4783,6 +4803,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redwoodjs/router@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@redwoodjs/router@npm:1.5.2"
+  dependencies:
+    "@babel/runtime-corejs3": 7.16.7
+    "@reach/skip-nav": 0.16.0
+    "@redwoodjs/auth": 1.5.2
+    core-js: 3.22.5
+    lodash.isequal: 4.5.0
+  checksum: d1fffc66a632b3798b81f6a0c4d7b78e0d21f861b33e84556b540eedea3191a5ddc3f0c067f57e8d65586230e7b3808f84a66cdeb0c6f9e3013ced28153e9fed
+  languageName: node
+  linkType: hard
+
 "@redwoodjs/structure@npm:1.5.1":
   version: 1.5.1
   resolution: "@redwoodjs/structure@npm:1.5.1"
@@ -4902,6 +4935,38 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@redwoodjs/web@npm:1.5.2":
+  version: 1.5.2
+  resolution: "@redwoodjs/web@npm:1.5.2"
+  dependencies:
+    "@apollo/client": 3.6.4
+    "@babel/runtime-corejs3": 7.16.7
+    "@redwoodjs/auth": 1.5.2
+    core-js: 3.22.5
+    graphql: 16.5.0
+    graphql-tag: 2.12.6
+    react-helmet-async: 1.3.0
+    react-hot-toast: 2.2.0
+    stacktracey: 2.1.8
+    ts-toolbelt: 9.6.0
+  peerDependencies:
+    prop-types: 15.8.1
+    react: 17.0.2
+    react-dom: 17.0.2
+  bin:
+    build-storybook: dist/bins/build-storybook.js
+    cross-env: dist/bins/cross-env.js
+    msw: dist/bins/msw.js
+    redwood: dist/bins/redwood.js
+    rw: dist/bins/redwood.js
+    rwfw: dist/bins/rwfw.js
+    start-storybook: dist/bins/start-storybook.js
+    tsc: dist/bins/tsc.js
+    webpack: dist/bins/webpack.js
+  checksum: 6af653753a5715cd55df70fbab44990cd81ae525572de733eab95ce73308c862f0d7946deeea2eeed060a86856c955377588bc45639f949c3d20e94bcd85f620
+  languageName: node
+  linkType: hard
+
 "@repeaterjs/repeater@npm:^3.0.4":
   version: 3.0.4
   resolution: "@repeaterjs/repeater@npm:3.0.4"
@@ -4920,6 +4985,85 @@ __metadata:
     zen-observable:
       optional: true
   checksum: 0d874453f6bc2460d71783292291f52feb36c2a75314b1072a6ffe6206562f33e9d664a554348d565a6b54da9041d75070371052545bc329caaa52f64216987f
+  languageName: node
+  linkType: hard
+
+"@sentry/browser@npm:7.1.1":
+  version: 7.1.1
+  resolution: "@sentry/browser@npm:7.1.1"
+  dependencies:
+    "@sentry/core": 7.1.1
+    "@sentry/types": 7.1.1
+    "@sentry/utils": 7.1.1
+    tslib: ^1.9.3
+  checksum: 3b98a7826e01e8b6a20a69655a78c820c75e3c0bc8e1c35b841c68bcaf975f739e43fd46f2e359a74c0dddaeaeefbd7845c6cdabd3c4b8846727782997442b7f
+  languageName: node
+  linkType: hard
+
+"@sentry/core@npm:7.1.1":
+  version: 7.1.1
+  resolution: "@sentry/core@npm:7.1.1"
+  dependencies:
+    "@sentry/hub": 7.1.1
+    "@sentry/types": 7.1.1
+    "@sentry/utils": 7.1.1
+    tslib: ^1.9.3
+  checksum: cfad6a2172bc53e4827024c6632c70125d65d8668a3fd19b6d0087372675cfb4da8f9af16d7f7594c92f758252b025aa6d339916df62e8417473b9be34554ce2
+  languageName: node
+  linkType: hard
+
+"@sentry/hub@npm:7.1.1":
+  version: 7.1.1
+  resolution: "@sentry/hub@npm:7.1.1"
+  dependencies:
+    "@sentry/types": 7.1.1
+    "@sentry/utils": 7.1.1
+    tslib: ^1.9.3
+  checksum: 374a2dc3398f45328ea2dcca8bc8c7e2ba4a20912afd5ebeb9ddaf7e37f4c73cc13318509558d4482685e742c0b1c356fcd031605f3432b4ff8d29daf327656f
+  languageName: node
+  linkType: hard
+
+"@sentry/react@npm:^7.1.1":
+  version: 7.1.1
+  resolution: "@sentry/react@npm:7.1.1"
+  dependencies:
+    "@sentry/browser": 7.1.1
+    "@sentry/types": 7.1.1
+    "@sentry/utils": 7.1.1
+    hoist-non-react-statics: ^3.3.2
+    tslib: ^1.9.3
+  peerDependencies:
+    react: 15.x || 16.x || 17.x || 18.x
+  checksum: 5c8dec361f7501ca5fde03d50eda5e6b6f983379e72c818de3038c23d024c2def092375ee04d2aac31eb935d88b943c1f64105ed837488307df4b4417e32f26b
+  languageName: node
+  linkType: hard
+
+"@sentry/tracing@npm:^7.1.1":
+  version: 7.1.1
+  resolution: "@sentry/tracing@npm:7.1.1"
+  dependencies:
+    "@sentry/hub": 7.1.1
+    "@sentry/types": 7.1.1
+    "@sentry/utils": 7.1.1
+    tslib: ^1.9.3
+  checksum: 591e87228413d6ad3886f7e3dd952c11e5694da00efe3ee275ea3d8823e1fba1ad672dfaba8f1453e8ff1b0cd91fae8a11b426722212670c0a98d165f4d2d143
+  languageName: node
+  linkType: hard
+
+"@sentry/types@npm:7.1.1":
+  version: 7.1.1
+  resolution: "@sentry/types@npm:7.1.1"
+  checksum: 70d44abac63b9f37842780a3298b92837db34ae949574a2246887a956deaca342e3430886b23ecd14492bc9078923a999e8378666c6704c9bfcc757e3858cbff
+  languageName: node
+  linkType: hard
+
+"@sentry/utils@npm:7.1.1":
+  version: 7.1.1
+  resolution: "@sentry/utils@npm:7.1.1"
+  dependencies:
+    "@sentry/types": 7.1.1
+    tslib: ^1.9.3
+  checksum: 229b98f7d0ccb3faa29b3da4bc6d4b53fe412b3e960383e2168d0973538a5f46a2729f2156357497505a134c15479f9e4154f423ee0dfd5606af898c66f7683c
   languageName: node
   linkType: hard
 
@@ -6193,25 +6337,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/api@npm:^1.0.0-rc.7":
-  version: 1.0.0-rc.7
-  resolution: "@tauri-apps/api@npm:1.0.0-rc.7"
+"@tauri-apps/api@npm:^1.0.1":
+  version: 1.0.1
+  resolution: "@tauri-apps/api@npm:1.0.1"
   dependencies:
-    type-fest: 2.13.0
-  checksum: 80596a27fb41b2b5774d7594641ea635183953dc6f21484e5903a3c0e4919c2ed2ae8ac755d7de564d4046861a31de11de11a087987b6f50eab10849617d1052
+    type-fest: 2.13.1
+  checksum: bf0980fc7435abc1625d8a873ed0df98fde732930b5183e6a56c9f8ab6c114ff2c2cab3249abff4562e6ee5e445fd8e11c9bedef53a8690e980d44f2d12706bd
   languageName: node
   linkType: hard
 
 "@tauri-apps/cli-darwin-arm64@npm:1.0.0":
   version: 1.0.0
   resolution: "@tauri-apps/cli-darwin-arm64@npm:1.0.0"
-  conditions: os=darwin & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@tauri-apps/cli-darwin-arm64@npm:1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli-darwin-arm64@npm:1.0.0-rc.13"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
@@ -6223,23 +6360,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-darwin-x64@npm:1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli-darwin-x64@npm:1.0.0-rc.13"
-  conditions: os=darwin & cpu=x64
-  languageName: node
-  linkType: hard
-
 "@tauri-apps/cli-linux-arm-gnueabihf@npm:1.0.0":
   version: 1.0.0
   resolution: "@tauri-apps/cli-linux-arm-gnueabihf@npm:1.0.0"
-  conditions: os=linux & cpu=arm
-  languageName: node
-  linkType: hard
-
-"@tauri-apps/cli-linux-arm-gnueabihf@npm:1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli-linux-arm-gnueabihf@npm:1.0.0-rc.13"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
@@ -6251,23 +6374,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-linux-arm64-gnu@npm:1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli-linux-arm64-gnu@npm:1.0.0-rc.13"
-  conditions: os=linux & cpu=arm64
-  languageName: node
-  linkType: hard
-
 "@tauri-apps/cli-linux-arm64-musl@npm:1.0.0":
   version: 1.0.0
   resolution: "@tauri-apps/cli-linux-arm64-musl@npm:1.0.0"
-  conditions: os=linux & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"@tauri-apps/cli-linux-arm64-musl@npm:1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli-linux-arm64-musl@npm:1.0.0-rc.13"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
@@ -6279,23 +6388,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-linux-x64-gnu@npm:1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli-linux-x64-gnu@npm:1.0.0-rc.13"
-  conditions: os=linux & cpu=x64
-  languageName: node
-  linkType: hard
-
 "@tauri-apps/cli-linux-x64-musl@npm:1.0.0":
   version: 1.0.0
   resolution: "@tauri-apps/cli-linux-x64-musl@npm:1.0.0"
-  conditions: os=linux & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@tauri-apps/cli-linux-x64-musl@npm:1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli-linux-x64-musl@npm:1.0.0-rc.13"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
@@ -6307,23 +6402,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tauri-apps/cli-win32-ia32-msvc@npm:1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli-win32-ia32-msvc@npm:1.0.0-rc.13"
-  conditions: os=win32 & cpu=ia32
-  languageName: node
-  linkType: hard
-
 "@tauri-apps/cli-win32-x64-msvc@npm:1.0.0":
   version: 1.0.0
   resolution: "@tauri-apps/cli-win32-x64-msvc@npm:1.0.0"
-  conditions: os=win32 & cpu=x64
-  languageName: node
-  linkType: hard
-
-"@tauri-apps/cli-win32-x64-msvc@npm:1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli-win32-x64-msvc@npm:1.0.0-rc.13"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -6363,44 +6444,6 @@ __metadata:
   bin:
     tauri: tauri.js
   checksum: 45f2b6b13764938442fe8cefd98b4c4af40543968c9d77b2f9994955a2e88c5621729a653706e7a1de750aee0180f6f31a7507efa51f331a0ad1c817374b7285
-  languageName: node
-  linkType: hard
-
-"@tauri-apps/cli@npm:^1.0.0-rc.13":
-  version: 1.0.0-rc.13
-  resolution: "@tauri-apps/cli@npm:1.0.0-rc.13"
-  dependencies:
-    "@tauri-apps/cli-darwin-arm64": 1.0.0-rc.13
-    "@tauri-apps/cli-darwin-x64": 1.0.0-rc.13
-    "@tauri-apps/cli-linux-arm-gnueabihf": 1.0.0-rc.13
-    "@tauri-apps/cli-linux-arm64-gnu": 1.0.0-rc.13
-    "@tauri-apps/cli-linux-arm64-musl": 1.0.0-rc.13
-    "@tauri-apps/cli-linux-x64-gnu": 1.0.0-rc.13
-    "@tauri-apps/cli-linux-x64-musl": 1.0.0-rc.13
-    "@tauri-apps/cli-win32-ia32-msvc": 1.0.0-rc.13
-    "@tauri-apps/cli-win32-x64-msvc": 1.0.0-rc.13
-  dependenciesMeta:
-    "@tauri-apps/cli-darwin-arm64":
-      optional: true
-    "@tauri-apps/cli-darwin-x64":
-      optional: true
-    "@tauri-apps/cli-linux-arm-gnueabihf":
-      optional: true
-    "@tauri-apps/cli-linux-arm64-gnu":
-      optional: true
-    "@tauri-apps/cli-linux-arm64-musl":
-      optional: true
-    "@tauri-apps/cli-linux-x64-gnu":
-      optional: true
-    "@tauri-apps/cli-linux-x64-musl":
-      optional: true
-    "@tauri-apps/cli-win32-ia32-msvc":
-      optional: true
-    "@tauri-apps/cli-win32-x64-msvc":
-      optional: true
-  bin:
-    tauri: tauri.js
-  checksum: a5be8eb9a2263d4e1338610be8f6913a17e47ca20ea14eb723dfc5d0a8219c56501889497bdfa4bcae5ab0bdff6befd0eb056ab66b6a55de5153e0b41d6abb22
   languageName: node
   linkType: hard
 
@@ -18797,12 +18840,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:^21.8.9":
-  version: 21.8.9
-  resolution: "i18next@npm:21.8.9"
+"i18next@npm:^21.8.10":
+  version: 21.8.10
+  resolution: "i18next@npm:21.8.10"
   dependencies:
     "@babel/runtime": ^7.17.2
-  checksum: 381208b4218e1d287af42e40d58879cdf46a7505db4ca1414ba6bb7ec3e387dfe2524182a980bf5644052600fcc7142505ef292eaa37b130aae7c3cbc17257c7
+  checksum: 7a8831bbd756c490c550c11b9a935309edcbee5bcf3bca84d23eeff2da255a459dfc3890646c98e5843beb7296920353a559030ca4d215e5c0d54beaedf37b0b
   languageName: node
   linkType: hard
 
@@ -26937,9 +26980,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:^11.17.1":
-  version: 11.17.1
-  resolution: "react-i18next@npm:11.17.1"
+"react-i18next@npm:^11.17.2":
+  version: 11.17.2
+  resolution: "react-i18next@npm:11.17.2"
   dependencies:
     "@babel/runtime": ^7.14.5
     html-escaper: ^2.0.2
@@ -26952,7 +26995,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: d1359695c55bec02a737aeae4c948e055d366cc5d3017463a68759b7cf06dd560eb26f7e22d400a7f2332b4b166abf72529cf2d09d4571befad11d79de142615
+  checksum: 1fdcc98dc2499a4b16a5d35eede5f81bf038fde7ace6a7efc626edbba3348faa7558b451ef164f5be3107c6bbb42531daeec082d2acd87d7ed5fab6a73276d91
   languageName: node
   linkType: hard
 
@@ -28149,9 +28192,8 @@ __metadata:
     "@redwoodjs/core": 1.5.1
     "@tauri-apps/cli": ^1.0.0
     cz-conventional-changelog: 3.3.0
-    formik: ^2.2.9
     husky: ^7.0.0
-    react-icons: ^4.4.0
+    react-slick: ^0.29.0
     web: "workspace:^"
   languageName: unknown
   linkType: soft
@@ -30957,7 +30999,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.10.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.2":
+"tslib@npm:^1.10.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.2, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 69ae09c49eea644bc5ebe1bca4fa4cc2c82b7b3e02f43b84bd891504edf66dbc6b2ec0eef31a957042de2269139e4acff911e6d186a258fb14069cd7f6febce2
@@ -31030,10 +31072,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:2.13.0":
-  version: 2.13.0
-  resolution: "type-fest@npm:2.13.0"
-  checksum: 8746231e055ed9298b09fe1f1b14f37438f69acf3f1bf5fc2d203d0279c381b69413375a5b71d03641c71fccce0527d38e842f661f3246b6b48f96ff7d2afe90
+"type-fest@npm:2.13.1":
+  version: 2.13.1
+  resolution: "type-fest@npm:2.13.1"
+  checksum: 87405de8002280b89c3af3c9970e9099581470764a50d79a23e96ee814d3ce40cd33f4237f7432aa9fcf92b9eda88989a1f3e4a282617ba108f67ab4aabc3240
   languageName: node
   linkType: hard
 
@@ -32155,34 +32197,38 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "web@workspace:web"
   dependencies:
-    "@emotion/react": ^11.9.0
+    "@emotion/react": ^11.9.3
     "@emotion/styled": ^11.9.3
     "@mantine/core": 4.2.9
     "@mantine/dates": ^4.2.9
     "@mantine/dropzone": ^4.2.9
-    "@mantine/form": ^4.2.8
-    "@mantine/hooks": ^4.2.8
+    "@mantine/form": ^4.2.9
+    "@mantine/hooks": ^4.2.9
     "@mantine/modals": ^4.2.9
-    "@mantine/notifications": ^4.2.8
+    "@mantine/notifications": ^4.2.9
     "@mantine/prism": ^4.2.9
-    "@mantine/spotlight": ^4.2.8
+    "@mantine/spotlight": ^4.2.9
     "@redwoodjs/auth": 1.5.2
     "@redwoodjs/forms": 1.5.2
-    "@redwoodjs/router": 1.5.1
-    "@redwoodjs/web": 1.5.1
-    "@tauri-apps/api": ^1.0.0-rc.7
-    "@tauri-apps/cli": ^1.0.0-rc.13
+    "@redwoodjs/router": 1.5.2
+    "@redwoodjs/web": 1.5.2
+    "@sentry/react": ^7.1.1
+    "@sentry/tracing": ^7.1.1
+    "@tauri-apps/api": ^1.0.1
+    "@tauri-apps/cli": ^1.0.0
     cypress: 9.6.0
     cz-conventional-changelog: 3.3.0
     date-fns: ^2.28.0
     dayjs: ^1.11.3
     detect-browser-language: ^0.0.2
-    i18next: ^21.8.9
+    formik: ^2.2.9
+    i18next: ^21.8.10
     i18next-browser-languagedetector: ^6.1.4
     prop-types: 15.8.1
     react: 17.0.2
     react-dom: 17.0.2
-    react-i18next: ^11.17.1
+    react-i18next: ^11.17.2
+    react-icons: ^4.4.0
     react-slick: ^0.29.0
     react-undraw-illustrations: ^2.0.3
     react-use: ^17.4.0

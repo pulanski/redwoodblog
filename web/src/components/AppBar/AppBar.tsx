@@ -1,4 +1,3 @@
-import React from 'react'
 import { createStyles, Header, Group, Burger, Kbd, Input } from '@mantine/core'
 import { useBooleanToggle } from '@mantine/hooks'
 import { Search } from 'tabler-icons-react'
@@ -67,14 +66,8 @@ const useStyles = createStyles((theme) => ({
   },
 }))
 
-// export interface AppBarProps {
-//   showNavbar?: boolean
-//   setShowNavbar?: (showNavbar: boolean) => void
-// }
-
 export function AppBar({ showNavbar, setShowNavbar }) {
-  // const [opened, toggleOpened] = useBooleanToggle(false)
-  const [opened] = useBooleanToggle(false)
+  const [opened, toggleOpened] = useBooleanToggle(false)
   const { classes } = useStyles()
 
   return (
@@ -84,7 +77,7 @@ export function AppBar({ showNavbar, setShowNavbar }) {
           <Burger
             opened={opened}
             onClick={() => {
-              // toggleOpened()
+              toggleOpened()
               setShowNavbar(!showNavbar)
             }}
             size="sm"

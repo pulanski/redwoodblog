@@ -7,6 +7,7 @@ import {
   useMantineTheme,
   createStyles,
 } from '@mantine/core'
+import { navigate, routes } from '@redwoodjs/router'
 import { useState } from 'react'
 import { useDarkMode } from 'src/hooks/useDarkMode'
 import CreateCommunityModal from '../CreateCommunityModal/CreateCommunityModal'
@@ -51,6 +52,7 @@ const HomeInfoCard = () => {
             variant={darkMode ? 'light' : 'filled'}
             fullWidth
             color="orange"
+            onClick={() => navigate(routes.create())}
           >
             Create Post
           </Button>

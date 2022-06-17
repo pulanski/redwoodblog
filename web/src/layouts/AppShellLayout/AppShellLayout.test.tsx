@@ -1,16 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import HomePage from './HomePage'
+import AppShellLayout from './AppShellLayout'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //   https://redwoodjs.com/docs/testing#testing-pages-layouts
 
-describe('HomePage', () => {
+describe('AppShellLayout', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<HomePage />)
-    })
-    // TODO Having errors with useQuery no-op
-    // .not.toThrow()
+      render(<AppShellLayout />)
+    }).not.toThrow()
   })
 })

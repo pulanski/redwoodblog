@@ -17,19 +17,19 @@ export const actions: SpotlightAction[] = [
   },
   {
     title: 'Collection',
-    description: 'View all of your created blog posts',
+    description: 'View created posts',
     onTrigger: () => navigate('/collection'),
     icon: <Notebook size={18} />,
   },
   {
     title: 'Bookmarks',
-    description: 'View all of your saved blog posts',
+    description: 'View saved posts',
     onTrigger: () => navigate('/bookmarks'),
     icon: <Bookmarks size={18} />,
   },
   {
     title: 'Settings',
-    description: 'Tweak your settings to your liking',
+    description: 'Tweak your settings to just your liking',
     onTrigger: () => navigate(routes.settings()),
     icon: <Notebook size={18} />,
   },

@@ -19,7 +19,7 @@ const CreatePostPage = ({ onSubmit }: CreatePostProps) => {
     <>
       <MetaTags title="CreatePost" description="CreatePost page" />
 
-      <Formik
+      {/* <Formik
         initialValues={{
           title: '',
           content: '',
@@ -34,7 +34,7 @@ const CreatePostPage = ({ onSubmit }: CreatePostProps) => {
             <TextInput name="title">{values.values.title}</TextInput>
           </Form>
         )}
-      </Formik>
+      </Formik> */}
     </>
   )
 }

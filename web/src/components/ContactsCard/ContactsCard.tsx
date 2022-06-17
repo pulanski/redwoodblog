@@ -1,12 +1,13 @@
 import {
   Card,
   createStyles,
-  Text,
-  Stack,
-  useMantineTheme,
   Group,
   Space,
+  Stack,
+  Text,
+  useMantineTheme,
 } from '@mantine/core'
+
 import Contact from '../Contact/Contact'
 import ContactsMenu from '../ContactsMenu/ContactsMenu'
 
@@ -14,6 +15,11 @@ const useStyles = createStyles((theme) => ({
   card: {
     [theme.fn.smallerThan('md')]: {
       display: 'none',
+    },
+  },
+  contact: {
+    '&:hover': {
+      cursor: 'pointer',
     },
   },
 }))
@@ -34,8 +40,8 @@ export const ContactsCard = () => {
         <Space h={20} />
         <Stack spacing="lg">
           <Contact
-            src="https://randomuser.me/api/portraits/men/27.jpg"
-            name="Boyd Schuppe IV"
+            src="https://randomuser.me/api/portraits/women/27.jpg"
+            name="Vivian Reichert"
           />
           <Contact
             src="https://randomuser.me/api/portraits/men/77.jpg"

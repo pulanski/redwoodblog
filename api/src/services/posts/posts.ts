@@ -39,6 +39,12 @@ export const Post: PostResolvers = {
     db.post.findUnique({ where: { id: root.id } }).author(),
 }
 
-export const featured: QueryResolvers['featured'] = () => {
+export const featuredPosts: QueryResolvers['featuredPosts'] = () => {
   return db.post.findMany({ where: { featured: true } })
+}
+
+export const popularPosts = ({ direction }) => {
+  return db.post.findMany({
+    orderBy: { numLikes: direction === 'asc' ? 'asc' : 'desc' },
+  })
 }

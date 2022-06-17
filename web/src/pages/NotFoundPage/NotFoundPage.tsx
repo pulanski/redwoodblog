@@ -1,18 +1,19 @@
+import Footer from 'src/components/Footer/Footer'
+import NotFoundHeader from 'src/components/NotFoundHeader/NotFoundHeader'
+
+import styled from '@emotion/styled'
 import {
   Button,
-  Title,
-  Text,
-  Stack,
-  // createStyles,
   Container,
   SimpleGrid,
   Space,
+  Stack,
+  Text,
+  Title,
 } from '@mantine/core'
 import { Link, routes } from '@redwoodjs/router'
+
 import NotFoundSVG from './NotFound.svg'
-import styled from '@emotion/styled'
-import Footer from 'src/components/Footer/Footer'
-import NotFoundHeader from 'src/components/NotFoundHeader/NotFoundHeader'
 
 const StyledContainer = styled(Container)`
   padding: 5rem 2rem;
@@ -57,7 +58,7 @@ export function NotFoundPage() {
           </Text>
           {/* className={classes.control} */}
           <Link to={routes.home()}>
-            <Button variant="outline" size="md" mt="xl">
+            <Button color="red" variant="outline" size="md" mt="xl">
               Get back to the home page
             </Button>
           </Link>

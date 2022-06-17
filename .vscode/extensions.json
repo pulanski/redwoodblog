@@ -11,7 +11,9 @@
     "graphql.vscode-graphql",
     "kol.commit-lint",
     "redjue.git-commit-plugin",
-    "rioukkevin.vscode-git-commit"
+    "rioukkevin.vscode-git-commit",
+    "vsls-contrib.gitdoc",
+    "mikey.vscode-fileheader"
   ],
   "unwantedRecommendations": []
 }
