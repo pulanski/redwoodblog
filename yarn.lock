@@ -4988,82 +4988,82 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/browser@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/browser@npm:7.1.1"
+"@sentry/browser@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/browser@npm:7.2.0"
   dependencies:
-    "@sentry/core": 7.1.1
-    "@sentry/types": 7.1.1
-    "@sentry/utils": 7.1.1
+    "@sentry/core": 7.2.0
+    "@sentry/types": 7.2.0
+    "@sentry/utils": 7.2.0
     tslib: ^1.9.3
-  checksum: 3b98a7826e01e8b6a20a69655a78c820c75e3c0bc8e1c35b841c68bcaf975f739e43fd46f2e359a74c0dddaeaeefbd7845c6cdabd3c4b8846727782997442b7f
+  checksum: 9f70d7e9a4ed0a47c467200ba2281f78ed2dacd9ccad19f7771617173b4f66d586f56035480e27a7c183d6b7856167365453bb2cf178f6af45d0c68348c38c12
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/core@npm:7.1.1"
+"@sentry/core@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/core@npm:7.2.0"
   dependencies:
-    "@sentry/hub": 7.1.1
-    "@sentry/types": 7.1.1
-    "@sentry/utils": 7.1.1
+    "@sentry/hub": 7.2.0
+    "@sentry/types": 7.2.0
+    "@sentry/utils": 7.2.0
     tslib: ^1.9.3
-  checksum: cfad6a2172bc53e4827024c6632c70125d65d8668a3fd19b6d0087372675cfb4da8f9af16d7f7594c92f758252b025aa6d339916df62e8417473b9be34554ce2
+  checksum: ab72f6a58b3d718950989d29b3b97e0658a3254f83334f2bd02c46e07a176dddbbde91513b47221aab4211a5eaccbf66d9ab7d39b095205cc109810be9e3d826
   languageName: node
   linkType: hard
 
-"@sentry/hub@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/hub@npm:7.1.1"
+"@sentry/hub@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/hub@npm:7.2.0"
   dependencies:
-    "@sentry/types": 7.1.1
-    "@sentry/utils": 7.1.1
+    "@sentry/types": 7.2.0
+    "@sentry/utils": 7.2.0
     tslib: ^1.9.3
-  checksum: 374a2dc3398f45328ea2dcca8bc8c7e2ba4a20912afd5ebeb9ddaf7e37f4c73cc13318509558d4482685e742c0b1c356fcd031605f3432b4ff8d29daf327656f
+  checksum: a25a6b79bb13f15766c97747c0da33346afa2ec4fe506e323cc0ddaa04c89f69df8e766a2802b692653581bbd1b2c7668d1b421efd537d102cd3cbd0b96b0687
   languageName: node
   linkType: hard
 
-"@sentry/react@npm:^7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/react@npm:7.1.1"
+"@sentry/react@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/react@npm:7.2.0"
   dependencies:
-    "@sentry/browser": 7.1.1
-    "@sentry/types": 7.1.1
-    "@sentry/utils": 7.1.1
+    "@sentry/browser": 7.2.0
+    "@sentry/types": 7.2.0
+    "@sentry/utils": 7.2.0
     hoist-non-react-statics: ^3.3.2
     tslib: ^1.9.3
   peerDependencies:
     react: 15.x || 16.x || 17.x || 18.x
-  checksum: 5c8dec361f7501ca5fde03d50eda5e6b6f983379e72c818de3038c23d024c2def092375ee04d2aac31eb935d88b943c1f64105ed837488307df4b4417e32f26b
+  checksum: 56ca65154890561248b32fe4f026285d28c076f0e096cac984a338ac10f343f481d8b9e751bce8e9c6c1a14ddffe1291726a3f394ba0071045772475ee2e9975
   languageName: node
   linkType: hard
 
-"@sentry/tracing@npm:^7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/tracing@npm:7.1.1"
+"@sentry/tracing@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/tracing@npm:7.2.0"
   dependencies:
-    "@sentry/hub": 7.1.1
-    "@sentry/types": 7.1.1
-    "@sentry/utils": 7.1.1
+    "@sentry/hub": 7.2.0
+    "@sentry/types": 7.2.0
+    "@sentry/utils": 7.2.0
     tslib: ^1.9.3
-  checksum: 591e87228413d6ad3886f7e3dd952c11e5694da00efe3ee275ea3d8823e1fba1ad672dfaba8f1453e8ff1b0cd91fae8a11b426722212670c0a98d165f4d2d143
+  checksum: 385f8ba53bf7521f78f26c832ad0ccdad11c4197bd3d27c1255e59facf626671d6075f7112804f1008db5fd4fafa66e6964ba30c116e802e81e99dc370299112
   languageName: node
   linkType: hard
 
-"@sentry/types@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/types@npm:7.1.1"
-  checksum: 70d44abac63b9f37842780a3298b92837db34ae949574a2246887a956deaca342e3430886b23ecd14492bc9078923a999e8378666c6704c9bfcc757e3858cbff
+"@sentry/types@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/types@npm:7.2.0"
+  checksum: 55e551e879e6caa818e4af9ca14229a9f484674cd63153d2179dbc789d8b3b771d5cb7dc6d183311d71576107f7d707a83b77cb61e58c32a0d2d23100a0108ed
   languageName: node
   linkType: hard
 
-"@sentry/utils@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/utils@npm:7.1.1"
+"@sentry/utils@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/utils@npm:7.2.0"
   dependencies:
-    "@sentry/types": 7.1.1
+    "@sentry/types": 7.2.0
     tslib: ^1.9.3
-  checksum: 229b98f7d0ccb3faa29b3da4bc6d4b53fe412b3e960383e2168d0973538a5f46a2729f2156357497505a134c15479f9e4154f423ee0dfd5606af898c66f7683c
+  checksum: 9e49feb4ddae8f0702cfb42f61fd70ae36d185065d5050338438eb79be1549d28c1a970b168c134d0c68accb76ac42900f33bc8720d097b882af9e5401c7dc10
   languageName: node
   linkType: hard
 
@@ -32212,8 +32212,8 @@ __metadata:
     "@redwoodjs/forms": 1.5.2
     "@redwoodjs/router": 1.5.2
     "@redwoodjs/web": 1.5.2
-    "@sentry/react": ^7.1.1
-    "@sentry/tracing": ^7.1.1
+    "@sentry/react": 7.2.0
+    "@sentry/tracing": 7.2.0
     "@tauri-apps/api": ^1.0.1
     "@tauri-apps/cli": ^1.0.0
     cypress: 9.6.0
