@@ -11,7 +11,7 @@
   "devDependencies": {
     "@commitlint/cli": "^17.0.2",
     "@commitlint/config-angular": "^17.0.0",
-    "@redwoodjs/core": "1.5.1",
+    "@redwoodjs/core": "2.0.0",
     "@tauri-apps/cli": "^1.0.0",
     "cz-conventional-changelog": "3.3.0",
     "husky": "^7.0.0"
