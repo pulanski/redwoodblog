@@ -1,4 +1,6 @@
 import { db } from 'src/lib/db'
+import { context } from '@redwoodjs/graphql-server'
+
 import type {
   QueryResolvers,
   MutationResolvers,
@@ -46,5 +48,13 @@ export const featuredPosts: QueryResolvers['featuredPosts'] = () => {
 export const popularPosts = ({ direction }) => {
   return db.post.findMany({
     orderBy: { numLikes: direction === 'asc' ? 'asc' : 'desc' },
+  })
+}
+
+export const collection: QueryResolvers['collection'] = () => {
+  return db.post.findMany({
+    where: {
+      authorId: context.currentUser.id,
+    },
   })
 }

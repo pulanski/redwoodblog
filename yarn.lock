@@ -28195,6 +28195,7 @@ __metadata:
     husky: ^7.0.0
     react-slick: ^0.29.0
     web: "workspace:^"
+    zod: ^3.17.3
   languageName: unknown
   linkType: soft
 
@@ -33462,6 +33463,13 @@ __metadata:
     compress-commons: ^4.1.0
     readable-stream: ^3.6.0
   checksum: ed9eb9387953576c43bdf7678705e8b0ff4e9149cf92b39fa845ddd5413b08daf68655b1ee8311e2dd7c88ddeb95908a785e8e48473016b2595870b0adf588d4
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.17.3":
+  version: 3.17.3
+  resolution: "zod@npm:3.17.3"
+  checksum: 0f3c152dac6f6e81bbeb8eaeb6fdaa003488659de9ffa79614b22570dd201782f059830f208f4b32b1be540767295a2cd556c181b689b0c8b6602364e529e0ef
   languageName: node
   linkType: hard
 

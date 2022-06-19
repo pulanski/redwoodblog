@@ -1,22 +1,34 @@
 export const schema = gql`
   type User {
     id: Int!
-    name: String
+    firstName: String
+    lastName: String
+    middleName: String
     email: String!
+    gender: String
+    language: String
     hashedPassword: String!
     salt: String!
     resetToken: String
     resetTokenExpiresAt: DateTime
+    Comment: [Comment]!
+    Contact: [Contact]!
+    createdAt: DateTime!
+    Post: [Post]!
   }
 
   type Query {
-    users: [User!]! @skipAuth
-    user(id: Int!): User @skipAuth
+    users: [User!]! @requireAuth
+    user(id: Int!): User @requireAuth
   }
 
   input CreateUserInput {
-    name: String
+    firstName: String
+    lastName: String
+    middleName: String
     email: String!
+    gender: String
+    language: String
     hashedPassword: String!
     salt: String!
     resetToken: String
@@ -24,8 +36,12 @@ export const schema = gql`
   }
 
   input UpdateUserInput {
-    name: String
+    firstName: String
+    lastName: String
+    middleName: String
     email: String
+    gender: String
+    language: String
     hashedPassword: String
     salt: String
     resetToken: String

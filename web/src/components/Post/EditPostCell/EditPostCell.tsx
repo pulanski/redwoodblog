@@ -1,11 +1,11 @@
 import type { EditPostById } from 'types/graphql'
 
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
+import PostForm from 'src/components/Post/PostForm'
+
+import { navigate, routes } from '@redwoodjs/router'
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
-import { navigate, routes } from '@redwoodjs/router'
-
-import PostForm from 'src/components/Post/PostForm'
 
 export const QUERY = gql`
   query EditPostById($id: Int!) {

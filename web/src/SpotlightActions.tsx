@@ -12,25 +12,25 @@ export const actions: SpotlightAction[] = [
   {
     title: 'New Post',
     description: 'Let the world know what you are thinking',
-    onTrigger: () => navigate('/posts'),
+    onTrigger: () => navigate(routes.create()),
     icon: <Wallpaper size={18} />,
   },
   {
     title: 'Collection',
     description: 'View created posts',
-    onTrigger: () => navigate('/collection'),
+    onTrigger: () => navigate(routes.collection()),
     icon: <Notebook size={18} />,
   },
   {
     title: 'Bookmarks',
     description: 'View saved posts',
-    onTrigger: () => navigate('/bookmarks'),
+    onTrigger: () => navigate(routes.bookmarks()),
     icon: <Bookmarks size={18} />,
   },
   {
     title: 'Settings',
     description: 'Tweak your settings to just your liking',
-    onTrigger: () => navigate(routes.settings()),
+    onTrigger: () => navigate(routes.generalSettings()),
     icon: <Notebook size={18} />,
   },
 ]

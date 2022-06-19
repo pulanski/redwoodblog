@@ -22,7 +22,7 @@ const useStyles = createStyles((theme) => ({
   },
 }))
 
-export function SettingsPage() {
+export function GeneralSettingsPage() {
   const { colorScheme, toggleColorScheme } = useMantineColorScheme()
   const dark = colorScheme === 'dark'
 
@@ -32,19 +32,24 @@ export function SettingsPage() {
     <>
       <MetaTags title="Settings" description="Settings page" />
 
-      <Group position="center" my="xl">
+      <Group
+        position="center"
+        style={{
+          marginBottom: '4rem',
+        }}
+      >
         <Stack>
           <Title order={1} mt={30} mb={40} className={classes.title}>
             Settings
           </Title>
 
-          <DarkModeToggle
+          {/* <DarkModeToggle
             dark={dark}
             colorScheme={colorScheme}
             toggleColorScheme={toggleColorScheme}
           />
           <FullScreenToggle dark={dark} />
-          <RtlModeToggle dark={dark} />
+          <RtlModeToggle dark={dark} /> */}
           <Center>
             <Title order={2} className={classes.title}>
               Keyboard Shortcuts Reference
@@ -58,4 +63,4 @@ export function SettingsPage() {
   )
 }
 
-export default SettingsPage
+export default GeneralSettingsPage

@@ -1,14 +1,15 @@
-import { AppShell, Badge, Breadcrumbs, Group, Space } from '@mantine/core'
 import { useEffect, useState } from 'react'
 import AppBar from 'src/components/AppBar/AppBar'
-import Navigation from 'src/components/Navigation/Navigation'
 import Footer from 'src/components/Footer/Footer'
-import { Home } from 'tabler-icons-react'
-import { useHotkeys, useMouse } from '@mantine/hooks'
-import { navigate, routes, useLocation } from '@redwoodjs/router'
-import SystemInfoModal from 'src/components/SystemInfoModal/SystemInfoModal'
-import { MouseContext } from 'src/contexts/MouseContext'
+import Navigation from 'src/components/Navigation/Navigation'
 import ScrollToTop from 'src/components/ScrollToTop/ScrollToTop'
+import SystemInfoModal from 'src/components/SystemInfoModal/SystemInfoModal'
+// import { MouseContext } from 'src/contexts/MouseContext'
+import { Home } from 'tabler-icons-react'
+
+import { AppShell, Badge, Breadcrumbs, Group, Space } from '@mantine/core'
+import { useHotkeys } from '@mantine/hooks'
+import { navigate, routes, useLocation } from '@redwoodjs/router'
 
 type BlogLayoutProps = {
   children?: React.ReactNode
@@ -18,7 +19,7 @@ export function AppShellLayout({ children }: BlogLayoutProps) {
   // Handle UI State for Navbar, Srolling, and System Info Modal
   const [showNavbar, setShowNavbar] = useState(true)
   const [clientInfoOpened, setClientInfoOpened] = useState(false)
-  const { ref, x, y } = useMouse()
+  // const { ref, x, y } = useMouse()
 
   useHotkeys([
     ['mod+B', () => setShowNavbar(!showNavbar)],
@@ -44,48 +45,48 @@ export function AppShellLayout({ children }: BlogLayoutProps) {
 
   return (
     <>
-      <MouseContext.Provider value={{ x, y }}>
-        <div ref={ref}>
-          <SystemInfoModal
-            clientInfoOpened={clientInfoOpened}
-            setClientInfoOpened={setClientInfoOpened}
-          />
-          <AppShell
-            padding="md"
-            fixed
-            navbar={<Navigation showNavbar={showNavbar} />}
-            header={
-              <AppBar showNavbar={showNavbar} setShowNavbar={setShowNavbar} />
+      {/* <MouseContext.Provider value={{ x, y }}> */}
+      {/* <div ref={ref}> */}
+      <SystemInfoModal
+        clientInfoOpened={clientInfoOpened}
+        setClientInfoOpened={setClientInfoOpened}
+      />
+      <AppShell
+        padding="md"
+        fixed
+        navbar={<Navigation showNavbar={showNavbar} />}
+        header={
+          <AppBar showNavbar={showNavbar} setShowNavbar={setShowNavbar} />
+        }
+        footer={<Footer />}
+        styles={(theme) => ({
+          main: {
+            backgroundColor:
+              theme.colorScheme === 'dark'
+                ? theme.colors.dark[8]
+                : theme.colors.gray[0],
+          },
+        })}
+      >
+        <Group>
+          <Badge
+            color="red"
+            size="lg"
+            style={{ cursor: 'pointer' }}
+            onClick={() => navigate(routes.home())}
+            leftSection={
+              <>
+                <Home size={24} style={{ paddingTop: '0.5rem' }} />
+              </>
             }
-            footer={<Footer />}
-            styles={(theme) => ({
-              main: {
-                backgroundColor:
-                  theme.colorScheme === 'dark'
-                    ? theme.colors.dark[8]
-                    : theme.colors.gray[0],
-              },
-            })}
-          >
-            <Group>
-              <Badge
-                color="red"
-                size="lg"
-                style={{ cursor: 'pointer' }}
-                onClick={() => navigate(routes.home())}
-                leftSection={
-                  <>
-                    <Home size={24} style={{ paddingTop: '0.5rem' }} />
-                  </>
-                }
-              ></Badge>
-              /<Breadcrumbs separator="/">{items}</Breadcrumbs>
-            </Group>
-            <Space h="lg" />
-            {children}
-          </AppShell>
-        </div>
-      </MouseContext.Provider>
+          ></Badge>
+          /<Breadcrumbs separator="/">{items}</Breadcrumbs>
+        </Group>
+        <Space h="lg" />
+        {children}
+      </AppShell>
+      {/* </div> */}
+      {/* </MouseContext.Provider> */}
       <ScrollToTop />
     </>
   )

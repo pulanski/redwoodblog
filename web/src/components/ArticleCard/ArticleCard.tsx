@@ -74,7 +74,6 @@ const ArticleCard = ({ article, homePage }) => {
             leftIcon={isLiked ? <HeartPlus /> : <Heart />}
             onClick={() => {
               setIsLiked(!isLiked)
-              console.log(isLiked)
             }}
           >
             Like

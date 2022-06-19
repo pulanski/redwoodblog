@@ -46,7 +46,12 @@ export function Navigation({ showNavbar }) {
       shortcutKey: '4',
     },
     { link: '/contact', label: 'Contact', icon: Edit, shortcutKey: '5' },
-    { link: '/settings', label: 'Settings', icon: Settings, shortcutKey: ',' },
+    {
+      link: routes.generalSettings(),
+      label: 'Settings',
+      icon: Settings,
+      shortcutKey: ',',
+    },
   ]
 
   const links = data.map((item) => (

@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "react-slick": "^0.29.0",
-    "web": "workspace:^"
+    "web": "workspace:^",
+    "zod": "^3.17.3"
   }
 }

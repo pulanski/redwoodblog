@@ -17,6 +17,7 @@ export const schema = gql`
     post(id: Int!): Post @skipAuth
     featuredPosts: [Post!]! @skipAuth
     popularPosts(direction: String!): [Post!]! @skipAuth
+    collection: [Post!]! @skipAuth
   }
 
   input CreatePostInput {

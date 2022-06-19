@@ -27,25 +27,23 @@ export function RedwoodLogo() {
 
   return (
     <>
-      <div
+      <Group
         onClick={() => navigate(routes.home())}
         style={{
           cursor: 'pointer',
         }}
       >
-        <Group>
-          <Image
-            width={35}
-            height={35}
-            src="https://redwoodjs.com/images/diecut.svg"
-            alt="RedwoodJS Logo"
-            withPlaceholder
-            className={classes.image}
-          />
-          <Text className={classes.logoText}>RedwoodJS Blog</Text>
-          <Code sx={{ fontWeight: 700 }}>v1.5.1</Code>
-        </Group>
-      </div>
+        <Image
+          width={35}
+          height={35}
+          src="https://redwoodjs.com/images/diecut.svg"
+          alt="RedwoodJS Logo"
+          withPlaceholder
+          className={classes.image}
+        />
+        <Text className={classes.logoText}>RedwoodJS Blog</Text>
+        <Code sx={{ fontWeight: 700 }}>v1.5.1</Code>
+      </Group>
     </>
   )
 }

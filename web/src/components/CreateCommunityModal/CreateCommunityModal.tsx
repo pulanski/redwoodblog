@@ -23,20 +23,18 @@ const CreateCommunityModal = ({
         <Space h={30} />
         <CommunityOptions />
         <Space h={40} />
-        <>
-          <Group position="right">
-            <Button
-              variant="light"
-              color="red"
-              onClick={() => setModalOpened(false)}
-            >
-              Cancel
-            </Button>
-            <Button variant="light" color="red">
-              Create Community
-            </Button>
-          </Group>
-        </>
+        <Group position="right">
+          <Button
+            variant="light"
+            color="red"
+            onClick={() => setModalOpened(false)}
+          >
+            Cancel
+          </Button>
+          <Button variant="light" color="red">
+            Create Community
+          </Button>
+        </Group>
       </Modal>
     </>
   )

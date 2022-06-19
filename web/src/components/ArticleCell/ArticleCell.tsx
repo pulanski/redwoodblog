@@ -1,8 +1,6 @@
 import type { FindArticleQuery, FindArticleQueryVariables } from 'types/graphql'
 import type { CellSuccessProps, CellFailureProps } from '@redwoodjs/web'
-import { Button, Card, createStyles, Divider, Group, Text } from '@mantine/core'
-import { navigate, routes } from '@redwoodjs/router'
-import { Book } from 'tabler-icons-react'
+import { createStyles } from '@mantine/core'
 import ArticleCard from '../ArticleCard/ArticleCard'
 
 export const QUERY = gql`
@@ -44,7 +42,7 @@ const useStyles = createStyles((theme) => ({
 export const Success = ({
   article,
 }: CellSuccessProps<FindArticleQuery, FindArticleQueryVariables>) => {
-  const { classes } = useStyles()
+  // const { classes } = useStyles()
 
   return (
     <>

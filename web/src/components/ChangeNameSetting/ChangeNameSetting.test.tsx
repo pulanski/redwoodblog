@@ -1,14 +1,14 @@
 import { render } from '@redwoodjs/testing/web'
 
-import FeaturedPosts from './FeaturedPosts'
+import ChangeNameSetting from './ChangeNameSetting'
 
 //   Improve this test with help from the Redwood Testing Doc:
 //    https://redwoodjs.com/docs/testing#testing-components
 
-describe('FeaturedPosts', () => {
+describe('ChangeNameSetting', () => {
   it('renders successfully', () => {
     expect(() => {
-      render(<FeaturedPosts />)
+      render(<ChangeNameSetting />)
     }).not.toThrow()
   })
 })
